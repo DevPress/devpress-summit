@@ -1,0 +1,173 @@
+<?php
+/**
+ * Currents functions and definitions
+ *
+ * @package Currents
+ */
+
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 755; /* pixels */
+}
+
+/**
+ * Set constant for version
+ */
+define( 'CURRENTS_VERSION', '1.0' );
+
+if ( ! function_exists( 'currents_setup' ) ) :
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function currents_setup() {
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 */
+	load_theme_textdomain( 'currents', get_template_directory() . '/languages' );
+
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
+
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+	add_theme_support( 'post-thumbnails' );
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'currents' ),
+		'social' => __( 'Social Menu', 'currents' ),
+	) );
+
+	// Enable support for Post Formats.
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	// Add image sizes
+	add_image_size( 'currents-large', '755', 9999, false );
+
+	// Setup the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'currents_custom_background_args', array(
+		'default-color' => '444444',
+		'default-image' => '',
+	) ) );
+
+	// Enable support for HTML5 markup.
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form',
+		'gallery',
+	) );
+}
+endif; // currents_setup
+add_action( 'after_setup_theme', 'currents_setup' );
+
+/**
+ * Register widget area.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function currents_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'currents' ),
+		'id'            => 'footer',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'currents_widgets_init' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function currents_scripts() {
+
+	wp_enqueue_style( 'currents-style', get_stylesheet_uri(), array(), CURRENTS_VERSION );
+
+	if ( SCRIPT_DEBUG || WP_DEBUG ) :
+
+		wp_enqueue_script( 'currents-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), CURRENTS_VERSION, true );
+
+		wp_enqueue_script( 'currents-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CURRENTS_VERSION, true );
+
+		wp_enqueue_script( 'currents-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CURRENTS_VERSION, true );
+
+	else :
+
+		wp_enqueue_script( 'currents-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), CURRENTS_VERSION, true );
+
+	endif;
+
+	if ( 'column-masonry' == footer_widgetarea_class() ) {
+		wp_enqueue_script( 'currents-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), CURRENTS_VERSION, true );
+	}
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'currents_scripts' );
+
+/**
+ * Replace class on html tag if javascript is supported
+ */
+function currents_js_class() {
+    echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
+}
+add_action( 'wp_head', 'currents_js_class', 1 );
+
+/**
+ * Enqueue fonts.
+ */
+function currents_fonts() {
+
+	// Source Sans Pro
+	wp_register_style( 'currents_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic', '', null, 'screen' );
+	wp_enqueue_style( 'currents_source_sans' );
+
+	// Noto Serif
+	wp_register_style( 'currents_noto_serif', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic', '', null, 'screen' );
+	wp_enqueue_style( 'currents_noto_serif' );
+
+	// Custom Icon Font
+	wp_enqueue_style( 'currents_icons', get_template_directory_uri() . '/fonts/currents-icons/icons.css', array(), CURRENTS_VERSION );
+
+}
+add_action( 'wp_enqueue_scripts', 'currents_fonts' );
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';

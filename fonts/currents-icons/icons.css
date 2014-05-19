@@ -1,0 +1,129 @@
+@font-face {
+	font-family: 'currents-icons';
+	src: url('currents-icons.eot?1.0');
+	src: url('currents-icons.eot?1.0#iefix') format('embedded-opentype'),
+		url('currents-icons.woff?1.0') format('woff'),
+		url('currents-icons.ttf?1.0') format('truetype'),
+		url('currents-icons.svg?1.0#currents-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "currents-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-picture:before {
+	content: '\e800';
+}
+.icon-lock:before {
+	content: '\e803';
+}
+.icon-up:before {
+	content: '\e820';
+}
+.icon-down:before {
+	content: '\e811';
+}
+.icon-right:before {
+	content: '\e805';
+}
+.icon-left:before {
+	content: '\e804';
+}
+.icon-search:before {
+	content: '\e810';
+}
+.icon-menu:before {
+	content: '\e812';
+}
+.icon-cancel:before {
+	content: '\e821';
+}
+.icon-link:before {
+	content: '\e80d';
+}
+.icon-comment:before {
+	content: '\e808';
+}
+.icon-clock:before {
+	content: '\e813';
+}
+.icon-list:before {
+	content: '\e806';
+}
+.icon-quote-left:before {
+	content: '\e802';
+}
+.icon-quote-right:before {
+	content: '\e80b';
+}
+.icon-video-alt:before {
+	content: '\e80e';
+}
+.icon-camera:before {
+	content: '\e801';
+}
+.icon-pencil:before {
+	content: '\e809';
+}
+.icon-tags:before {
+	content: '\e814';
+}
+.icon-post:before {
+	content: '\e822';
+}
+
+/* Social */
+
+.icon-behance:before {
+	content: '\e81d';
+}
+.icon-dribbble:before {
+	content: '\e818';
+}
+.icon-facebook:before {
+	content: '\e80c';
+}
+.icon-flickr:before {
+	content: '\e81f';
+}
+.icon-github:before {
+	content: '\e81e';
+}
+.icon-gplus:before {
+	content: '\e80f';
+}
+.icon-instagram:before {
+	content: '\e81c';
+}
+.icon-linkedin:before {
+	content: '\e816';
+}
+.icon-pinterest:before {
+	content: '\e817';
+}
+.icon-rdio:before {
+	content: '\e819';
+}
+.icon-skype:before {
+	content: '\e80a';
+}
+.icon-spotify:before {
+	content: '\e81b';
+}
+.icon-tumblr:before {
+	content: '\e815';
+}
+.icon-twitter:before {
+	content: '\e81a';
+}
+.icon-vimeo:before {
+	content: '\e807';
+}

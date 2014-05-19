@@ -1,0 +1,362 @@
+# Copyright (C) 2014 DevPress
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Currents 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-05-19 16:32:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
+msgstr ""
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:44
+#. translators: %1$s: smiley
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:27
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:30
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:33
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:36
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:39
+msgid "Asides"
+msgstr ""
+
+#: archive.php:42
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:45
+msgid "Images"
+msgstr ""
+
+#: archive.php:48
+msgid "Videos"
+msgstr ""
+
+#: archive.php:51
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:54
+msgid "Links"
+msgstr ""
+
+#: archive.php:57
+msgid "Statuses"
+msgstr ""
+
+#: archive.php:60
+msgid "Audios"
+msgstr ""
+
+#: archive.php:63
+msgid "Chats"
+msgstr ""
+
+#: archive.php:66
+msgid "Archives"
+msgstr ""
+
+#: comments.php:35 comments.php:54
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:55
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:18 content-single.php:29 content.php:28
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:23 content-single.php:76 content.php:61
+msgid "Edit"
+msgstr ""
+
+#: content-single.php:42
+msgid "About %s"
+msgstr ""
+
+#: content-single.php:53 content-single.php:63 content.php:38 content.php:48
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: content-single.php:67 content.php:52
+msgid "Tagged %1$s"
+msgstr ""
+
+#: content-single.php:73 content.php:58
+msgid "Leave a comment"
+msgstr ""
+
+#: content-single.php:73 content.php:58
+msgid "1 Comment"
+msgstr ""
+
+#: content-single.php:73 content.php:58
+msgid "% Comments"
+msgstr ""
+
+#: content.php:25
+msgid "[ Read More ]"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:48
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:81 inc/customizer/options.php:233
+msgid "Footer"
+msgstr ""
+
+#: header.php:67
+msgid "Menu"
+msgstr ""
+
+#: header.php:68
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer/options.php:29
+msgid "Logo Image"
+msgstr ""
+
+#: inc/customizer/options.php:35
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer/options.php:46
+msgid "Site Title Text Color"
+msgstr ""
+
+#: inc/customizer/options.php:54
+msgid "Site Tagline Text Color"
+msgstr ""
+
+#: inc/customizer/options.php:62
+msgid "Display Site Tagline"
+msgstr ""
+
+#: inc/customizer/options.php:73
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer/options.php:79
+msgid "Header Overlay Color"
+msgstr ""
+
+#: inc/customizer/options.php:101
+msgid "Header Overlay Opacity"
+msgstr ""
+
+#: inc/customizer/options.php:124
+msgid "Header Image Blur"
+msgstr ""
+
+#: inc/customizer/options.php:146
+msgid "Header Text Shadow"
+msgstr ""
+
+#: inc/customizer/options.php:155
+msgid "Header Text Shadow Color"
+msgstr ""
+
+#: inc/customizer/options.php:166
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/options.php:172
+msgid "Highlight Color"
+msgstr ""
+
+#: inc/customizer/options.php:183
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer/options.php:192
+msgid "General"
+msgstr ""
+
+#: inc/customizer/options.php:198
+msgid "Display Post Dates"
+msgstr ""
+
+#: inc/customizer/options.php:206
+msgid "Display Featured Images"
+msgstr ""
+
+#: inc/customizer/options.php:214
+msgid "Display Page Comments"
+msgstr ""
+
+#: inc/customizer/options.php:222
+msgid "Display Overlay Navigation"
+msgstr ""
+
+#: inc/customizer/options.php:246
+msgid "Footer Widget Columns"
+msgstr ""
+
+#: inc/customizer/options.php:255
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer/options.php:291
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/options.php:297
+msgid "Background Color"
+msgstr ""
+
+#: inc/extras.php:63
+msgid "Page %s"
+msgstr ""
+
+#: inc/extras.php:178
+msgid "Powered by %s"
+msgstr ""
+
+#: inc/extras.php:179
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: inc/extras.php:183
+msgid "%1$s Theme by %2$s."
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Page navigation"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "<span><span class=\"meta-nav\">&larr;</span> Older posts</span>"
+msgstr ""
+
+#: inc/template-tags.php:35
+msgid "<span>Newer posts <span class=\"meta-nav\">&rarr;</span></span>"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:93
+msgid ""
+"<span class=\"posted-on\">Posted %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Currents"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://devpress.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Description"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DevPress"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://devpress.me/"
+msgstr ""
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:67
+msgctxt "Previous post link"
+msgid "<span><span class=\"meta-nav\">&larr;</span> Previous</span>"
+msgstr ""
+
+#: inc/template-tags.php:68
+msgctxt "Next post link"
+msgid "<span>Next <span class=\"meta-nav\">&rarr;</span></span>"
+msgstr ""
