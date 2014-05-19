@@ -107,29 +107,6 @@ function currents_options() {
 
 	$choices = array(
 		'0' => 'None',
-		'1px' => '1px',
-		'2px' => '2px',
-		'3px' => '3px',
-		'4px' => '4px',
-		'5px' => '5px',
-		'6px' => '6px',
-		'7px' => '7px',
-		'8px' => '8px',
-		'9px' => '9px',
-		'10px' => '10px',
-	);
-
-	$options['header-image-blur'] = array(
-		'id' => 'header-image-blur',
-		'label'   => __( 'Header Image Blur', 'currents' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => $choices,
-		'default' => '0',
-	);
-
-	$choices = array(
-		'0' => 'None',
 		'0.1' => '10%',
 		'0.2' => '20%',
 		'0.3' => '30%',

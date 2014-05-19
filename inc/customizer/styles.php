@@ -65,22 +65,6 @@ function currents_build_css_rules() {
 		) );
 	}
 
-	// Header Image Blur
-	$setting = 'header-image-blur';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
-
-	if ( $mod !== currents_get_default( $setting ) ) {
-
-		currents_css()->add( array(
-			'selectors'    => array( '.header-image img' ),
-			'declarations' => array(
-				'-webkit-filter' => 'blur(' . $mod . ')',
-				'-webkit-transform' => 'scale(1.04)'
-			)
-		) );
-
-	}
-
 	// Header Text Shadow
 	$setting = 'header-text-shadow';
 	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
