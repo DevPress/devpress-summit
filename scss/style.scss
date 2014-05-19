@@ -1,8 +1,8 @@
 /*
 Theme Name: Currents
-Theme URI: http://devpress.com/
+Theme URI: http://devpress.com/currents
 Author: DevPress
-Author URI: http://devpress.me/
+Author URI: http://devpress.com
 Description: Description
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -555,29 +555,6 @@ a:active {
 
 /* =8.1 Post Formats
 -------------------------------------------------------------- */
-
-.format-icon:before {
-	content: '\e822';
-	font-size:16px;
-	margin-top:-1px;
-	margin-left:3px;
-}
-.icon-format-image:before {
-	content: '\e801';
-}
-.icon-format-gallery:before {
-	content: '\e800';
-}
-.icon-format-link:before {
-	content: '\e80d';
-}
-.icon-format-video:before {
-	content: '\e80e';
-}
-.icon-format-quote:before {
-	content: '\e802';
-	font-size:15px;
-}
 
 #content blockquote {
 	font-size:18px;

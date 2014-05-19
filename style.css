@@ -1,8 +1,8 @@
 /*
 Theme Name: Currents
-Theme URI: http://devpress.com/
+Theme URI: http://devpress.com/currents
 Author: DevPress
-Author URI: http://devpress.me/
+Author URI: http://devpress.com
 Description: Description
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -421,6 +421,7 @@ h4, h5, h6 {
 a {
   color: #3fc0c3;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -661,6 +662,7 @@ a:active {
   }
 
   .dropdown-toggle {
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     color: #999;
     font-family: "currents-icons";
@@ -724,6 +726,7 @@ a:active {
   font-size: 16px;
   vertical-align: top;
   margin: 0;
+  -webkit-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
 }
 
@@ -961,34 +964,6 @@ a:active {
 
 /* =8.1 Post Formats
 -------------------------------------------------------------- */
-.format-icon:before {
-  content: '\e822';
-  font-size: 16px;
-  margin-top: -1px;
-  margin-left: 3px;
-}
-
-.icon-format-image:before {
-  content: '\e801';
-}
-
-.icon-format-gallery:before {
-  content: '\e800';
-}
-
-.icon-format-link:before {
-  content: '\e80d';
-}
-
-.icon-format-video:before {
-  content: '\e80e';
-}
-
-.icon-format-quote:before {
-  content: '\e802';
-  font-size: 15px;
-}
-
 #content blockquote {
   font-size: 18px;
   background: #f9f9f9;
@@ -1069,10 +1044,12 @@ a:active {
 
 .overlay-navigation .nav-previous a {
   width: auto;
+  -webkit-box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-next a {
+  -webkit-box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1082,6 +1059,7 @@ a:active {
   speak: none;
   display: inline-block;
   padding: 0 5px;
+  -webkit-transition: padding 0.2s ease;
   transition: padding 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -1395,6 +1373,7 @@ object {
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;

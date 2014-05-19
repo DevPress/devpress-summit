@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Currents 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-19 16:32:00+00:00\n"
+"POT-Creation-Date: 2014-05-19 18:38:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -304,7 +304,7 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:93
+#: inc/template-tags.php:94
 msgid ""
 "<span class=\"posted-on\">Posted %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
@@ -319,7 +319,7 @@ msgid "Currents"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://devpress.com/"
+msgid "http://devpress.com/currents"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -331,7 +331,7 @@ msgid "DevPress"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://devpress.me/"
+msgid "http://devpress.com"
 msgstr ""
 
 #: archive.php:33
