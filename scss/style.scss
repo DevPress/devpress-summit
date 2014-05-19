@@ -130,7 +130,7 @@ a:active {
 	padding-right:10%;
 }
 .site-title {
-	font-size: 38px;
+	font-size: 36px;
 	line-height: 1;
 	letter-spacing: 1px;
 	margin-bottom:.25em;
@@ -565,6 +565,7 @@ a:active {
 #content blockquote cite {
 	display: inline-block;
 	margin-top:.5em;
+	font-size:15px;
 }
 #content blockquote cite:before {
 	content: '\2014';
@@ -572,6 +573,13 @@ a:active {
 }
 #content blockquote p:last-of-type {
 	margin-bottom:0;
+}
+
+/* =8.2 Error 404
+-------------------------------------------------------------- */
+
+.error-404 .search-form {
+	margin-bottom:1.5em;
 }
 
 

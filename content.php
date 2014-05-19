@@ -22,7 +22,7 @@
 	<?php endif; ?>
 
 	<div class="entry-content clearfix">
-		<?php the_content( __( '[ Read More ]', 'currents' ) ); ?>
+		<?php the_content( __( 'Read More', 'currents' ) ); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'currents' ),
