@@ -66,7 +66,7 @@ select,
 textarea {
 	color: #454545;
 	font-family: $font-1;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.6;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -74,16 +74,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .5em;
 }
 h1 {
-	font-size: 34px;
-}
-h2 {
 	font-size: 30px;
 }
+h2 {
+	font-size: 28px;
+}
 h3 {
-	font-size: 26px;
+	font-size: 24px;
 }
 h4, h5, h6 {
-	font-size: 22px;
+	font-size: 20px;
 }
 a {
 	color: $highlight;
@@ -130,7 +130,7 @@ a:active {
 	padding-right:10%;
 }
 .site-title {
-	font-size: 42px;
+	font-size: 36px;
 	line-height: 1;
 	letter-spacing: 1px;
 	margin-bottom:.25em;
@@ -148,7 +148,7 @@ a:active {
 	max-width: 100%;
 }
 .site-description {
-	font-size:18px;
+	font-size:16px;
 	color:#fff;
 	font-family: $font-2;
 }
@@ -194,7 +194,7 @@ a:active {
 /* Larger Screen Sizes */
 @media screen and (min-width: $breakpoint-2 ) {
 	.main-navigation a {
-		font-size:16px;
+		font-size:15px;
 		padding:10px;
 		border:none;
 		display: inline-block;
@@ -437,7 +437,7 @@ a:active {
 	margin:0 0 1.5em;
 }
 .entry-title {
-	font-size:36px;
+	font-size:30px;
 	line-height:1.25;
 	margin-bottom:.25em;
 }
@@ -465,7 +465,7 @@ a:active {
 	margin:0 auto;
 }
 .entry-meta, .entry-footer {
-	font-size:16px;
+	font-size:15px;
 	font-family: $font-1;
 	color:#888;
 }
@@ -510,7 +510,7 @@ a:active {
 	margin: 0 0 1.5em;
 }
 .page-links a {
-	font-size:16px;
+	font-size:14px;
 	background:#f9f9f9;
 	padding:.25em 1em;
 }
@@ -523,7 +523,7 @@ a:active {
 .author-meta {
 	border-top: 1px solid #EEE;
 	border-bottom: 1px solid #EEE;
-	margin-bottom:3em;
+	margin:3em 0;
 	position: relative;
 	padding:1.5em 1.5em 1.5em 0;
 }
@@ -533,13 +533,13 @@ a:active {
 }
 .author-description {
 	font-family: $font-1;
-	font-size:16px;
+	font-size:15px;
 	padding-left: 90px;
 	min-height: 60px;
 }
 .author-description h3 {
 	font-weight: 600;
-	font-size:16px;
+	font-size:15px;
 	line-height:1;
 }
 
@@ -558,15 +558,15 @@ a:active {
 -------------------------------------------------------------- */
 
 #content blockquote {
-	font-size:22px;
+	font-size:18px;
 	background:#f9f9f9;
 	margin:0 0 1.5em;
 	padding:1.5em;
 }
 #content blockquote cite {
 	display: inline-block;
-	margin-top:1.5em;
-	font-size:16px;
+	margin-top:.5em;
+	font-size:15px;
 }
 #content blockquote cite:before {
 	content: '\2014';
@@ -781,7 +781,7 @@ a:active {
 	margin-bottom: 1.5em;
 }
 #respond .form-allowed-tags code {
-	font-size: 13px;
+	font-size: 12px;
 }
 
 
@@ -950,7 +950,7 @@ object {
 #infinite-handle span {
 	background: $highlight;
 	font-family: $font-1;
-	font-size:16px;
+	font-size:15px;
 }
 body #content div.sharedaddy {
 	border-bottom: 1px solid #EEE;
@@ -962,7 +962,7 @@ body #content div.sharedaddy div.sd-block {
 }
 body #content div.sharedaddy h3 {
 	font-family: $font-1;
-	font-size:16px;
+	font-size:15px;
 }
 
 /* =16.0 - Responsive

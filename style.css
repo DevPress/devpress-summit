@@ -393,7 +393,7 @@ select,
 textarea {
   color: #454545;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -403,25 +403,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 34px;
-}
-
-h2 {
   font-size: 30px;
 }
 
+h2 {
+  font-size: 28px;
+}
+
 h3 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 h4, h5, h6 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 a {
   color: #3fc0c3;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -469,7 +468,7 @@ a:active {
 }
 
 .site-title {
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1;
   letter-spacing: 1px;
   margin-bottom: .25em;
@@ -491,7 +490,7 @@ a:active {
 }
 
 .site-description {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   font-family: "Noto Serif", serif;
 }
@@ -542,7 +541,7 @@ a:active {
 /* Larger Screen Sizes */
 @media screen and (min-width: 890px) {
   .main-navigation a {
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px;
     border: none;
     display: inline-block;
@@ -662,7 +661,6 @@ a:active {
   }
 
   .dropdown-toggle {
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     color: #999;
     font-family: "currents-icons";
@@ -726,7 +724,6 @@ a:active {
   font-size: 16px;
   vertical-align: top;
   margin: 0;
-  -webkit-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
 }
 
@@ -827,7 +824,7 @@ a:active {
 }
 
 .entry-title {
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.25;
   margin-bottom: .25em;
 }
@@ -862,7 +859,7 @@ a:active {
 }
 
 .entry-meta, .entry-footer {
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Source Sans Pro", sans-serif;
   color: #888;
 }
@@ -916,7 +913,7 @@ a:active {
 }
 
 .page-links a {
-  font-size: 16px;
+  font-size: 14px;
   background: #f9f9f9;
   padding: .25em 1em;
 }
@@ -929,7 +926,7 @@ a:active {
 .author-meta {
   border-top: 1px solid #EEE;
   border-bottom: 1px solid #EEE;
-  margin-bottom: 3em;
+  margin: 3em 0;
   position: relative;
   padding: 1.5em 1.5em 1.5em 0;
 }
@@ -941,14 +938,14 @@ a:active {
 
 .author-description {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   padding-left: 90px;
   min-height: 60px;
 }
 
 .author-description h3 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
 }
 
@@ -966,7 +963,7 @@ a:active {
 /* =8.1 Post Formats
 -------------------------------------------------------------- */
 #content blockquote {
-  font-size: 22px;
+  font-size: 18px;
   background: #f9f9f9;
   margin: 0 0 1.5em;
   padding: 1.5em;
@@ -974,8 +971,8 @@ a:active {
 
 #content blockquote cite {
   display: inline-block;
-  margin-top: 1.5em;
-  font-size: 16px;
+  margin-top: .5em;
+  font-size: 15px;
 }
 
 #content blockquote cite:before {
@@ -1052,12 +1049,10 @@ a:active {
 
 .overlay-navigation .nav-previous a {
   width: auto;
-  -webkit-box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-next a {
-  -webkit-box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1067,7 +1062,6 @@ a:active {
   speak: none;
   display: inline-block;
   padding: 0 5px;
-  -webkit-transition: padding 0.2s ease;
   transition: padding 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -1226,7 +1220,7 @@ a:active {
 }
 
 #respond .form-allowed-tags code {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* =12.0 Media
@@ -1381,7 +1375,6 @@ object {
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
@@ -1416,7 +1409,7 @@ object {
 #infinite-handle span {
   background: #3fc0c3;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body #content div.sharedaddy {
@@ -1431,7 +1424,7 @@ body #content div.sharedaddy div.sd-block {
 
 body #content div.sharedaddy h3 {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* =16.0 - Responsive
