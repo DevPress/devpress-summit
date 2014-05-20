@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 688; /* pixels */
+	$content_width = 698; /* pixels */
 }
 
 /**
@@ -49,10 +49,10 @@ function currents_setup() {
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'quote', 'link' ) );
 
 	// Add image sizes
-	add_image_size( 'currents-large', '688', 9999, false );
+	add_image_size( 'currents-large', '698', 9999, false );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'currents_custom_background_args', array(
