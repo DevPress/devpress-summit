@@ -47,6 +47,20 @@ function currents_build_css_rules() {
 		) );
 	}
 
+	// Header Background Color
+	$setting = 'header-background-color';
+	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
+
+	if ( $mod !== currents_get_default( $setting ) ) {
+
+		currents_css()->add( array(
+			'selectors'    => array( '#masthead' ),
+			'declarations' => array(
+				'background' => $mod
+			)
+		) );
+	}
+
 	// Header Overlay Opacity
 	$setting = 'header-overlay-opacity';
 	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );

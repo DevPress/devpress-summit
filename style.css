@@ -433,7 +433,7 @@ a:active {
 }
 
 #page {
-  max-width: 880px;
+  max-width: 890px;
   margin: 0 auto;
   background-color: #FFF;
   position: relative;
@@ -540,7 +540,7 @@ a:active {
 }
 
 /* Larger Screen Sizes */
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 890px) {
   .main-navigation a {
     font-size: 15px;
     padding: 10px;
@@ -613,7 +613,7 @@ a:active {
   display: none;
 }
 
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 889px) {
   .main-navigation {
     padding: 1.75em 6em .5em;
   }
@@ -815,6 +815,7 @@ a:active {
   padding: 0 0 3em;
   margin: 0 0 3em;
   border-bottom: 1px solid #eee;
+  overflow: hidden;
 }
 
 .hentry:last-of-type {
@@ -826,7 +827,7 @@ a:active {
 }
 
 .entry-title {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.25;
   margin-bottom: .25em;
 }
@@ -1233,19 +1234,19 @@ a:active {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 15px;
+  margin: 0 0 15px 15px;
 }
 
 .aligncenter {
   clear: both;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
 
 .page-content img.wp-smiley,
@@ -1440,7 +1441,7 @@ body #content div.sharedaddy h3 {
     display: none;
   }
 }
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 890px) {
   #page {
     margin: 80px auto;
   }

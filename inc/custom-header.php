@@ -13,7 +13,7 @@ function currents_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'currents_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/images/mountain.jpg',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 880,
+		'width'                  => 890,
 		'height'                 => 410,
 		'flex-height'            => true
 	) ) );

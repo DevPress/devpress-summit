@@ -50,7 +50,7 @@ require_once $path . '/custom-controls/textarea.php';
  */
 function currents_customize_preview_js() {
 
-	$path = get_template_directory() . '/inc/customizer';
+	$path = get_template_directory_uri() . '/inc/customizer';
 
 	wp_enqueue_script( 'currents_customizer', $path . '/js/customizer.js', array( 'customize-preview' ), CURRENTS_VERSION, true );
 

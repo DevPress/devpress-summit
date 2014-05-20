@@ -74,6 +74,14 @@ function currents_options() {
 		'priority' => '70'
 	);
 
+	$options['header-background-color'] = array(
+		'id' => 'header-background-color',
+		'label'   => __( 'Header Background Color', 'currents' ),
+		'section' => $section,
+		'type'    => 'color',
+		'default' => '#3fc0c3',
+	);
+
 	$options['header-overlay-color'] = array(
 		'id' => 'header-overlay-color',
 		'label'   => __( 'Header Overlay Color', 'currents' ),

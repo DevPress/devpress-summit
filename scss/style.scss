@@ -428,6 +428,7 @@ a:active {
 	padding: 0 0 3em;
 	margin: 0 0 3em;
 	border-bottom: 1px solid #eee;
+	overflow: hidden;
 }
 .hentry:last-of-type {
 	margin: 0 0 1.5em;
@@ -436,7 +437,7 @@ a:active {
 	margin:0 0 1.5em;
 }
 .entry-title {
-	font-size:32px;
+	font-size:30px;
 	line-height:1.25;
 	margin-bottom:.25em;
 }
@@ -790,17 +791,17 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 15px;
+	margin: 0 15px 15px 0;
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 15px;
+	margin: 0 0 15px 15px;
 }
 .aligncenter {
 	clear: both;
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 15px;
 }
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
