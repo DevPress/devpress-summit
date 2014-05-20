@@ -5,6 +5,7 @@
  * @package Currents
  */
 
+
 /**
  * Define the path for the customizer files.
  */
@@ -28,7 +29,7 @@ require_once $path . '/extensions/interface.php';
 /**
  * Helper functions for customizer sanitization.
  */
-require_once $path . '/extensions/interface.php';
+require_once $path . '/extensions/sanitization.php';
 
 /**
  * Helper functions to build the inline CSS.

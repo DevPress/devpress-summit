@@ -30,7 +30,7 @@ function currents_build_css_rules() {
 		currents_css()->add( array(
 			'selectors'    => array( '.site-title a' ),
 			'declarations' => array(
-				'color' => $mod
+				'color' => sanitize_hex_color( $mod )
 			)
 		) );
 	}
@@ -42,7 +42,7 @@ function currents_build_css_rules() {
 		currents_css()->add( array(
 			'selectors'    => array( '.site-description' ),
 			'declarations' => array(
-				'color' => $mod
+				'color' => sanitize_hex_color( $mod )
 			)
 		) );
 	}
@@ -56,7 +56,7 @@ function currents_build_css_rules() {
 		currents_css()->add( array(
 			'selectors'    => array( '#masthead' ),
 			'declarations' => array(
-				'background' => $mod
+				'background' => sanitize_hex_color( $mod )
 			)
 		) );
 	}
@@ -107,14 +107,14 @@ function currents_build_css_rules() {
 		currents_css()->add( array(
 			'selectors' => array( 'a', '.main-navigation .dropdown-toggle:hover', '.entry-title a:hover', '.entry-meta a:hover', '.entry-footer a:hover' ),
 			'declarations' => array(
-				'color' => $mod
+				'color' => sanitize_hex_color( $mod )
 			)
 		) );
 
 		currents_css()->add( array(
 			'selectors' => array( 'button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]', '#infinite-handle span' ),
 			'declarations' => array(
-				'background' => $mod
+				'background' => sanitize_hex_color( $mod )
 			)
 		) );
 

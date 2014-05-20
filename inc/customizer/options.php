@@ -132,7 +132,7 @@ function currents_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $choices,
-		'default' => '0',
+		'default' => '0.4',
 	);
 
 	$options['header-text-shadow-color'] = array(

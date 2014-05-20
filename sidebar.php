@@ -5,7 +5,8 @@
  * @package Currents
  */
 ?>
+	<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 	<div id="secondary" class="widget-area clearfix <?php echo footer_widgetarea_class(); ?>" role="complementary">
-		<?php if ( ! dynamic_sidebar( 'footer' ) ) : ?>
-		<?php endif; // end sidebar widget area ?>
+		<?php dynamic_sidebar( 'footer' ); ?>
 	</div><!-- #secondary -->
+	<?php endif; ?>
