@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-21 22:09:00+00:00\n"
+"POT-Creation-Date: 2014-05-21 22:50:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -167,11 +167,11 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: header.php:70
+#: header.php:65
 msgid "Menu"
 msgstr ""
 
-#: header.php:71
+#: header.php:66
 msgid "Skip to content"
 msgstr ""
 
@@ -185,6 +185,10 @@ msgstr ""
 
 #: inc/custom-header.php:66
 msgid "Golden"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Summit"
 msgstr ""
 
 #: inc/customizer/options.php:29
@@ -335,10 +339,6 @@ msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Summit"
 msgstr ""
 
 #. Theme URI of the plugin/theme

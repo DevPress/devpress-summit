@@ -13,11 +13,11 @@
  */
 function summit_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'summit_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/images/summit.jpg',
+		'random-default'         => true,
 		'default-text-color'     => 'ffffff',
 		'width'                  => 890,
 		'height'                 => 410,
-		'flex-height'            => true
+		'flex-height'            => false
 	) ) );
 }
 add_action( 'after_setup_theme', 'summit_custom_header_setup' );
@@ -64,5 +64,10 @@ register_default_headers( array(
 		'url'           => '%s/images/golden.jpg',
 		'thumbnail_url' => '%s/images/golden.jpg',
 		'description'   => __( 'Golden', 'summit' )
+	),
+	'summit' => array(
+		'url'           => '%s/images/summit.jpg',
+		'thumbnail_url' => '%s/images/summit.jpg',
+		'description'   => __( 'Summit', 'summit' )
 	)
 ) );

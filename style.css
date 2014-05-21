@@ -448,6 +448,8 @@ a:active {
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .header-image img {
@@ -1517,6 +1519,10 @@ body #content div.sharedaddy h3 {
   }
 }
 @media screen and (max-width: 640px) {
+  #masthead {
+    min-height: 280px;
+  }
+
   .main-navigation, #content, #colophon {
     padding-right: 3em;
     padding-left: 3em;

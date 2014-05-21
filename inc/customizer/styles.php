@@ -23,6 +23,17 @@ if ( ! function_exists( 'summit_build_css_rules' ) ) :
  */
 function summit_build_css_rules() {
 
+	// Header image
+	$image = get_header_image();
+	if ( $image != '' ) {
+		summit_css()->add( array(
+			'selectors'    => array( '#masthead' ),
+			'declarations' => array(
+				'background-image' => 'url("' . esc_url( $image ) . '")'
+			)
+		) );
+	}
+
 	// Site title color
 	$setting = 'site-title-text-color';
 	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );

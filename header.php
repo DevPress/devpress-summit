@@ -23,13 +23,8 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php
-		$image = get_header_image();
-		if ( '' == $image ) {
-			$image = get_template_directory_uri() . '/images/blank.gif';
-		} ?>
 		<div class="header-image">
-			<img src="<?php echo $image; ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+			<img src="<?php echo get_template_directory_uri() . '/images/blank.gif' ?>" width="880" height="410" alt="">
 			<div class="opacity"></div>
 		</div>
 
