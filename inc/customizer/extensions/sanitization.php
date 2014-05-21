@@ -2,10 +2,10 @@
 /**
  * Currents Sanization
  *
- * @package Currents
+ * @package Summit
  */
 
-if ( ! function_exists( 'currents_sanitize_text' ) ) :
+if ( ! function_exists( 'summit_sanitize_text' ) ) :
 /**
  * Sanitize a string to allow only tags in the allowedtags array.
  *
@@ -14,13 +14,13 @@ if ( ! function_exists( 'currents_sanitize_text' ) ) :
  * @param  string    $string    The unsanitized string.
  * @return string               The sanitized string.
  */
-function currents_sanitize_text( $string ) {
+function summit_sanitize_text( $string ) {
 	global $allowedtags;
 	return wp_kses( $string , $allowedtags );
 }
 endif;
 
-if ( ! function_exists( 'currents_sanitize_checkbox' ) ) :
+if ( ! function_exists( 'summit_sanitize_checkbox' ) ) :
 /**
  * Sanitize a checkbox to only allow 0 or 1
  *
@@ -29,7 +29,7 @@ if ( ! function_exists( 'currents_sanitize_checkbox' ) ) :
  * @param  boolean    $value    The unsanitized value.
  * @return boolean				The sanitized boolean.
  */
-function currents_sanitize_checkbox( $value ) {
+function summit_sanitize_checkbox( $value ) {
 	if ( $value == 1 ) {
 		return 1;
     } else {
@@ -38,7 +38,7 @@ function currents_sanitize_checkbox( $value ) {
 }
 endif;
 
-if ( ! function_exists( 'currents_sanitize_choices' ) ) :
+if ( ! function_exists( 'summit_sanitize_choices' ) ) :
 /**
  * Sanitize a value from a list of allowed values.
  *
@@ -48,23 +48,23 @@ if ( ! function_exists( 'currents_sanitize_choices' ) ) :
  * @param  mixed    $setting    The setting for which the sanitizing is occurring.
  * @return mixed                The sanitized value.
  */
-function currents_sanitize_choices( $value, $setting ) {
+function summit_sanitize_choices( $value, $setting ) {
 	if ( is_object( $setting ) ) {
 		$setting = $setting->id;
 	}
 
-	$choices = currents_get_choices( $setting );
+	$choices = summit_get_choices( $setting );
 	$allowed_choices = array_keys( $choices );
 
 	if ( ! in_array( $value, $allowed_choices ) ) {
-		$value = currents_get_default( $setting );
+		$value = summit_get_default( $setting );
 	}
 
 	return $value;
 }
 endif;
 
-if ( ! function_exists( 'currents_sanitize_file_url' ) ) :
+if ( ! function_exists( 'summit_sanitize_file_url' ) ) :
 /**
  * Sanitize the url of uploaded media.
  *
@@ -73,7 +73,7 @@ if ( ! function_exists( 'currents_sanitize_file_url' ) ) :
  * @param  string    $value      The url to sanitize
  * @return string    $output     The sanitized url.
  */
-function currents_sanitize_file_url( $url ) {
+function summit_sanitize_file_url( $url ) {
 
 	$output = '';
 

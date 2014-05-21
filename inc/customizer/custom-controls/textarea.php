@@ -2,7 +2,7 @@
 /**
  * Customize for textarea, extend the WP customizer
  *
- * @package Currents
+ * @package Summit
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) )

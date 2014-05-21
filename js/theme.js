@@ -1,7 +1,7 @@
 ( function( $ ) {
 
 	// Vertically centers the .site-branding
-	function currents_logo_position() {
+	function summit_logo_position() {
 		var $sitebranding = $('.site-branding'),
 			copyheight = $sitebranding.height(),
 			imageheight = $('.header-image').height(),
@@ -9,7 +9,7 @@
 		$sitebranding.css({ 'top' : distance + '%' }).fadeIn('200');
 	}
 
-	currents_logo_position();
+	summit_logo_position();
 
 	// Update logo alignment on resize
 	$(window).on( 'resize', function() {
@@ -18,7 +18,7 @@
 
     $(window).on( 'resize', debounce(
     	function(){
-	    	currents_logo_position();
+	    	summit_logo_position();
     	}, 200 )
     );
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Currents
+ * @package Summit
  * @credit Based on code from "Make" by The Theme Foundary
  */
 
@@ -251,7 +251,7 @@ class CURRENTS_CSS {
 }
 endif;
 
-if ( ! function_exists( 'currents_css' ) ) :
+if ( ! function_exists( 'summit_css' ) ) :
 /**
  * Return the one CURRENTS_CSS object.
  *
@@ -259,9 +259,9 @@ if ( ! function_exists( 'currents_css' ) ) :
  *
  * @return CURRENTS_CSS    The one CURRENTS_CSS object.
  */
-function currents_css() {
+function summit_css() {
 	return CURRENTS_CSS::instance();
 }
 endif;
 
-add_action( 'init', 'currents_css', 1 );
+add_action( 'init', 'summit_css', 1 );

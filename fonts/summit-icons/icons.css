@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'currents-icons';
-	src: url('currents-icons.eot?1.0');
-	src: url('currents-icons.eot?1.0#iefix') format('embedded-opentype'),
-		url('currents-icons.woff?1.0') format('woff'),
-		url('currents-icons.ttf?1.0') format('truetype'),
-		url('currents-icons.svg?1.0#currents-icons') format('svg');
+	font-family: 'summit-icons';
+	src: url('summit-icons.eot?1.0');
+	src: url('summit-icons.eot?1.0#iefix') format('embedded-opentype'),
+		url('summit-icons.woff?1.0') format('woff'),
+		url('summit-icons.ttf?1.0') format('truetype'),
+		url('summit-icons.svg?1.0#summit-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "currents-icons";
+  font-family: "summit-icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -19,9 +19,6 @@
   text-transform: none;
 }
 
-.icon-picture:before {
-	content: '\e800';
-}
 .icon-lock:before {
 	content: '\e803';
 }
@@ -52,9 +49,6 @@
 .icon-comment:before {
 	content: '\e808';
 }
-.icon-clock:before {
-	content: '\e813';
-}
 .icon-list:before {
 	content: '\e806';
 }
@@ -64,20 +58,14 @@
 .icon-quote-right:before {
 	content: '\e80b';
 }
-.icon-video-alt:before {
-	content: '\e80e';
-}
-.icon-camera:before {
-	content: '\e801';
-}
 .icon-pencil:before {
 	content: '\e809';
 }
 .icon-tags:before {
 	content: '\e814';
 }
-.icon-post:before {
-	content: '\e822';
+.icon-chat:before {
+	content: '\e800';
 }
 
 /* Social */

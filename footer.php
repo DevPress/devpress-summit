@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Currents
+ * @package Summit
  */
 ?>
 
@@ -12,14 +12,14 @@
 
 	<?php if ( get_theme_mod( 'overlay-navigation', 1 ) ) : ?>
 	<div class="overlay-navigation">
-		<?php currents_post_nav(); ?>
+		<?php summit_post_nav(); ?>
 	</div>
 	<?php endif; ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php if ( get_theme_mod( 'footer-text', currents_get_default('footer-text') ) != '' ) : ?>
+		<?php if ( get_theme_mod( 'footer-text', summit_get_default('footer-text') ) != '' ) : ?>
 		<div class="site-info">
-			<?php echo get_theme_mod( 'footer-text', currents_get_default('footer-text') ); ?>
+			<?php echo get_theme_mod( 'footer-text', summit_get_default('footer-text') ); ?>
 		</div><!-- .site-info -->
 		<?php endif; ?>
 	</footer><!-- #colophon -->

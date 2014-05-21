@@ -2,11 +2,11 @@
 /**
  * Implements styles set in the theme customizer
  *
- * @package Currents
+ * @package Summit
  * @credit Based on code from "Make" by The Theme Foundary
  */
 
-if ( ! function_exists( 'currents_build_css_rules' ) ) :
+if ( ! function_exists( 'summit_build_css_rules' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
  *
@@ -21,13 +21,13 @@ if ( ! function_exists( 'currents_build_css_rules' ) ) :
  *
  * @return void
  */
-function currents_build_css_rules() {
+function summit_build_css_rules() {
 
 	// Site title color
 	$setting = 'site-title-text-color';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
-	if ( $mod !== currents_get_default( $setting ) ) {
-		currents_css()->add( array(
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+	if ( $mod !== summit_get_default( $setting ) ) {
+		summit_css()->add( array(
 			'selectors'    => array( '.site-title a' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
@@ -37,9 +37,9 @@ function currents_build_css_rules() {
 
 	// Site tagline color
 	$setting = 'site-tagline-text-color';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
-	if ( $mod !== currents_get_default( $setting ) ) {
-		currents_css()->add( array(
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+	if ( $mod !== summit_get_default( $setting ) ) {
+		summit_css()->add( array(
 			'selectors'    => array( '.site-description' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
@@ -49,11 +49,11 @@ function currents_build_css_rules() {
 
 	// Header Background Color
 	$setting = 'header-background-color';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
 
-	if ( $mod !== currents_get_default( $setting ) ) {
+	if ( $mod !== summit_get_default( $setting ) ) {
 
-		currents_css()->add( array(
+		summit_css()->add( array(
 			'selectors'    => array( '#masthead' ),
 			'declarations' => array(
 				'background' => sanitize_hex_color( $mod )
@@ -63,15 +63,15 @@ function currents_build_css_rules() {
 
 	// Header Overlay Opacity
 	$setting = 'header-overlay-opacity';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
 
-	if ( $mod !== currents_get_default( $setting ) ) {
+	if ( $mod !== summit_get_default( $setting ) ) {
 
 		// Header Overlay Color
-		$color = get_theme_mod( 'header-overlay-color', currents_get_default( 'header-overlay-color' ) );
-		$color = join( ', ', currents_hex_to_rgb( $color ) );
+		$color = get_theme_mod( 'header-overlay-color', summit_get_default( 'header-overlay-color' ) );
+		$color = join( ', ', summit_hex_to_rgb( $color ) );
 
-		currents_css()->add( array(
+		summit_css()->add( array(
 			'selectors'    => array( '.header-image .opacity' ),
 			'declarations' => array(
 				'background' => 'rgba(' . $color . ',' . $mod . ')'
@@ -81,15 +81,15 @@ function currents_build_css_rules() {
 
 	// Header Text Shadow
 	$setting = 'header-text-shadow';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
 
-	if ( $mod !== currents_get_default( $setting ) ) {
+	if ( $mod !== summit_get_default( $setting ) ) {
 
 		// Header Overlay Color
-		$color = get_theme_mod( 'header-text-shadow-color', currents_get_default( 'header-text-shadow-color' ) );
-		$color = join( ', ', currents_hex_to_rgb( $color ) );
+		$color = get_theme_mod( 'header-text-shadow-color', summit_get_default( 'header-text-shadow-color' ) );
+		$color = join( ', ', summit_hex_to_rgb( $color ) );
 
-		currents_css()->add( array(
+		summit_css()->add( array(
 			'selectors'    => array( '.site-branding' ),
 			'declarations' => array(
 				'text-shadow' => '0 1px 1px rgba(' . $color . ',' . $mod . ')'
@@ -100,18 +100,18 @@ function currents_build_css_rules() {
 
 	// Highlight Color
 	$setting = 'highlight-color';
-	$mod = get_theme_mod( $setting, currents_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
 
-	if ( $mod !== currents_get_default( $setting ) ) {
+	if ( $mod !== summit_get_default( $setting ) ) {
 
-		currents_css()->add( array(
+		summit_css()->add( array(
 			'selectors' => array( 'a', '.main-navigation .dropdown-toggle:hover', '.entry-title a:hover', '.entry-meta a:hover', '.entry-footer a:hover' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
 			)
 		) );
 
-		currents_css()->add( array(
+		summit_css()->add( array(
 			'selectors' => array( 'button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]', '#infinite-handle span' ),
 			'declarations' => array(
 				'background' => sanitize_hex_color( $mod )
@@ -124,32 +124,32 @@ function currents_build_css_rules() {
 }
 endif;
 
-add_action( 'currents_css', 'currents_build_css_rules' );
+add_action( 'summit_css', 'summit_build_css_rules' );
 
-if ( ! function_exists( 'currents_display_customizations' ) ) :
+if ( ! function_exists( 'summit_display_customizations' ) ) :
 /**
  * Generates the style tag and CSS needed for the theme options.
  *
- * By using the "currents_css" filter, different components can print CSS in the header. It is organized this way to
+ * By using the "summit_css" filter, different components can print CSS in the header. It is organized this way to
  * ensure that there is only one "style" tag and not a proliferation of them.
  *
  * @since  1.0.0.
  *
  * @return void
  */
-function currents_display_customizations() {
+function summit_display_customizations() {
 
-	do_action( 'currents_css' );
+	do_action( 'summit_css' );
 
 	// Echo the rules
-	$css = currents_css()->build();
+	$css = summit_css()->build();
 
 	if ( ! empty( $css ) ) {
-		echo "\n<!-- Begin Currents Custom CSS -->\n<style type=\"text/css\" id=\"currents-custom-css\">\n";
+		echo "\n<!-- Begin Currents Custom CSS -->\n<style type=\"text/css\" id=\"summit-custom-css\">\n";
 		echo $css;
 		echo "\n</style>\n<!-- End Currents Custom CSS -->\n";
 	}
 }
 endif;
 
-add_action( 'wp_head', 'currents_display_customizations', 11 );
+add_action( 'wp_head', 'summit_display_customizations', 11 );

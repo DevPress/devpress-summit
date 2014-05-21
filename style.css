@@ -1,13 +1,13 @@
 /*
-Theme Name: Currents
-Theme URI: http://devpress.com/currents
+Theme Name: Summit
+Theme URI: http://devpress.com/summit
 Author: DevPress
 Author URI: http://devpress.com
 Description: Description
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: currents
+Text Domain: summit
 Domain Path: /languages/
 Tags:
 
@@ -313,7 +313,6 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* Corrects inability to style clickable 'input' types in iOS */
   line-height: 1;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05), inset 0 -2px 1px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05), inset 0 -2px 1px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.05);
   padding: .75em 1.25em;
@@ -325,7 +324,6 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1), inset 0 2px 6px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1), inset 0 2px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -365,7 +363,6 @@ textarea {
   border: 1px solid #ddd;
   border-top: none;
   padding: 5px 10px;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -427,7 +424,6 @@ h4, h5, h6 {
 a {
   color: #3fc0c3;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -514,7 +510,6 @@ a:active {
   margin: 0 0 3em;
   border-bottom: 1px solid #eee;
   padding: .75em 6em .75em;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -637,7 +632,7 @@ a:active {
 
   .menu-toggle:after {
     color: #666;
-    font-family: "currents-icons";
+    font-family: "summit-icons";
     content: '\e812';
     speak: none;
     display: inline-block;
@@ -671,10 +666,9 @@ a:active {
   }
 
   .dropdown-toggle {
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     color: #999;
-    font-family: "currents-icons";
+    font-family: "summit-icons";
     speak: none;
     display: inline-block;
     font-weight: 400;
@@ -732,11 +726,10 @@ a:active {
   content: '\e80d';
   display: inline-block;
   padding: 0 5px;
-  font-family: 'currents-icons';
+  font-family: 'summit-icons';
   font-size: 16px;
   vertical-align: top;
   margin: 0;
-  -webkit-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
 }
 
@@ -891,7 +884,7 @@ a:active {
 }
 
 .format-icon:before, .cat-links:before, .tags-links:before, .comments-link:before, .post-edit-link:before {
-  font-family: "currents-icons";
+  font-family: "summit-icons";
   speak: none;
   display: inline-block;
   margin-right: .5em;
@@ -1055,7 +1048,6 @@ a:active {
   font-size: 26px;
   padding: .75em 10px;
   text-decoration: none;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -1065,22 +1057,19 @@ a:active {
 
 .overlay-navigation .nav-previous a {
   width: auto;
-  -webkit-box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-next a {
-  -webkit-box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-previous a:before,
 .overlay-navigation .nav-next a:after {
-  font-family: "currents-icons";
+  font-family: "summit-icons";
   speak: none;
   display: inline-block;
   padding: 0 5px;
-  -webkit-transition: padding 0.2s ease;
   transition: padding 0.2s ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -1251,14 +1240,15 @@ a:active {
 }
 
 #reply-title:after {
-  font-family: "currents-icons";
+  font-family: "summit-icons";
   speak: none;
   display: inline-block;
   margin-right: .5em;
-  content: '\e808';
+  content: '\e800';
   position: absolute;
   right: 1em;
   color: #888;
+  font-size: 20px;
 }
 
 #respond textarea {
@@ -1433,7 +1423,6 @@ object {
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;

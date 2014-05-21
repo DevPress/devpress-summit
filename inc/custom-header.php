@@ -3,7 +3,7 @@
  * Implement the custom header
  * http://codex.wordpress.org/Custom_Headers
  *
- * @package Currents
+ * @package Summit
  */
 
 /**
@@ -11,8 +11,8 @@
  *
  * @since 1.0.0
  */
-function currents_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'currents_custom_header_args', array(
+function summit_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'summit_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/images/summit.jpg',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 890,
@@ -20,7 +20,7 @@ function currents_custom_header_setup() {
 		'flex-height'            => true
 	) ) );
 }
-add_action( 'after_setup_theme', 'currents_custom_header_setup' );
+add_action( 'after_setup_theme', 'summit_custom_header_setup' );
 
 /**
  * Remove the header menu item from the appearance menu.
@@ -28,21 +28,21 @@ add_action( 'after_setup_theme', 'currents_custom_header_setup' );
  *
  * @since 1.0.0
  */
-function currents_custom_header_screen() {
+function summit_custom_header_screen() {
 	remove_submenu_page( 'themes.php', 'custom-header' );
 }
-add_action( 'admin_menu', 'currents_custom_header_screen', 20 );
+add_action( 'admin_menu', 'summit_custom_header_screen', 20 );
 
 /**
  * Remove the header menu item from the admin bar.
  *
  * @since 1.0.0
  */
-function currents_admin_bar_header_menu( $wp_admin_bar ) {
+function summit_admin_bar_header_menu( $wp_admin_bar ) {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu( 'header' );
 }
-add_action( 'wp_before_admin_bar_render', 'currents_admin_bar_header_menu' );
+add_action( 'wp_before_admin_bar_render', 'summit_admin_bar_header_menu' );
 
 /**
  * Remove the header menu item from the admin bar.
@@ -53,16 +53,16 @@ register_default_headers( array(
 	'cloudscape' => array(
 		'url'           => '%s/images/cloudscape.jpg',
 		'thumbnail_url' => '%s/images/cloudscape.jpg',
-		'description'   => __( 'Cloudscape', 'currents' )
+		'description'   => __( 'Cloudscape', 'summit' )
 	),
 	'dune' => array(
 		'url'           => '%s/images/dune.jpg',
 		'thumbnail_url' => '%s/images/dune.jpg',
-		'description'   => __( 'Dune', 'currents' )
+		'description'   => __( 'Dune', 'summit' )
 	),
 	'golden' => array(
 		'url'           => '%s/images/golden.jpg',
 		'thumbnail_url' => '%s/images/golden.jpg',
-		'description'   => __( 'Golden', 'currents' )
+		'description'   => __( 'Golden', 'summit' )
 	)
 ) );

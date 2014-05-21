@@ -2,7 +2,7 @@
 /**
  * Currents Theme Customizer
  *
- * @package Currents
+ * @package Summit
  */
 
 /**
@@ -13,7 +13,7 @@
  * @return array $options
  */
 
-function currents_options() {
+function summit_options() {
 
 	// Stores all the controls that will be added
 	$options = array();
@@ -26,13 +26,13 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Logo Image', 'currents' ),
+		'title' => __( 'Logo Image', 'summit' ),
 		'priority' => '20'
 	);
 
 	$options['logo'] = array(
 		'id' => 'logo',
-		'label'   => __( 'Logo', 'currents' ),
+		'label'   => __( 'Logo', 'summit' ),
 		'section' => $section,
 		'type'    => 'upload',
 		'default' => '',
@@ -43,7 +43,7 @@ function currents_options() {
 
 	$options['site-title-text-color'] = array(
 		'id' => 'site-title-text-color',
-		'label'   => __( 'Site Title Text Color', 'currents' ),
+		'label'   => __( 'Site Title Text Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#ffffff',
@@ -51,7 +51,7 @@ function currents_options() {
 
 	$options['site-tagline-text-color'] = array(
 		'id' => 'site-tagline-text-color',
-		'label'   => __( 'Site Tagline Text Color', 'currents' ),
+		'label'   => __( 'Site Tagline Text Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#ffffff',
@@ -59,7 +59,7 @@ function currents_options() {
 
 	$options['display-site-tagline'] = array(
 		'id' => 'display-site-tagline',
-		'label'   => __( 'Display Site Tagline', 'currents' ),
+		'label'   => __( 'Display Site Tagline', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '1',
@@ -70,13 +70,13 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Header Settings', 'currents' ),
+		'title' => __( 'Header Settings', 'summit' ),
 		'priority' => '70'
 	);
 
 	$options['header-background-color'] = array(
 		'id' => 'header-background-color',
-		'label'   => __( 'Header Background Color', 'currents' ),
+		'label'   => __( 'Header Background Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#3fc0c3',
@@ -84,7 +84,7 @@ function currents_options() {
 
 	$options['header-overlay-color'] = array(
 		'id' => 'header-overlay-color',
-		'label'   => __( 'Header Overlay Color', 'currents' ),
+		'label'   => __( 'Header Overlay Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#000000',
@@ -106,7 +106,7 @@ function currents_options() {
 
 	$options['header-overlay-opacity'] = array(
 		'id' => 'header-overlay-opacity',
-		'label'   => __( 'Header Overlay Opacity', 'currents' ),
+		'label'   => __( 'Header Overlay Opacity', 'summit' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $choices,
@@ -128,7 +128,7 @@ function currents_options() {
 
 	$options['header-text-shadow'] = array(
 		'id' => 'header-text-shadow',
-		'label'   => __( 'Header Text Shadow', 'currents' ),
+		'label'   => __( 'Header Text Shadow', 'summit' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $choices,
@@ -137,7 +137,7 @@ function currents_options() {
 
 	$options['header-text-shadow-color'] = array(
 		'id' => 'header-text-shadow-color',
-		'label'   => __( 'Header Text Shadow Color', 'currents' ),
+		'label'   => __( 'Header Text Shadow Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#000000',
@@ -148,13 +148,13 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Colors', 'currents' ),
+		'title' => __( 'Colors', 'summit' ),
 		'priority' => '80'
 	);
 
 	$options['highlight-color'] = array(
 		'id' => 'highlight-color',
-		'label'   => __( 'Highlight Color', 'currents' ),
+		'label'   => __( 'Highlight Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#3fc0c3',
@@ -165,7 +165,7 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Typography', 'currents' ),
+		'title' => __( 'Typography', 'summit' ),
 		'priority' => '80'
 	);
 
@@ -174,13 +174,13 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'General', 'currents' ),
+		'title' => __( 'General', 'summit' ),
 		'priority' => '80'
 	);
 
 	$options['display-post-dates'] = array(
 		'id' => 'display-post-dates',
-		'label'   => __( 'Display Post Dates', 'currents' ),
+		'label'   => __( 'Display Post Dates', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '1',
@@ -188,7 +188,7 @@ function currents_options() {
 
 	$options['display-featured-images'] = array(
 		'id' => 'display-featured-images',
-		'label'   => __( 'Display Featured Images', 'currents' ),
+		'label'   => __( 'Display Featured Images', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '0',
@@ -196,7 +196,7 @@ function currents_options() {
 
 	$options['page-comments'] = array(
 		'id' => 'page-comments',
-		'label'   => __( 'Display Page Comments', 'currents' ),
+		'label'   => __( 'Display Page Comments', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '0',
@@ -204,7 +204,7 @@ function currents_options() {
 
 	$options['overlay-navigation'] = array(
 		'id' => 'overlay-navigation',
-		'label'   => __( 'Display Overlay Navigation', 'currents' ),
+		'label'   => __( 'Display Overlay Navigation', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '1',
@@ -215,7 +215,7 @@ function currents_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Footer', 'currents' ),
+		'title' => __( 'Footer', 'summit' ),
 		'priority' => '100'
 	);
 
@@ -228,7 +228,7 @@ function currents_options() {
 
 	$options['footer-widget-columns'] = array(
 		'id' => 'footer-widget-columns',
-		'label'   => __( 'Footer Widget Columns', 'currents' ),
+		'label'   => __( 'Footer Widget Columns', 'summit' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $choices,
@@ -237,10 +237,10 @@ function currents_options() {
 
 	$options['footer-text'] = array(
 		'id' => 'footer-text',
-		'label'   => __( 'Footer Text', 'currents' ),
+		'label'   => __( 'Footer Text', 'summit' ),
 		'section' => $section,
 		'type'    => 'textarea',
-		'default' => currents_get_default_footer_text(),
+		'default' => summit_get_default_footer_text(),
 	);
 
 	// Adds the sections to the $options array
@@ -258,7 +258,7 @@ function currents_options() {
  * @param  object $wp_customize The global customizer object.
  * @return void
  */
-function currents_customizer_defaults( $wp_customize ) {
+function summit_customizer_defaults( $wp_customize ) {
 
 	// Remove default colors section
 	$wp_customize->remove_section( 'colors' );
@@ -284,4 +284,4 @@ function currents_customizer_defaults( $wp_customize ) {
 	) ) );
 
 }
-add_action( 'customize_register', 'currents_customizer_defaults' );
+add_action( 'customize_register', 'summit_customizer_defaults' );

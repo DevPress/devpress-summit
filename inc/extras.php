@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Currents
+ * @package Summit
  */
 
 /**
@@ -13,11 +13,11 @@
  * @param array $args Configuration arguments.
  * @return array
  */
-function currents_page_menu_args( $args ) {
+function summit_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'currents_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'summit_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -25,7 +25,7 @@ add_filter( 'wp_page_menu_args', 'currents_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function currents_body_classes( $classes ) {
+function summit_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -33,7 +33,7 @@ function currents_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'currents_body_classes' );
+add_filter( 'body_class', 'summit_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -42,7 +42,7 @@ add_filter( 'body_class', 'currents_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function currents_wp_title( $title, $sep ) {
+function summit_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
@@ -60,12 +60,12 @@ function currents_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'currents' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'summit' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'currents_wp_title', 10, 2 );
+add_filter( 'wp_title', 'summit_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -79,14 +79,14 @@ add_filter( 'wp_title', 'currents_wp_title', 10, 2 );
  * @global WP_Query $wp_query WordPress Query object.
  * @return void
  */
-function currents_setup_author() {
+function summit_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
-add_action( 'wp', 'currents_setup_author' );
+add_action( 'wp', 'summit_setup_author' );
 
 /**
  * Replaces definition list elements with their appropriate HTML5 counterparts.
@@ -94,14 +94,14 @@ add_action( 'wp', 'currents_setup_author' );
  * @param array $atts The output array of shortcode attributes.
  * @return array HTML5-ified gallery attributes.
  */
-function currents_gallery_atts( $atts ) {
+function summit_gallery_atts( $atts ) {
     $atts['itemtag']    = 'figure';
     $atts['icontag']    = 'div';
     $atts['captiontag'] = 'figcaption';
 
     return $atts;
 }
-add_filter( 'shortcode_atts_gallery', 'currents_gallery_atts' );
+add_filter( 'shortcode_atts_gallery', 'summit_gallery_atts' );
 
 /**
  * Removes the default styles for galleries
@@ -111,17 +111,17 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 /**
  * Filters avatar size in comments
  */
-function currents_custom_avatar_size( $avatar ) {
+function summit_custom_avatar_size( $avatar ) {
     global $comment;
     $avatar = get_avatar( $comment, $size = '60' );
     return $avatar;
 }
-add_filter( 'inline_get_avatar', 'currents_custom_avatar_size' );
+add_filter( 'inline_get_avatar', 'summit_custom_avatar_size' );
 
 /**
  * Counts number of widgets in a sidebar
  */
-function currents_count_widgets( $sidebar_id ) {
+function summit_count_widgets( $sidebar_id ) {
 
 	// If loading from front page, consult $_wp_sidebars_widgets rather than options
 	// to see if wp_convert_widget_settings() has made manipulations in memory.
@@ -150,7 +150,7 @@ function footer_widgetarea_class() {
 		return $mod;
 	}
 
-	$count = currents_count_widgets( 'footer' );
+	$count = summit_count_widgets( 'footer' );
 
 	if ( 0 == $count ) {
 		return 'no-widgets';
@@ -175,14 +175,14 @@ function footer_widgetarea_class() {
  *
  * @since 1.0.0
  */
-function currents_get_default_footer_text() {
+function summit_get_default_footer_text() {
 	$text = sprintf(
-		__( 'Powered by %s', 'currents' ),
-		'<a href="' . esc_url( __( 'http://wordpress.org/', 'currents' ) ) . '">WordPress</a>'
+		__( 'Powered by %s', 'summit' ),
+		'<a href="' . esc_url( __( 'http://wordpress.org/', 'summit' ) ) . '">WordPress</a>'
 	);
 	$text .= '<span class="sep"> | </span>';
 	$text .= sprintf(
-		__( '%1$s Theme by %2$s.', 'currents' ),
+		__( '%1$s Theme by %2$s.', 'summit' ),
 			'Currents',
 			'<a href="http://devpress.com/" rel="designer">DevPress</a>'
 	);
@@ -194,7 +194,7 @@ function currents_get_default_footer_text() {
  *
  * @since 1.0.0
  */
-function currents_comment_fields( $fields ) {
+function summit_comment_fields( $fields ) {
 
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
@@ -202,38 +202,38 @@ function currents_comment_fields( $fields ) {
 
     $fields['author'] =
         '<p class="comment-form-author">
-            <input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'currents' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+            <input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'summit' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
     '" size="30"' . $aria_req . ' />
         </p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
-            <input required placeholder="' . __( 'Email *', 'currents' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+            <input required placeholder="' . __( 'Email *', 'summit' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' />
         </p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
-            <input placeholder="' . __( 'Website', 'currents' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <input placeholder="' . __( 'Website', 'summit' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
     '" size="30" />
         </p>';
 
     return $fields;
 }
-add_filter( 'comment_form_default_fields', 'currents_comment_fields' );
+add_filter( 'comment_form_default_fields', 'summit_comment_fields' );
 
 /**
  * Add HTML5 placeholder to the comment textarea.
  *
  * @since 1.0.0
  */
- function currents_commtent_textarea( $comment_field ) {
+ function summit_commtent_textarea( $comment_field ) {
 
     $comment_field =
         '<p class="comment-form-comment">
-            <textarea required placeholder="' . __( 'Comment *', 'currents' ) . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
+            <textarea required placeholder="' . __( 'Comment *', 'summit' ) . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
         </p>';
 
     return $comment_field;
 }
-add_filter( 'comment_form_field_comment', 'currents_commtent_textarea' );
+add_filter( 'comment_form_field_comment', 'summit_commtent_textarea' );

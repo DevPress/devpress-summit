@@ -2,7 +2,7 @@
 /**
  * Customizer Utility Functions
  *
- * @package Currents
+ * @package Summit
  */
 
 /**
@@ -14,9 +14,9 @@
  * @return mixed $default
  */
 
-function currents_get_default( $setting ) {
+function summit_get_default( $setting ) {
 
-	$options = currents_options();
+	$options = summit_options();
 
 	if ( isset( $options[$setting]['default'] ) ) {
 		return $options[$setting]['default'];
@@ -33,9 +33,9 @@ function currents_get_default( $setting ) {
  * @return mixed $default
  */
 
-function currents_get_choices( $setting ) {
+function summit_get_choices( $setting ) {
 
-	$options = currents_options();
+	$options = summit_options();
 
 	if ( isset( $options[$setting]['choices'] ) ) {
 		return $options[$setting]['choices'];
@@ -52,7 +52,7 @@ function currents_get_choices( $setting ) {
  * @param  string  $hex
  * @return array
  */
-function currents_hex_to_rgb( $hex ) {
+function summit_hex_to_rgb( $hex ) {
 
 	// Remove "#" if it was added
 	$color = trim( $hex, '#' );

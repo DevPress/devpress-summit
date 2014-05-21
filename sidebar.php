@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Currents
+ * @package Summit
  */
 ?>
 	<?php if ( is_active_sidebar( 'footer' ) ) : ?>

@@ -2,7 +2,7 @@
 /**
  * Currents functions and definitions
  *
- * @package Currents
+ * @package Summit
  */
 
 /**
@@ -15,9 +15,9 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set constant for version
  */
-define( 'CURRENTS_VERSION', '1.0' );
+define( 'SUMMIT_VERSION', '1.0' );
 
-if ( ! function_exists( 'currents_setup' ) ) :
+if ( ! function_exists( 'summit_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -25,12 +25,12 @@ if ( ! function_exists( 'currents_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function currents_setup() {
+function summit_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 */
-	load_theme_textdomain( 'currents', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'summit', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,18 +44,18 @@ function currents_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'currents' ),
-		'social' => __( 'Social Menu', 'currents' ),
+		'primary' => __( 'Primary Menu', 'summit' ),
+		'social' => __( 'Social Menu', 'summit' ),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'quote', 'link' ) );
 
 	// Add image sizes
-	add_image_size( 'currents-large', '698', 9999, false );
+	add_image_size( 'summit-large', '698', 9999, false );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'currents_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'summit_custom_background_args', array(
 		'default-color' => '444444',
 		'default-image' => '',
 	) ) );
@@ -68,17 +68,17 @@ function currents_setup() {
 		'gallery',
 	) );
 }
-endif; // currents_setup
-add_action( 'after_setup_theme', 'currents_setup' );
+endif; // summit_setup
+add_action( 'after_setup_theme', 'summit_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function currents_widgets_init() {
+function summit_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'currents' ),
+		'name'          => __( 'Footer', 'summit' ),
 		'id'            => 'footer',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -87,65 +87,65 @@ function currents_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'currents_widgets_init' );
+add_action( 'widgets_init', 'summit_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function currents_scripts() {
+function summit_scripts() {
 
-	wp_enqueue_style( 'currents-style', get_stylesheet_uri(), array(), CURRENTS_VERSION );
+	wp_enqueue_style( 'summit-style', get_stylesheet_uri(), array(), SUMMIT_VERSION );
 
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
-		wp_enqueue_script( 'currents-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), CURRENTS_VERSION, true );
+		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), SUMMIT_VERSION, true );
 
-		wp_enqueue_script( 'currents-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CURRENTS_VERSION, true );
+		wp_enqueue_script( 'summit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SUMMIT_VERSION, true );
 
-		wp_enqueue_script( 'currents-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CURRENTS_VERSION, true );
+		wp_enqueue_script( 'summit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SUMMIT_VERSION, true );
 
 	else :
 
-		wp_enqueue_script( 'currents-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), CURRENTS_VERSION, true );
+		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), SUMMIT_VERSION, true );
 
 	endif;
 
 	if ( 'column-masonry' == footer_widgetarea_class() ) {
-		wp_enqueue_script( 'currents-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), CURRENTS_VERSION, true );
+		wp_enqueue_script( 'summit-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), SUMMIT_VERSION, true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'currents_scripts' );
+add_action( 'wp_enqueue_scripts', 'summit_scripts' );
 
 /**
  * Replace class on html tag if javascript is supported
  */
-function currents_js_class() {
+function summit_js_class() {
     echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
 }
-add_action( 'wp_head', 'currents_js_class', 1 );
+add_action( 'wp_head', 'summit_js_class', 1 );
 
 /**
  * Enqueue fonts.
  */
-function currents_fonts() {
+function summit_fonts() {
 
 	// Source Sans Pro
-	wp_register_style( 'currents_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic', '', null, 'screen' );
-	wp_enqueue_style( 'currents_source_sans' );
+	wp_register_style( 'summit_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic', '', null, 'screen' );
+	wp_enqueue_style( 'summit_source_sans' );
 
 	// Noto Serif
-	wp_register_style( 'currents_noto_serif', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic', '', null, 'screen' );
-	wp_enqueue_style( 'currents_noto_serif' );
+	wp_register_style( 'summit_noto_serif', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic', '', null, 'screen' );
+	wp_enqueue_style( 'summit_noto_serif' );
 
 	// Custom Icon Font
-	wp_enqueue_style( 'currents_icons', get_template_directory_uri() . '/fonts/currents-icons/icons.css', array(), CURRENTS_VERSION );
+	wp_enqueue_style( 'summit_icons', get_template_directory_uri() . '/fonts/summit-icons/icons.css', array(), SUMMIT_VERSION );
 
 }
-add_action( 'wp_enqueue_scripts', 'currents_fonts' );
+add_action( 'wp_enqueue_scripts', 'summit_fonts' );
 
 /**
  * Implement the Custom Header feature.

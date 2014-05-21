@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Currents
+ * @package Summit
  */
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -67,8 +67,8 @@
 
 	<?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<h3 class="menu-toggle"><?php _e( 'Menu', 'currents' ); ?></h3>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'currents' ); ?></a>
+		<h3 class="menu-toggle"><?php _e( 'Menu', 'summit' ); ?></h3>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'summit' ); ?></a>
 
 		<?php wp_nav_menu( array(
 			'theme_location' => 'primary',

@@ -2,7 +2,7 @@
 /**
  * Currents Theme Customizer
  *
- * @package Currents
+ * @package Summit
  */
 
 
@@ -49,22 +49,22 @@ require_once $path . '/custom-controls/textarea.php';
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function currents_customize_preview_js() {
+function summit_customize_preview_js() {
 
 	$path = get_template_directory_uri() . '/inc/customizer';
 
-	wp_enqueue_script( 'currents_customizer', $path . '/js/customizer.js', array( 'customize-preview' ), CURRENTS_VERSION, true );
+	wp_enqueue_script( 'summit_customizer', $path . '/js/customizer.js', array( 'customize-preview' ), SUMMIT_VERSION, true );
 
 }
-add_action( 'customize_preview_init', 'currents_customize_preview_js' );
+add_action( 'customize_preview_init', 'summit_customize_preview_js' );
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function currents_customize_register( $wp_customize ) {
+function summit_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'currents_customize_register' );
+add_action( 'customize_register', 'summit_customize_register' );

@@ -2,10 +2,10 @@
 /**
  * Currents Theme Customizer
  *
- * @package Currents
+ * @package Summit
  */
 
-if ( ! function_exists( 'currents_customizer' ) ) :
+if ( ! function_exists( 'summit_customizer' ) ) :
 /**
  * Configure settings and controls for the theme customizer
  *
@@ -14,9 +14,9 @@ if ( ! function_exists( 'currents_customizer' ) ) :
  * @param  object $wp_customize The global customizer object.
  * @return void
  */
-function currents_customizer( $wp_customize ) {
+function summit_customizer( $wp_customize ) {
 
-	$options = currents_options();
+	$options = summit_options();
 	$sections = $options['sections'];
 
 	if ( isset( $sections ) ) {
@@ -45,7 +45,7 @@ function currents_customizer( $wp_customize ) {
 					case 'select':
 
 						if ( !isset( $option['sanitize_callback'] ) ) {
-							$option['sanitize_callback'] = 'currents_sanitize_choices';
+							$option['sanitize_callback'] = 'summit_sanitize_choices';
 						}
 
 						$wp_customize->add_control( $option['id'], array(
@@ -61,7 +61,7 @@ function currents_customizer( $wp_customize ) {
 					case 'checkbox':
 
 						if ( !isset( $option['sanitize_callback'] ) ) {
-							$option['sanitize_callback'] = 'currents_sanitize_checkbox';
+							$option['sanitize_callback'] = 'summit_sanitize_checkbox';
 						}
 
 						$wp_customize->add_control( $option['id'], array(
@@ -91,7 +91,7 @@ function currents_customizer( $wp_customize ) {
 					case 'upload':
 
 						if ( !isset( $option['sanitize_callback'] ) ) {
-							$option['sanitize_callback'] = 'currents_sanitize_file_url';
+							$option['sanitize_callback'] = 'summit_sanitize_file_url';
 						}
 
 				    	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize,
@@ -106,7 +106,7 @@ function currents_customizer( $wp_customize ) {
 					case 'textarea':
 
 						if ( !isset( $option['sanitize_callback'] ) ) {
-							$option['sanitize_callback'] = 'currents_sanitize_text';
+							$option['sanitize_callback'] = 'summit_sanitize_text';
 						}
 
 				    	$wp_customize->add_control( new Textarea_Custom_Control( $wp_customize,
@@ -126,4 +126,4 @@ function currents_customizer( $wp_customize ) {
 }
 endif;
 
-add_action( 'customize_register', 'currents_customizer', 100 );
+add_action( 'customize_register', 'summit_customizer', 100 );
