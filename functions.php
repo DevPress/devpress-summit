@@ -134,7 +134,7 @@ add_action( 'wp_head', 'currents_js_class', 1 );
 function currents_fonts() {
 
 	// Source Sans Pro
-	wp_register_style( 'currents_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic', '', null, 'screen' );
+	wp_register_style( 'currents_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic', '', null, 'screen' );
 	wp_enqueue_style( 'currents_source_sans' );
 
 	// Noto Serif

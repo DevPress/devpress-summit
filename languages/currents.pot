@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Currents 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-20 18:30:24+00:00\n"
+"POT-Creation-Date: 2014-05-21 18:03:29+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -173,6 +173,18 @@ msgstr ""
 
 #: header.php:71
 msgid "Skip to content"
+msgstr ""
+
+#: inc/custom-header.php:56
+msgid "Cloudscape"
+msgstr ""
+
+#: inc/custom-header.php:61
+msgid "Dune"
+msgstr ""
+
+#: inc/custom-header.php:66
+msgid "Golden"
 msgstr ""
 
 #: inc/customizer/options.php:29

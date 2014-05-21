@@ -138,14 +138,17 @@ input[type="submit"] {
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	line-height: 1;
-	padding: .5em 1em;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05), inset 0 -2px 1px 0px rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	padding: .75em 1.25em;
 	border:none;
+	border-radius:3px;
 }
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1), inset 0 2px 6px 1px rgba(0, 0, 0, 0.2);
 }
 button:focus,
 input[type="button"]:focus,
@@ -183,6 +186,7 @@ input[type="search"],
 textarea {
 	color: #666;
 	border: 1px solid #ccc;
+	padding: 4px 8px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -192,16 +196,8 @@ input[type="search"]:focus,
 textarea:focus {
 	color: #111;
 }
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	padding: 3px;
-}
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 98%;
 }

@@ -165,6 +165,7 @@ a:active {
 	margin: 0 0 3em;
 	border-bottom: 1px solid #eee;
 	padding: .75em 6em .75em;
+	touch-action: manipulation;
 }
 .no-main-navigation {
 	border-top: 1px solid #eee;
@@ -345,6 +346,7 @@ a:active {
 }
 .social-menu a {
 	color:#fff;
+	text-decoration: none;
 }
 .social-menu a:hover {
 	opacity: .6;
@@ -631,6 +633,8 @@ a:active {
 	background:rgba(0,0,0,.1);
 	font-size:26px;
 	padding:.75em 10px;
+	text-decoration: none;
+	touch-action: manipulation;
 }
 .overlay-navigation a:hover {
 	color:rgba( 255, 255, 255, 1);
@@ -731,6 +735,9 @@ a:active {
 	border-radius:3px;
 	margin:0 0 20px 0;
 }
+.bypostauthor .comment-body {
+	background: #f0fafa;
+}
 .comment-body:before {
 	position: absolute;
 	top: 30px;
@@ -753,9 +760,6 @@ a:active {
 .comment-metadata {
 	margin-bottom:1.5em;
 }
-.bypostauthor {
-	/* Required for Theme Review */
-}
 #respond p {
 	margin-bottom: 1.5em;
 }
@@ -770,7 +774,6 @@ a:active {
 #respond textarea {
   display: block;
   margin: 1em 0;
-  padding: 5px;
   width: 90%;
 }
 #respond .form-allowed-tags {
@@ -993,20 +996,61 @@ body #content div.sharedaddy h3 {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
-	.hentry {
-		padding: 0 1.5em 1.5em;
-	}
 	#content {
 		padding-right: 0em;
 		padding-left: 0em;
 	}
-	.site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
+	.hentry {
+		padding-bottom:1.5em;
+		margin-bottom: 1.5em;
+	}
+	.entry-header,
+	.entry-content,
+	.entry-footer {
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+	}
+	.author-meta {
+		margin:3em 0 1.5em;
+	}
+	.author-meta .author-avatar {
+		left: 1.5em;
+	}
+	.author-description {
+		padding-left:7.5em;
+	}
+	.site-main .comment-navigation,
+	.site-main .paging-navigation,
+	.site-main .post-navigation {
 		padding: 0 1.5em 1.5em;
 	}
 	.cat-links, .tags-links, .comments-link {
 		display: block;
 		clear:both;
 		margin-bottom:.5em;
+	}
+	#comments {
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+	}
+	.comments-title {
+		margin-bottom:1.5em;
+	}
+	.comment {
+		margin:0;
+	}
+	.comment-body:before {
+		content:none;
+	}
+	.comment-author .avatar {
+		left: auto;
+		right: 1.5em;
+		top:2em;
+		z-index: 10;
+		max-width:40px;
+	}
+	#respond textarea {
+		width:100%;
 	}
 	#secondary.column-2 .widget,
 	#secondary.column-masonry .widget {

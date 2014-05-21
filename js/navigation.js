@@ -48,7 +48,7 @@
 				$toggle.addClass('toggled');
 			});
 		} else {
-			submenu.slideUp( function(){
+			$submenu.slideUp( function(){
 				$toggle.removeClass('toggled');
 			});
 		}

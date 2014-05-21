@@ -29,7 +29,7 @@
 			$image = get_template_directory_uri() . '/images/blank.gif';
 		} ?>
 		<div class="header-image">
-			<img src="<?php echo $image; ?>" width="<?php get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+			<img src="<?php echo $image; ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
 			<div class="opacity"></div>
 		</div>
 
