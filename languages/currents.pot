@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Currents 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-21 18:03:29+00:00\n"
+"POT-Creation-Date: 2014-05-21 19:36:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -283,16 +283,32 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/extras.php:178
+#: inc/extras.php:180
 msgid "Powered by %s"
 msgstr ""
 
-#: inc/extras.php:179
+#: inc/extras.php:181
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: inc/extras.php:183
+#: inc/extras.php:185
 msgid "%1$s Theme by %2$s."
+msgstr ""
+
+#: inc/extras.php:205
+msgid "Name *"
+msgstr ""
+
+#: inc/extras.php:211
+msgid "Email *"
+msgstr ""
+
+#: inc/extras.php:217
+msgid "Website"
+msgstr ""
+
+#: inc/extras.php:234
+msgid "Comment *"
 msgstr ""
 
 #: inc/template-tags.php:27

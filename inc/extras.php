@@ -172,6 +172,8 @@ function footer_widgetarea_class() {
 
 /**
  * Get default footer text
+ *
+ * @since 1.0.0
  */
 function currents_get_default_footer_text() {
 	$text = sprintf(
@@ -186,3 +188,52 @@ function currents_get_default_footer_text() {
 	);
 	return $text;
 }
+
+/**
+ * Add HTML5 placeholders for each default comment field
+ *
+ * @since 1.0.0
+ */
+function currents_comment_fields( $fields ) {
+
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+    $fields['author'] =
+        '<p class="comment-form-author">
+            <input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'currents' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '" size="30"' . $aria_req . ' />
+        </p>';
+
+    $fields['email'] =
+        '<p class="comment-form-email">
+            <input required placeholder="' . __( 'Email *', 'currents' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '" size="30"' . $aria_req . ' />
+        </p>';
+
+    $fields['url'] =
+        '<p class="comment-form-url">
+            <input placeholder="' . __( 'Website', 'currents' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+    '" size="30" />
+        </p>';
+
+    return $fields;
+}
+add_filter( 'comment_form_default_fields', 'currents_comment_fields' );
+
+/**
+ * Add HTML5 placeholder to the comment textarea.
+ *
+ * @since 1.0.0
+ */
+ function currents_commtent_textarea( $comment_field ) {
+
+    $comment_field =
+        '<p class="comment-form-comment">
+            <textarea required placeholder="' . __( 'Comment *', 'currents' ) . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
+        </p>';
+
+    return $comment_field;
+}
+add_filter( 'comment_form_field_comment', 'currents_commtent_textarea' );

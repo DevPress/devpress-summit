@@ -723,7 +723,7 @@ a:active {
 	list-style: none;
 }
 .comments-title {
-	margin: 0 0 3em;
+	margin: 0 0 1.5em;
 }
 .comment {
 	position: relative;
@@ -757,8 +757,27 @@ a:active {
 .comment-content a {
 	word-wrap: break-word;
 }
+.comment-meta {
+	padding-right:90px;
+}
 .comment-metadata {
 	margin-bottom:1.5em;
+}
+.comment-list .children .children {
+	margin: 0;
+}
+.comment-list .children .children .comment {
+	margin:0;
+}
+.comment-list .children .children .comment-body:before {
+	content:none;
+}
+.comment-list .children .children .comment-author .avatar {
+	left: auto;
+	right: 1.5em;
+	top:2em;
+	z-index: 10;
+	max-width:40px;
 }
 #respond p {
 	margin-bottom: 1.5em;
@@ -766,20 +785,35 @@ a:active {
 #author, #email, #url {
 	width: 50%;
 }
-#commentform label[for="author"], #commentform label[for="email"], #commentform label[for="url"] {
-	float: left;
-	padding: 5px 0;
-	width: 100px;
+#reply-title {
+	font-size:17px;
+	color:#666;
+	font-weight:bold;
+	padding:1.5em 0;
+	margin-bottom:1.5em;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+#reply-title:after {
+	font-family: "currents-icons";
+	speak: none;
+	display: inline-block;
+	margin-right:.5em;
+	content: '\e808';
+	position: absolute;
+	right:1em;
+	color:#888;
 }
 #respond textarea {
   display: block;
   margin: 1em 0;
-  width: 90%;
+  width: 80%;
 }
 #respond .form-allowed-tags {
-	display: block;
+	display: none;
 	clear: both;
-	width: 90%;
+	width: 80%;
 }
 #respond .form-allowed-tags {
 	margin-bottom: 1.5em;
@@ -984,10 +1018,38 @@ body #content div.sharedaddy h3 {
 	}
 }
 
+@media screen and (max-width: $breakpoint-2 ) {
+	.comment-list .children {
+		margin: 0;
+	}
+	.comment-list .children .comment {
+		margin:0;
+	}
+	.comment-list .children .comment-body:before {
+		content:none;
+	}
+	.comment-list .children .comment-author .avatar {
+		left: auto;
+		right: 1.5em;
+		top:2em;
+		z-index: 10;
+		max-width:40px;
+	}
+	#author, #email, #url {
+		width: 70%;
+	}
+	#respond textarea {
+		width: 90%;
+	}
+}
+
 @media screen and (max-width: $breakpoint-3 ) {
 	.main-navigation, #content, #colophon {
 		padding-right: 3em;
 		padding-left: 3em;
+	}
+	#author, #email, #url, #respond textarea {
+		width: 100%;
 	}
 }
 
@@ -1049,8 +1111,8 @@ body #content div.sharedaddy h3 {
 		z-index: 10;
 		max-width:40px;
 	}
-	#respond textarea {
-		width:100%;
+	#reply-title {
+		padding: .75em 0;
 	}
 	#secondary.column-2 .widget,
 	#secondary.column-masonry .widget {
