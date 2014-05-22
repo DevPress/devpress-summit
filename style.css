@@ -3,16 +3,16 @@ Theme Name: Summit
 Theme URI: http://devpress.com/summit
 Author: DevPress
 Author URI: http://devpress.com
-Description: Description
+Description: Summit is simple one-column WordPress theme, perfect for blogging and small business.  It features excellent header images with a number of customizable display options.  A social icon can be added to the header and there's multiple options for the widget area in the footer.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: summit
 Domain Path: /languages/
-Tags:
+Tags: one-column, responsive-layout, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Currents is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Summit is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
 */
 /* =Table Contents
@@ -448,7 +448,7 @@ a:active {
 /* =6.0 Header
 -------------------------------------------------------------- */
 #masthead {
-  background: #3fc0c3;
+  background: #aaa;
   text-align: center;
   position: relative;
   overflow: hidden;

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-22 20:36:35+00:00\n"
+"POT-Creation-Date: 2014-05-22 20:51:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -338,7 +338,11 @@ msgid "http://devpress.com/summit"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Description"
+msgid ""
+"Summit is simple one-column WordPress theme, perfect for blogging and small "
+"business.  It features excellent header images with a number of "
+"customizable display options.  A social icon can be added to the header and "
+"there's multiple options for the widget area in the footer."
 msgstr ""
 
 #. Author of the plugin/theme

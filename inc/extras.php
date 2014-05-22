@@ -110,7 +110,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
  * Counts number of widgets in a sidebar
  *
  * @param string $sidebar_id
- * @return numeric $widget_count
+ * @return int $widget_count
  */
 function summit_count_widgets( $sidebar_id ) {
 

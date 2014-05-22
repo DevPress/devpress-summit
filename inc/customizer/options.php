@@ -79,7 +79,7 @@ function summit_options() {
 		'label'   => __( 'Header Background Color', 'summit' ),
 		'section' => $section,
 		'type'    => 'color',
-		'default' => '#3fc0c3',
+		'default' => '#aaaaaa',
 	);
 
 	$options['header-overlay-color'] = array(
