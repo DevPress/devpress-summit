@@ -174,7 +174,7 @@ function summit_options() {
 		'label'   => __( 'Display Featured Images', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
-		'default' => '0',
+		'default' => '',
 	);
 
 	$options['page-comments'] = array(
@@ -182,7 +182,7 @@ function summit_options() {
 		'label'   => __( 'Display Page Comments', 'summit' ),
 		'section' => $section,
 		'type'    => 'checkbox',
-		'default' => '0',
+		'default' => '',
 	);
 
 	$options['overlay-navigation'] = array(

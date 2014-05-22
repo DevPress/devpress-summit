@@ -1271,6 +1271,7 @@ a:active {
   width: 80%;
 }
 
+/* These are not displayed by default */
 #respond .form-allowed-tags {
   display: none;
   clear: both;

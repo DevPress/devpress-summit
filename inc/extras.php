@@ -2,8 +2,6 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * Eventually, some of the functionality here could be replaced by core features
- *
  * @package Summit
  */
 
@@ -23,7 +21,7 @@ add_filter( 'wp_page_menu_args', 'summit_page_menu_args' );
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
- * @return array
+ * @return array $classes
  */
 function summit_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
@@ -109,17 +107,10 @@ add_filter( 'shortcode_atts_gallery', 'summit_gallery_atts' );
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 /**
- * Filters avatar size in comments
- */
-function summit_custom_avatar_size( $avatar ) {
-    global $comment;
-    $avatar = get_avatar( $comment, $size = '60' );
-    return $avatar;
-}
-add_filter( 'inline_get_avatar', 'summit_custom_avatar_size' );
-
-/**
  * Counts number of widgets in a sidebar
+ *
+ * @param string $sidebar_id
+ * @return numeric $widget_count
  */
 function summit_count_widgets( $sidebar_id ) {
 
@@ -143,7 +134,7 @@ function summit_count_widgets( $sidebar_id ) {
  * Returns a custom class for the widget area depending
  * on how many widgets are set.
  *
- * return string
+ * @return string
  */
 function footer_widgetarea_class() {
 
@@ -176,7 +167,7 @@ function footer_widgetarea_class() {
 /**
  * Get default footer text
  *
- * @since 1.0.0
+ * @return string $text
  */
 function summit_get_default_footer_text() {
 	$text = sprintf(
@@ -195,7 +186,8 @@ function summit_get_default_footer_text() {
 /**
  * Add HTML5 placeholders for each default comment field
  *
- * @since 1.0.0
+ * @param array $fields
+ * @return array $fields
  */
 function summit_comment_fields( $fields ) {
 
@@ -228,7 +220,8 @@ add_filter( 'comment_form_default_fields', 'summit_comment_fields' );
 /**
  * Add HTML5 placeholder to the comment textarea.
  *
- * @since 1.0.0
+ * @param string $comment_field
+ * @return string $comment_field
  */
  function summit_commtent_textarea( $comment_field ) {
 
