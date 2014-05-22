@@ -90,25 +90,6 @@ function summit_build_css_rules() {
 		) );
 	}
 
-	// Header Text Shadow
-	$setting = 'header-text-shadow';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
-
-	if ( $mod !== summit_get_default( $setting ) ) {
-
-		// Header Overlay Color
-		$color = get_theme_mod( 'header-text-shadow-color', summit_get_default( 'header-text-shadow-color' ) );
-		$color = join( ', ', summit_hex_to_rgb( $color ) );
-
-		summit_css()->add( array(
-			'selectors'    => array( '.site-branding' ),
-			'declarations' => array(
-				'text-shadow' => '0 1px 1px rgba(' . $color . ',' . $mod . ')'
-			)
-		) );
-
-	}
-
 	// Highlight Color
 	$setting = 'highlight-color';
 	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );

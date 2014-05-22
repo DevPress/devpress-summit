@@ -91,7 +91,7 @@ function summit_options() {
 	);
 
 	$choices = array(
-		'0' => 'None',
+		'0' => '0%',
 		'0.05' => '5%',
 		'0.10' => '10%',
 		'0.15' => '15%',
@@ -124,23 +124,6 @@ function summit_options() {
 		'0.7' => '70%',
 		'0.8' => '80%',
 		'0.9' => '90%',
-	);
-
-	$options['header-text-shadow'] = array(
-		'id' => 'header-text-shadow',
-		'label'   => __( 'Header Text Shadow', 'summit' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => $choices,
-		'default' => '0.4',
-	);
-
-	$options['header-text-shadow-color'] = array(
-		'id' => 'header-text-shadow-color',
-		'label'   => __( 'Header Text Shadow Color', 'summit' ),
-		'section' => $section,
-		'type'    => 'color',
-		'default' => '#000000',
 	);
 
 	// Colors

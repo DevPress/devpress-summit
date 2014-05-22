@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-21 22:50:55+00:00\n"
+"POT-Creation-Date: 2014-05-22 20:19:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:81 inc/customizer/options.php:218
+#: functions.php:81 inc/customizer/options.php:201
 msgid "Footer"
 msgstr ""
 
@@ -227,59 +227,51 @@ msgstr ""
 msgid "Header Overlay Opacity"
 msgstr ""
 
-#: inc/customizer/options.php:131
-msgid "Header Text Shadow"
-msgstr ""
-
-#: inc/customizer/options.php:140
-msgid "Header Text Shadow Color"
-msgstr ""
-
-#: inc/customizer/options.php:151
+#: inc/customizer/options.php:134
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/options.php:157
+#: inc/customizer/options.php:140
 msgid "Highlight Color"
 msgstr ""
 
-#: inc/customizer/options.php:168
+#: inc/customizer/options.php:151
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/options.php:177
+#: inc/customizer/options.php:160
 msgid "General"
 msgstr ""
 
-#: inc/customizer/options.php:183
+#: inc/customizer/options.php:166
 msgid "Display Post Dates"
 msgstr ""
 
-#: inc/customizer/options.php:191
+#: inc/customizer/options.php:174
 msgid "Display Featured Images"
 msgstr ""
 
-#: inc/customizer/options.php:199
+#: inc/customizer/options.php:182
 msgid "Display Page Comments"
 msgstr ""
 
-#: inc/customizer/options.php:207
+#: inc/customizer/options.php:190
 msgid "Display Overlay Navigation"
 msgstr ""
 
-#: inc/customizer/options.php:231
+#: inc/customizer/options.php:214
 msgid "Footer Widget Columns"
 msgstr ""
 
-#: inc/customizer/options.php:240
+#: inc/customizer/options.php:223
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer/options.php:276
+#: inc/customizer/options.php:259
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/options.php:282
+#: inc/customizer/options.php:265
 msgid "Background Color"
 msgstr ""
 
@@ -287,31 +279,31 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/extras.php:180
+#: inc/extras.php:183
 msgid "Powered by %s"
 msgstr ""
 
-#: inc/extras.php:181
+#: inc/extras.php:184
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: inc/extras.php:185
+#: inc/extras.php:188
 msgid "%1$s Theme by %2$s."
 msgstr ""
 
-#: inc/extras.php:205
+#: inc/extras.php:208
 msgid "Name *"
 msgstr ""
 
-#: inc/extras.php:211
+#: inc/extras.php:214
 msgid "Email *"
 msgstr ""
 
-#: inc/extras.php:217
+#: inc/extras.php:220
 msgid "Website"
 msgstr ""
 
-#: inc/extras.php:234
+#: inc/extras.php:237
 msgid "Comment *"
 msgstr ""
 
