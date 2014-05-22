@@ -240,15 +240,3 @@ add_filter( 'comment_form_default_fields', 'summit_comment_fields' );
     return $comment_field;
 }
 add_filter( 'comment_form_field_comment', 'summit_commtent_textarea' );
-
-/**
- * Add a custom avatar for use with this theme
- *
- * @since 1.0.0
- */
-function summit_avatar_defaults( $avatar_defaults ) {
-	$avatar = get_template_directory_uri() . '/images/avatar.gif';
-	$avatar_defaults[$avatar] = "Disguise (Summit)";
-	return $avatar_defaults;
-}
-add_filter( 'avatar_defaults', 'summit_avatar_defaults' );
