@@ -197,18 +197,21 @@ function summit_comment_fields( $fields ) {
 
     $fields['author'] =
         '<p class="comment-form-author">
+        	<label for="author">' . __( 'Name', 'summit' ) . '</label>
             <input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'summit' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
     '" size="30"' . $aria_req . ' />
         </p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
+        	<label for="email">' . __( 'Email', 'summit' ) . '</label>
             <input required placeholder="' . __( 'Email *', 'summit' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' />
         </p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
+        	<label for="url">' . __( 'Website', 'summit' ) . '</label>
             <input placeholder="' . __( 'Website', 'summit' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
     '" size="30" />
         </p>';

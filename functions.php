@@ -129,6 +129,14 @@ function summit_js_class() {
 add_action( 'wp_head', 'summit_js_class', 1 );
 
 /**
+ * Load placeholder polyfill for IE9 and older
+ */
+function summit_placeholder_polyfill() {
+    echo '<!--[if lte IE 9]><script src="' . get_template_directory_uri() . '/js/jquery-placeholder.js"></script><![endif]-->'. "\n";
+}
+add_action( 'wp_head', 'summit_placeholder_polyfill' );
+
+/**
  * Enqueue fonts.
  */
 function summit_fonts() {

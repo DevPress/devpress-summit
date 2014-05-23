@@ -790,6 +790,9 @@ a:active {
 #respond p {
 	margin-bottom: 1.5em;
 }
+#respond label {
+	display:none; /* Using placeholders instead */
+}
 #author, #email, #url {
 	width: 50%;
 }
@@ -818,6 +821,9 @@ a:active {
   display: block;
   margin: 1em 0;
   width: 80%;
+}
+#respond .placeholder {
+	color: #aaa;
 }
 /* These are not displayed by default */
 #respond .form-allowed-tags {
