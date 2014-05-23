@@ -551,6 +551,25 @@ a:active {
 	line-height:1;
 }
 
+/* Override Specific Global Styles */
+
+.hentry ul {
+	list-style: none;
+}
+.hentry ul li:before {
+	font-family: sans-serif;
+	content: '\25A0'; // Square bullet
+	font-size:10px;
+	line-height: 1;
+	margin-top:5px;
+	margin-left: -1.5em;
+	width:1.5em;
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
+}
+
 /* Archive Pages */
 
 .archive .page-header {
@@ -712,9 +731,6 @@ a:active {
 #secondary .widget ul {
 	margin-left:0;
 	list-style: none;
-}
-#secondary .widget ul li:before {
-	content:'';
 }
 
 /* =11.0 Comments
