@@ -79,7 +79,7 @@ add_action( 'after_setup_theme', 'summit_setup' );
 function summit_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'summit' ),
-		'id'            => 'summit-footer',
+		'id'            => 'footer',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

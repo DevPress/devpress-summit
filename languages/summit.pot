@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-23 17:16:56+00:00\n"
+"POT-Creation-Date: 2014-05-23 23:28:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -299,7 +299,7 @@ msgstr ""
 msgid "Name *"
 msgstr ""
 
-#: inc/extras.php:207
+#: inc/extras.php:207 inc/theme-updater.php:507
 msgid "Email"
 msgstr ""
 
@@ -335,6 +335,72 @@ msgstr ""
 msgid ""
 "<span class=\"posted-on\">Posted %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
+msgstr ""
+
+#: inc/theme-updater.php:305
+msgid "Executing upgrader_source_selection filter function..."
+msgstr ""
+
+#: inc/theme-updater.php:315
+msgid "Renamed theme folder successfully."
+msgstr ""
+
+#: inc/theme-updater.php:320
+msgid "**Unable to rename downloaded theme."
+msgstr ""
+
+#: inc/theme-updater.php:326
+msgid "**Source or Remote Source is unavailable."
+msgstr ""
+
+#: inc/theme-updater.php:347
+msgid " Theme Updates"
+msgstr ""
+
+#: inc/theme-updater.php:385
+msgid "Username: "
+msgstr ""
+
+#: inc/theme-updater.php:389
+msgid "Email: "
+msgstr ""
+
+#: inc/theme-updater.php:395
+msgid "Key: "
+msgstr ""
+
+#: inc/theme-updater.php:400
+msgid "<p>Your theme update is <span style=\"color:green\">active</span></p>"
+msgstr ""
+
+#: inc/theme-updater.php:404
+msgid ""
+"<p>Your input is <span style=\"color:red\">not valid</span>, automatic "
+"updates is <span style=\"color:red\">not active</span>.</p>"
+msgstr ""
+
+#: inc/theme-updater.php:405
+msgid "Edit Key"
+msgstr ""
+
+#: inc/theme-updater.php:409
+msgid "<p>Unable to validate update activation.</p>"
+msgstr ""
+
+#: inc/theme-updater.php:410
+msgid "Try again"
+msgstr ""
+
+#: inc/theme-updater.php:415
+msgid "Add Key"
+msgstr ""
+
+#: inc/theme-updater.php:501
+msgid "User name"
+msgstr ""
+
+#: inc/theme-updater.php:516
+msgid "Activation Key"
 msgstr ""
 
 #: search.php:16

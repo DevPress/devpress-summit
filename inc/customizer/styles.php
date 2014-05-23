@@ -23,6 +23,20 @@ if ( ! function_exists( 'summit_build_css_rules' ) ) :
  */
 function summit_build_css_rules() {
 
+	// Header Background Color
+	$setting = 'header-background-color';
+	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+
+	if ( $mod !== summit_get_default( $setting ) ) {
+
+		summit_css()->add( array(
+			'selectors'    => array( '#masthead' ),
+			'declarations' => array(
+				'background-color' => sanitize_hex_color( $mod )
+			)
+		) );
+	}
+
 	// Header image
 	$image = get_header_image();
 	if ( $image != '' ) {
@@ -54,20 +68,6 @@ function summit_build_css_rules() {
 			'selectors'    => array( '.site-description' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
-			)
-		) );
-	}
-
-	// Header Background Color
-	$setting = 'header-background-color';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
-
-	if ( $mod !== summit_get_default( $setting ) ) {
-
-		summit_css()->add( array(
-			'selectors'    => array( '#masthead' ),
-			'declarations' => array(
-				'background' => sanitize_hex_color( $mod )
 			)
 		) );
 	}
