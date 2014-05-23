@@ -179,3 +179,20 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Theme updater.
+ */
+require get_template_directory() . '/inc/theme-updater.php';
+new Summit_Theme_Updater;
+
+/* Updater Arguments */
+$updater_args = array(
+	'repo_uri'    => 'http://devpress.com/',
+	'repo_slug'   => 'repo-summit',
+	'dashboard'   => true,
+	'username'    => true,
+);
+
+/* Add Support for Updater */
+add_theme_support( 'auto-hosted-theme-updater', $updater_args );
