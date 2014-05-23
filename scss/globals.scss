@@ -80,7 +80,20 @@ ul, ol {
 	margin: 0 0 1.5em 3em;
 }
 ul {
-	list-style: square;
+	list-style: none;
+}
+ul li:before {
+	font-family: sans-serif;
+	content: '\25A0'; // Square bullet
+	font-size:10px;
+	line-height: 1;
+	margin-top:5px;
+	margin-left: -1.5em;
+	width:1.5em;
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
 }
 ol {
 	list-style: decimal;
@@ -88,7 +101,10 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 3em;
+}
+li {
+	margin-bottom:.25em;
 }
 dt {
 	font-weight: bold;

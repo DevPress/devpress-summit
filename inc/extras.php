@@ -177,7 +177,7 @@ function summit_get_default_footer_text() {
 	$text .= '<span class="sep"> | </span>';
 	$text .= sprintf(
 		__( '%1$s Theme by %2$s.', 'summit' ),
-			'Currents',
+			'Summit',
 			'<a href="http://devpress.com/" rel="designer">DevPress</a>'
 	);
 	return $text;
