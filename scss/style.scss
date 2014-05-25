@@ -1096,6 +1096,12 @@ body .contact-form label {
 	#author, #email, #url, #respond textarea {
 		width: 100%;
 	}
+	#secondary.column-2 .widget,
+	#secondary.column-masonry .widget {
+		float:none;
+		width:auto;
+		margin:0 0 1.5em 0;
+	}
 }
 
 @media screen and (max-width: $breakpoint-4 ) {
@@ -1158,11 +1164,5 @@ body .contact-form label {
 	}
 	#reply-title {
 		padding: .75em 0;
-	}
-	#secondary.column-2 .widget,
-	#secondary.column-masonry .widget {
-		float:none;
-		width:auto;
-		margin:0 0 1.5em 0;
 	}
 }
