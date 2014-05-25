@@ -49,13 +49,13 @@ function summit_setup() {
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 
-		'aside', 
-		'image', 
-		'gallery', 
-		'video', 
-		'quote', 
-		'link' 
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'gallery',
+		'video',
+		'quote',
+		'link'
 	) );
 
 	// Add image sizes
@@ -149,12 +149,7 @@ add_action( 'wp_head', 'summit_placeholder_polyfill' );
 function summit_fonts() {
 
 	// Source Sans Pro
-	wp_register_style( 'summit_source_sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic', '', null, 'screen' );
-	wp_enqueue_style( 'summit_source_sans' );
-
-	// Noto Serif
-	wp_register_style( 'summit_noto_serif', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic', '', null, 'screen' );
-	wp_enqueue_style( 'summit_noto_serif' );
+	wp_enqueue_style( 'summit_fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Noto+Serif:400,700,400italic', array(), null, 'screen' );
 
 	// Custom Icon Font
 	wp_enqueue_style( 'summit_icons', get_template_directory_uri() . '/fonts/summit-icons/icons.css', array(), SUMMIT_VERSION );
