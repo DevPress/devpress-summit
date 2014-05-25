@@ -487,7 +487,11 @@ a:active {
 .entry-content {
 	margin-bottom:1.5em;
 }
-.format-icon:before, .cat-links:before, .tags-links:before, .comments-link:before, .post-edit-link:before {
+.format-icon:before,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.post-edit-link:before {
 	font-family: "summit-icons";
 	speak: none;
 	display: inline-block;
@@ -508,7 +512,9 @@ a:active {
 .post-edit-link:before {
 	content: '\e809';
 }
-.cat-links:after, .tags-links:after, .comments-link:after {
+.cat-links:after,
+.tags-links:after,
+.comments-link:after {
 	content: '';
 	display: inline-block;
 	margin-right:1.5em;
