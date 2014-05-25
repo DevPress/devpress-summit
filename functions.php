@@ -49,7 +49,14 @@ function summit_setup() {
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 
+		'aside', 
+		'image', 
+		'gallery', 
+		'video', 
+		'quote', 
+		'link' 
+	) );
 
 	// Add image sizes
 	add_image_size( 'summit-large', '698', 9999, false );
