@@ -26,13 +26,17 @@
 
 jQuery( document ).ready( function ($) {
 
-	var $secondary = $( '#secondary');
+	var $secondary = $('#secondary');
 
 	if ( $secondary.hasClass( 'column-masonry' ) ) {
 		$secondary.masonry({
 			itemSelector: '.widget',
 			gutter: 22
 		});
+	}
+
+	if ( $.fn.fitVids) {
+		$('.hentry').fitVids();
 	}
 });
 
