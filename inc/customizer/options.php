@@ -177,14 +177,6 @@ function summit_options() {
 		'default' => '',
 	);
 
-	$options['page-comments'] = array(
-		'id' => 'page-comments',
-		'label'   => __( 'Display Page Comments', 'summit' ),
-		'section' => $section,
-		'type'    => 'checkbox',
-		'default' => '',
-	);
-
 	$options['overlay-navigation'] = array(
 		'id' => 'overlay-navigation',
 		'label'   => __( 'Display Overlay Navigation', 'summit' ),

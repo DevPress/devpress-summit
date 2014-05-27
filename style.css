@@ -149,22 +149,22 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-::-moz-selection {
-  color: #fff;
-  background: #3fc0c3;
-}
-
-::selection {
-  color: #fff;
-  background: #3fc0c3;
-}
-
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
 p {
   margin-bottom: 1.5em;
+}
+
+p::-moz-selection {
+  color: #fff;
+  background: #3fc0c3;
+}
+
+p::selection {
+  color: #fff;
+  background: #3fc0c3;
 }
 
 b, strong {
@@ -390,6 +390,14 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
   color: #111;
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border: 0 none;
 }
 
 textarea {

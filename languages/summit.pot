@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-25 17:51:12+00:00\n"
+"POT-Creation-Date: 2014-05-27 17:25:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:88 inc/customizer/options.php:201
+#: functions.php:88 inc/customizer/options.php:193
 msgid "Footer"
 msgstr ""
 
@@ -252,26 +252,22 @@ msgid "Display Featured Images"
 msgstr ""
 
 #: inc/customizer/options.php:182
-msgid "Display Page Comments"
-msgstr ""
-
-#: inc/customizer/options.php:190
 msgid "Display Overlay Navigation"
 msgstr ""
 
-#: inc/customizer/options.php:214
+#: inc/customizer/options.php:206
 msgid "Footer Widget Columns"
 msgstr ""
 
-#: inc/customizer/options.php:223
+#: inc/customizer/options.php:215
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer/options.php:259
+#: inc/customizer/options.php:251
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/options.php:265
+#: inc/customizer/options.php:257
 msgid "Background Color"
 msgstr ""
 
