@@ -8,28 +8,20 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			files: ['scss/*.scss'],
-			tasks: 'sass:dev',
+			tasks: 'sass',
 			options: {
 				livereload: true,
 			},
 		},
 		sass: {
-			dev: {
+			default: {
 		  		options : {
 			  		style : 'expanded'
 			  	},
 			  	files: {
 					'style.css':'scss/style.scss',
 				}
-			},
-			release: {
-		  		options : {
-			  		style : 'expanded'
-			  	},
-			  	files: {
-					'style.css':'scss/style.scss',
-				}
-			},
+			}
 		},
 		autoprefixer: {
             options: {
@@ -73,15 +65,40 @@ module.exports = function(grunt) {
 	                type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
 	            }
 	        }
-	    }
-
+	    },
+	    replace: {
+			styleVersion: {
+				src: [
+					'scss/style.scss',
+				],
+				overwrite: true,
+				replacements: [{
+					from: /^.Version:.*$/m,
+					to: 'Version: <%= pkg.version %>'
+				}]
+			},
+			functionsVersion: {
+				src: [
+					'functions.php'
+				],
+				overwrite: true,
+				replacements: [ {
+					from: /^define\( 'SUMMIT_VERSION'.*$/m,
+					to: 'define( \'SUMMIT_VERSION\', \'<%= pkg.version %>\' );'
+				} ]
+			},
+		}
 	});
 
     grunt.registerTask( 'default', [
-    	'sass:dev'
+    	'sass',
+		'autoprefixer',
+    	'csscomb',
     ]);
+
     grunt.registerTask( 'release', [
-    	'sass:release',
+    	'replace',
+    	'sass',
 		'autoprefixer',
 		'csscomb',
 		'concat:release',
