@@ -104,7 +104,7 @@ function summit_build_css_rules() {
 		) );
 
 		summit_css()->add( array(
-			'selectors' => array( 'p::selection', 'button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]', '#infinite-handle span' ),
+			'selectors' => array( 'button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]', '#infinite-handle span' ),
 			'declarations' => array(
 				'background' => sanitize_hex_color( $mod )
 			)

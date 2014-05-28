@@ -9,7 +9,9 @@
 			$document: $(document),
 			$window: $(window),
 			$sitebranding: $('.site-branding'),
+			$logo: $('.site-branding img'),
 			$sitenavigation: $('#site-navigation'),
+			$secondary : $('#secondary')
 		},
 
 		/**
@@ -28,14 +30,15 @@
 
 			this.cache.$document.on( 'ready', function() {
 
-				self.brandingInit();
-
-				if ( self.cache.$sitenavigation ) {
+				// If there is an image logo, wait until it loads before positioning
+				if ( self.cache.$logo) {
+					self.cache.$logo.on( 'load', self.navigationInit() );
+				} else {
 					self.navigationInit();
 				}
 
+				self.brandingInit();
 				self.fitVidsInit();
-				self.masonryInit();
 			});
 
 			this.cache.$window.on( 'resize', function() {
@@ -128,11 +131,11 @@
 		 */
 		brandingInit: function() {
 
-			var $sitebranding = $('.site-branding'),
-				copyheight = $sitebranding.height(),
-				imageheight = $('.header-image').height(),
-				distance = ( ( ( imageheight - copyheight ) / 2 ) / imageheight ) * 100;
-			$sitebranding.css({ 'top' : distance + '%' }).fadeIn('200');
+			var copyheight = this.cache.$sitebranding.height(),
+				mastheadheight = $('#masthead').height(),
+				distance = ( ( ( mastheadheight - copyheight ) / 2 ) / mastheadheight ) * 100;
+
+			this.cache.$sitebranding.css({ 'top' : distance + '%' }).fadeIn('200');
 		},
 
 		/**
@@ -151,29 +154,6 @@
 
 			// Run FitVids
 			$('.hentry').fitVids();
-		},
-
-		/**
-		 * Masonry Init.
-		 *
-		 * @since  1.0.0
-		 *
-		 * @return void
-		 */
-		masonryInit: function() {
-
-			// Make sure lib is loaded.
-			if (!$.fn.masonry) {
-				return;
-			}
-
-			var $secondary = $('#secondary');
-			if ( $secondary.hasClass( 'column-masonry' ) ) {
-				$secondary.masonry({
-					itemSelector: '.widget',
-					gutter: 22
-				});
-			}
 		},
 
 		/**

@@ -117,10 +117,6 @@ function summit_scripts() {
 
 	endif;
 
-	if ( 'column-masonry' == footer_widgetarea_class() ) {
-		wp_enqueue_script( 'summit-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), SUMMIT_VERSION, true );
-	}
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

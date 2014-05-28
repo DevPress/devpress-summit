@@ -14,6 +14,16 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 "Summit" image by [Thomas Haase](https://creativemarket.com/moonloop).
 
+## Change log
+
+Summit 1.0.1
+----
+
+* Fix: Better loading of logos
+* Enhancement: Namespaced javascript
+* Update: Remove masonry footer option
+
+
 Summit 1.0.0
 ----
 

@@ -721,8 +721,7 @@ a:active {
 	background:#f9f9f9;
 	padding:1.5em;
 }
-#secondary.column-2 .widget,
-#secondary.column-masonry .widget {
+#secondary.column-2 .widget {
 	float:left;
 	width:48%;
 }
@@ -1100,8 +1099,7 @@ body .contact-form label {
 	#author, #email, #url, #respond textarea {
 		width: 100%;
 	}
-	#secondary.column-2 .widget,
-	#secondary.column-masonry .widget {
+	#secondary.column-2 .widget {
 		float:none;
 		width:auto;
 		margin:0 0 1.5em 0;
@@ -1143,6 +1141,10 @@ body .contact-form label {
 	.site-main .paging-navigation,
 	.site-main .post-navigation {
 		padding: 0 1.5em 1.5em;
+	}
+	#secondary {
+		padding-right: 1.5em;
+		padding-left: 1.5em;
 	}
 	.cat-links, .tags-links, .comments-link {
 		display: block;
