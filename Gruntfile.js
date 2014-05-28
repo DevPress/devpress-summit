@@ -52,7 +52,6 @@ module.exports = function(grunt) {
 		    release: {
 		        src: [
 		            'js/skip-link-focus-fix.js',
-		            'js/navigation.js',
 		            'js/jquery.fitvids.js',
 		            'js/theme.js'
 		        ],

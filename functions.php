@@ -105,13 +105,11 @@ function summit_scripts() {
 
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
-		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), SUMMIT_VERSION, true );
-
-		wp_enqueue_script( 'summit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SUMMIT_VERSION, true );
-
 		wp_enqueue_script( 'summit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SUMMIT_VERSION, true );
 
 		wp_enqueue_script( 'summit-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), SUMMIT_VERSION, true );
+
+		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), SUMMIT_VERSION, true );
 
 	else :
 

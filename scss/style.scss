@@ -1090,6 +1090,9 @@ body .contact-form label {
 	#masthead {
 		min-height:280px;
 	}
+	.site-logo img {
+		max-height: 120px;
+	}
 	.main-navigation, #content, #colophon {
 		padding-right: 3em;
 		padding-left: 3em;
@@ -1106,6 +1109,9 @@ body .contact-form label {
 }
 
 @media screen and (max-width: $breakpoint-4 ) {
+	.site-logo img {
+		max-height: 90px;
+	}
 	.main-navigation, #colophon {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
