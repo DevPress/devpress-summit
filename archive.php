@@ -53,14 +53,8 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'summit' );
 
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'summit' );
-
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
 							_e( 'Audios', 'summit' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'summit' );
 
 						else :
 							_e( 'Archives', 'summit' );

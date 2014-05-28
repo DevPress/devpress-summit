@@ -412,6 +412,7 @@ textarea {
 -------------------------------------------------------------- */
 body {
   background: #444;
+  word-wrap: break-word;
 }
 
 body,
@@ -1002,7 +1003,7 @@ a:active {
   list-style: none;
 }
 
-.hentry ul li:before {
+.hentry ul > li:before {
   font-family: sans-serif;
   content: '\25A0';
   font-size: 10px;

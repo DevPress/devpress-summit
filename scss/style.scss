@@ -58,6 +58,7 @@ Summit is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic,
 
 body {
 	background:#444;
+	word-wrap: break-word;
 }
 body,
 button,
@@ -562,7 +563,7 @@ a:active {
 .hentry ul {
 	list-style: none;
 }
-.hentry ul li:before {
+.hentry ul > li:before {
 	font-family: sans-serif;
 	content: '\25A0'; // Square bullet
 	font-size:10px;
