@@ -1,6 +1,6 @@
 <?php
 /**
- * Currents functions and definitions
+ * Summit functions and definitions
  *
  * @package Summit
  */

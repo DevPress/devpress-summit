@@ -1,12 +1,12 @@
 <?php
 /**
- * Currents Theme Customizer
+ * Summit Theme Customizer
  *
  * @package Summit
  */
 
 /**
- * Currents Options
+ * Summit Options
  *
  * @since  1.0.0
  *

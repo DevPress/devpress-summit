@@ -137,9 +137,9 @@ function summit_display_customizations() {
 	$css = summit_css()->build();
 
 	if ( ! empty( $css ) ) {
-		echo "\n<!-- Begin Currents Custom CSS -->\n<style type=\"text/css\" id=\"summit-custom-css\">\n";
+		echo "\n<!-- Begin Summit Custom CSS -->\n<style type=\"text/css\" id=\"summit-custom-css\">\n";
 		echo $css;
-		echo "\n</style>\n<!-- End Currents Custom CSS -->\n";
+		echo "\n</style>\n<!-- End Summit Custom CSS -->\n";
 	}
 }
 endif;

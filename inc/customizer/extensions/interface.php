@@ -1,6 +1,6 @@
 <?php
 /**
- * Currents Theme Customizer
+ * Summit Theme Customizer
  *
  * @package Summit
  */

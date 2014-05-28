@@ -1,6 +1,6 @@
 <?php
 /**
- * Currents Sanization
+ * Summit Sanization
  *
  * @package Summit
  */
