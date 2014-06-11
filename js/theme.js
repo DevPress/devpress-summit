@@ -11,7 +11,8 @@
 			$sitebranding: $('.site-branding'),
 			$logo: $('.site-branding img'),
 			$sitenavigation: $('#site-navigation'),
-			$secondary : $('#secondary')
+			$secondary : $('#secondary'),
+			masonry : false
 		},
 
 		/**
@@ -39,6 +40,7 @@
 
 				self.brandingInit();
 				self.fitVidsInit();
+				self.masonryInit();
 			});
 
 			this.cache.$window.on( 'resize', function() {
@@ -60,6 +62,17 @@
 					self.cache.$menu.find('.dropdown-toggle').each( function(){
 						$(this).removeClass('toggled');
 					});
+
+					// Refire masonry for footer widgets
+					if ( self.cache.masonry ) {
+						if ( self.cache.$window.width() < 640 ) {
+							self.cache.$secondary.masonry('destroy');
+							self.cache.masonry = false;
+							self.cache.$secondary.removeClass('column-masonry').addClass('column-1');
+						} else {
+							self.masonryInit();
+						}
+					}
 
 				}, 200 )
 			);
@@ -154,6 +167,33 @@
 
 			// Run FitVids
 			$('.hentry').fitVids();
+		},
+
+		/**
+		* Masonry Init.
+		*
+		* @since  1.0.0
+		*
+		* @return void
+		*/
+		masonryInit: function() {
+
+			// Make sure lib is loaded.
+			if ( !$.fn.masonry || ( this.cache.$window.width() < 640 ) ) {
+				return;
+			}
+
+			$secondary = this.cache.$secondary;
+
+			if ( $secondary.hasClass( 'column-masonry' ) ) {
+				$('.widget').css({ 'margin-right' : 0 });
+				var gutter = $secondary.width() - ( $('.widget').first().outerWidth() * 2 ) - 2;
+				var msnry = $secondary.masonry({
+					itemSelector: '.widget',
+					gutter: gutter
+				});
+				this.cache.masonry = true;
+			}
 		},
 
 		/**

@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set constant for version
  */
-define( 'SUMMIT_VERSION', '1.0.1' );
+define( 'SUMMIT_VERSION', '1.1.0' );
 
 if ( ! function_exists( 'summit_setup' ) ) :
 /**
@@ -117,6 +117,10 @@ function summit_scripts() {
 
 	endif;
 
+	if ( 'column-masonry' == footer_widgetarea_class() ) {
+		wp_enqueue_script( 'summit-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), SUMMIT_VERSION, true );
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -181,16 +185,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Theme updater.
  */
-require get_template_directory() . '/inc/theme-updater.php';
-new Summit_Theme_Updater;
-
-/* Updater Arguments */
-$updater_args = array(
-	'repo_uri'    => 'http://devpress.com/',
-	'repo_slug'   => 'repo-summit',
-	'dashboard'   => true,
-	'username'    => true,
-);
-
-/* Add Support for Updater */
-add_theme_support( 'auto-hosted-theme-updater', $updater_args );
+function prefix_theme_updater() {
+	require( get_template_directory() . '/inc/updater/theme-updater.php' );
+}
+add_action( 'after_setup_theme', 'prefix_theme_updater' );

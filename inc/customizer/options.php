@@ -197,7 +197,8 @@ function summit_options() {
 	$choices = array(
 		'default' => 'Default',
 		'column-1' => '1 Column',
-		'column-2' => '2 Columns'
+		'column-2' => '2 Columns',
+		'column-masonry' => 'Masonry Column'
 	);
 
 	$options['footer-widget-columns'] = array(

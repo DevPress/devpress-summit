@@ -146,6 +146,10 @@ function footer_widgetarea_class() {
 		return 'column-2';
 	}
 
+	if ( $count > 2 ) {
+		return 'column-masonry';
+	}
+
 }
 
 /**
