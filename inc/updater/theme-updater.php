@@ -88,7 +88,10 @@ function summit_license_page() {
 	}
 	?>
 	<div class="wrap">
-		<h2><?php _e( 'Theme License Options', 'summit' ); ?></h2>
+		<h2><?php _e( 'Theme License', 'summit' ); ?></h2>
+		<?php if ( ! $license ) { ?>
+		<h4><?php _e( 'Entering a license key will enable one-click theme updates.', 'summit' ); ?></h4>
+		<?php } ?>
 		<form method="post" action="options.php">
 
 			<?php settings_fields( 'summit_license' ); ?>
