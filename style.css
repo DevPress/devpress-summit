@@ -1194,6 +1194,11 @@ a:active {
   list-style: none;
 }
 
+#secondary .widget ul ul {
+  margin-left: 1.5em;
+  list-style: none;
+}
+
 /* =11.0 Comments
 -------------------------------------------------------------- */
 #comments, #respond {
@@ -1699,5 +1704,10 @@ body .contact-form label {
 
   #reply-title {
     padding: .75em 0;
+  }
+
+  .widget .search-field {
+    width: 90%;
+    margin-bottom: .5em;
   }
 }
