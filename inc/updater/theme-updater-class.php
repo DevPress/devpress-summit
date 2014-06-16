@@ -2,10 +2,10 @@
 /**
  * Theme updater class.
  *
- * @package EDD Theme Updater
+ * @package Summit
  */
 
-class Prefix_Theme_Updater {
+class DevPress_Theme_Updater {
 
 	private $remote_api_url;
 	private $request_data;

@@ -2,10 +2,10 @@
 /**
  * Theme updater admin page and functions.
  *
- * @package EDD Theme Updater
+ * @package Summit
  */
 
-class Prefix_Theme_Updater_Admin {
+class DevPress_Theme_Updater_Admin {
 
 	/**
 	 * Variables required for the theme updater
@@ -17,6 +17,17 @@ class Prefix_Theme_Updater_Admin {
 	 protected $theme_slug = null;
 	 protected $version = null;
 	 protected $author = null;
+
+	/**
+	 * Variable to store option names
+	 *
+	 * @since 1.0.0
+	 * @type string
+	 */
+	 protected $slug = null;
+	 protected $option_license_key = null;
+	 protected $option_license_key_status = null;
+	 protected $transient_license_message = null;
 
 	/**
 	 * Initialize the class.
@@ -31,11 +42,19 @@ class Prefix_Theme_Updater_Admin {
 		$this->version = $args['version'];
 		$this->author = $args['remote_api_url'];
 
+		// Set option names to use
+		$slug = strtolower( $args['theme_slug'] );
+		$this->slug = $slug;
+		$this->option_license_key =  $slug . '_license_key';
+		$this->option_license_key_status = $slug . '_license_key_status';
+		$this->transient_license_key_status = $slug . '_license_message';
+
+		// Load actions
 		add_action( 'admin_init', array( $this, 'updater' ) );
 		add_action( 'admin_init', array( $this, 'register_option' ) );
 		add_action( 'admin_init', array( $this, 'license_action' ) );
 		add_action( 'admin_menu', array( $this, 'license_menu' ) );
-		add_action( 'update_option_prefix_license_key', array( $this, 'activate_license' ), 10, 2 );
+		add_action( 'update_option_' . $this->option_license_key , array( $this, 'activate_license' ), 10, 2 );
 
 	}
 
@@ -47,11 +66,11 @@ class Prefix_Theme_Updater_Admin {
 	function updater() {
 
 		/* If there is no valid license key status, don't allow updates. */
-		if ( get_option( 'prefix_license_key_status', false) != 'valid' ) {
+		if ( get_option( $this->option_license_key_status, false) != 'valid' ) {
 			return;
 		}
 
-		if ( !class_exists( 'EDD_SL_Theme_Updater' ) ) {
+		if ( !class_exists( 'DevPress_Theme_Updater' ) ) {
 			// Load our custom theme updater
 			include( dirname( __FILE__ ) . '/theme-updater-class.php' );
 		}
@@ -59,7 +78,7 @@ class Prefix_Theme_Updater_Admin {
 		new Prefix_Theme_Updater( array(
 				'remote_api_url' 	=> $this->remote_api_url,
 				'version' 			=> $this->version,
-				'license' 			=> trim( get_option( 'prefix_license_key' ) ),
+				'license' 			=> trim( get_option( $this->option_license_key ) ),
 				'item_name' 		=> $this->theme_slug,
 				'author'			=> $this->author
 			)
@@ -88,25 +107,25 @@ class Prefix_Theme_Updater_Admin {
 	 */
 	function license_page() {
 
-		$license = trim( get_option( 'prefix_license_key' ) );
-		$status = get_option( 'prefix_license_key_status', false );
+		$license = trim( get_option( $this->option_license_key ) );
+		$status = get_option( $this->option_license_key_status, false );
 
 		// Checks license status to display under license key
 		if ( ! $license ) {
 			$message    = __( 'Enter your theme license key.', 'textdomain' );
 		} else {
 			// delete_transient( 'prefix_license_message' );
-			if ( ! get_transient( 'prefix_license_message', false ) ) {
-				set_transient( 'prefix_license_message', $this->check_license(), ( 60 * 60 * 24 ) );
+			if ( ! get_transient( $this->transient_license_message, false ) ) {
+				set_transient( $this->transient_license_message, $this->check_license(), ( 60 * 60 * 24 ) );
 			}
-			$message = get_transient( 'prefix_license_message' );
+			$message = get_transient( $this->transient_license_message );
 		}
 		?>
 		<div class="wrap">
 			<h2><?php _e( 'Theme License', 'textdomain' ); ?></h2>
 			<form method="post" action="options.php">
 
-				<?php settings_fields( 'prefix_license' ); ?>
+				<?php settings_fields( $this->option_license_key ); ?>
 
 				<table class="form-table">
 					<tbody>
@@ -116,7 +135,7 @@ class Prefix_Theme_Updater_Admin {
 								<?php _e( 'License Key', 'textdomain' ); ?>
 							</th>
 							<td>
-								<input id="prefix_license_key" name="prefix_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+								<input id="<?php echo $this->option_license_key; ?>" name="<?php echo $this->option_license_key; ?>" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
 								<p class="description">
 									<?php echo $message; ?>
 								</p>
@@ -130,11 +149,11 @@ class Prefix_Theme_Updater_Admin {
 							</th>
 							<td>
 								<?php
-								wp_nonce_field( 'prefix_nonce', 'prefix_nonce' );
+								wp_nonce_field( $this->slug . '_nonce', $this->slug . '_nonce' );
 								if ( 'valid' == $status ) { ?>
-									<input type="submit" class="button-secondary" name="prefix_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'textdomain' ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo $this->slug; ?>_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'textdomain' ); ?>"/>
 								<?php } else { ?>
-									<input type="submit" class="button-secondary" name="prefix_license_activate" value="<?php esc_attr_e( 'Activate License', 'textdomain' ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo $this->slug; ?>_license_activate" value="<?php esc_attr_e( 'Activate License', 'textdomain' ); ?>"/>
 								<?php }
 								?>
 							</td>
@@ -156,7 +175,7 @@ class Prefix_Theme_Updater_Admin {
 	function register_option() {
 		register_setting(
 			'prefix_license',
-			'prefix_license_key',
+			$this->option_license_key,
 			array( $this, 'sanitize_license' )
 		);
 	}
@@ -171,12 +190,12 @@ class Prefix_Theme_Updater_Admin {
 	 */
 	function sanitize_license( $new ) {
 
-		$old = get_option( 'prefix_license_key' );
+		$old = get_option( $this->option_license_key );
 
 		if ( $old && $old != $new ) {
 			// New license has been entered, so must reactivate
-			delete_option( 'prefix_license_key_status' );
-			delete_transient( 'prefix_license_message' );
+			delete_option( $this->option_license_key_status );
+			delete_transient( $this->transient_license_message );
 		}
 
 		return $new;
@@ -215,7 +234,7 @@ class Prefix_Theme_Updater_Admin {
 	 */
 	function activate_license() {
 
-		$license = trim( get_option( 'prefix_license_key' ) );
+		$license = trim( get_option( $this->option_license_key ) );
 
 		// Data to send in our API request.
 		$api_params = array(
@@ -228,8 +247,8 @@ class Prefix_Theme_Updater_Admin {
 
 		// $response->license will be either "active" or "inactive"
 		if ( $license_data && isset( $license_data->license ) ) {
-			update_option( 'prefix_license_key_status', $license_data->license );
-			delete_transient( 'prefix_license_message' );
+			update_option( $this->option_license_key_status, $license_data->license );
+			delete_transient( $this->transient_license_key_message );
 		}
 
 	}
@@ -242,7 +261,7 @@ class Prefix_Theme_Updater_Admin {
 	function deactivate_license() {
 
 		// Retrieve the license from the database.
-		$license = trim( get_option( 'prefix_license_key' ) );
+		$license = trim( get_option( $this->option_license_key ) );
 
 		// Data to send in our API request.
 		$api_params = array(
@@ -255,8 +274,8 @@ class Prefix_Theme_Updater_Admin {
 
 		// $license_data->license will be either "deactivated" or "failed"
 		if ( $license_data && ( $license_data->license == 'deactivated' ) ) {
-			delete_option( 'prefix_license_key_status' );
-			delete_transient( 'prefix_license_message' );
+			delete_option( $this->transient_license_key_status );
+			delete_transient( $this->transient_license_key_status );
 		}
 	}
 
@@ -267,14 +286,14 @@ class Prefix_Theme_Updater_Admin {
 	 */
 	function license_action() {
 
-		if ( isset( $_POST['prefix_license_activate'] ) ) {
-			if ( check_admin_referer( 'prefix_nonce', 'prefix_nonce' ) ) {
+		if ( isset( $_POST[ $this->slug . '_license_activate'] ) ) {
+			if ( check_admin_referer( $this->slug . '_nonce', $this->slug . '_nonce' ) ) {
 				$this->activate_license();
 			}
 		}
 
-		if ( isset( $_POST['prefix_license_deactivate'] ) ) {
-			if ( check_admin_referer( 'prefix_nonce', 'prefix_nonce' ) ) {
+		if ( isset( $_POST[ $this->slug . '_license_deactivate'] ) ) {
+			if ( check_admin_referer( $this->slug . '_nonce', $this->slug . '_nonce' ) ) {
 				$this->deactivate_license();
 			}
 		}
@@ -290,7 +309,7 @@ class Prefix_Theme_Updater_Admin {
 	 */
 	function check_license() {
 
-		$license = trim( get_option( 'prefix_license_key' ) );
+		$license = trim( get_option( $this->option_license_key ) );
 
 		$api_params = array(
 			'edd_action' => 'check_license',

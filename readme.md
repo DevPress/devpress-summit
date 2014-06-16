@@ -21,6 +21,7 @@ Summit 1.1.0
 
 * Enhancement: New theme updater
 * Fix: Archive headers on small screen layouts
+* Masonry footer option
 
 Summit 1.0.1
 ----
