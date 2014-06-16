@@ -6,17 +6,19 @@
  */
 
 // Includes the files needed for the theme updater
-include( dirname( __FILE__ ) . '/theme-updater-admin.php' );
+if ( !class_exists( 'DevPress_Theme_Updater_Admin' ) ) {
+	include( dirname( __FILE__ ) . '/theme-updater-admin.php' );
+}
 
-// Loads the theme updater admin class
-$updater = new DevPress_Theme_Updater_Admin;
+// Loads the updater classes
+$updater = new DevPress_Theme_Updater_Admin(
 
-// Defines variables to be used by the theme updater
-$updater->init(
 	array(
-		'remote_api_url' => 'https://devpress.com',
-		'theme_slug' => 'Summit', // The name of this theme
-		'version' => '0.1.0', // The current version of this theme
-		'author' => 'Devin Price' // The author of this theme
+		'remote_api_url' => 'https://devpress.com', // Site where EDD is hosted
+		'item_name' => 'Summit', // Name of theme
+		'theme_slug' => 'summit', // Theme slug
+		'version' => '1.1.0', // The current version of this theme
+		'author' => 'DevPress' // The author of this theme
 	)
+
 );

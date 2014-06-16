@@ -36,12 +36,6 @@ class DevPress_Theme_Updater {
 		$this->remote_api_url = $remote_api_url;
 		$this->response_key = $this->theme_slug . '-update-response';
 
-		// Populate fallbacks
-		if ( '' == $version ) {
-			$theme = wp_get_theme( $this->theme_slug );
-			$this->version = $theme->get( 'Version' );
-		}
-
 		add_filter( 'site_transient_update_themes', array( &$this, 'theme_update_transient' ) );
 		add_filter( 'delete_site_transient_update_themes', array( &$this, 'delete_theme_update_transient' ) );
 		add_action( 'load-update-core.php', array( &$this, 'delete_theme_update_transient' ) );
@@ -64,12 +58,12 @@ class DevPress_Theme_Updater {
 		}
 
 		$update_url = wp_nonce_url( 'update.php?action=upgrade-theme&amp;theme=' . urlencode( $this->theme_slug ), 'upgrade-theme_' . $this->theme_slug );
-		$update_onclick = ' onclick="if ( confirm(\'' . esc_js( __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'textdomain' ) ) . '\') ) {return true;}return false;"';
+		$update_onclick = ' onclick="if ( confirm(\'' . esc_js( __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'summit' ) ) . '\') ) {return true;}return false;"';
 
 		if ( version_compare( $this->version, $api_response->new_version, '<' ) ) {
 
 			echo '<div id="update-nag">';
-				printf( __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'textdomain' ),
+				printf( __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'summit' ),
 					$theme->get( 'Name' ),
 					$api_response->new_version,
 					'#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
