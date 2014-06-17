@@ -183,9 +183,11 @@ require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Theme updater.
+ * DevPress Theme Updater
+ *
+ * @since 1.1.0
  */
-function prefix_theme_updater() {
+function devpress_theme_updater() {
 	require( get_template_directory() . '/inc/updater/theme-updater.php' );
 }
-add_action( 'after_setup_theme', 'prefix_theme_updater' );
+add_action( 'after_setup_theme', 'devpress_theme_updater' );

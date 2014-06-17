@@ -90,8 +90,8 @@ class DevPress_Theme_Updater_Admin {
 	 */
 	function license_menu() {
 		add_theme_page(
-			__( 'Theme License', 'summit' ),
-			__( 'Theme License', 'summit' ),
+			__( 'Theme License', 'ambience' ),
+			__( 'Theme License', 'ambience' ),
 			'manage_options',
 			$this->theme_slug . '-license',
 			array( $this, 'license_page' )
@@ -110,7 +110,7 @@ class DevPress_Theme_Updater_Admin {
 
 		// Checks license status to display under license key
 		if ( ! $license ) {
-			$message    = __( 'Enter your theme license key.', 'summit' );
+			$message    = __( 'Enter your theme license key.', 'ambience' );
 		} else {
 			// delete_transient( $this->theme_slug . '_license_message' );
 			if ( ! get_transient( $this->theme_slug . '_license_message', false ) ) {
@@ -120,7 +120,7 @@ class DevPress_Theme_Updater_Admin {
 		}
 		?>
 		<div class="wrap">
-			<h2><?php _e( 'Theme License', 'summit' ); ?></h2>
+			<h2><?php _e( 'Theme License', 'ambience' ); ?></h2>
 			<form method="post" action="options.php">
 
 				<?php settings_fields( $this->theme_slug . '-license' ); ?>
@@ -130,7 +130,7 @@ class DevPress_Theme_Updater_Admin {
 
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php _e( 'License Key', 'summit' ); ?>
+								<?php _e( 'License Key', 'ambience' ); ?>
 							</th>
 							<td>
 								<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
@@ -143,15 +143,15 @@ class DevPress_Theme_Updater_Admin {
 						<?php if ( $license ) { ?>
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php _e( 'License Action', 'summit' ); ?>
+								<?php _e( 'License Action', 'ambience' ); ?>
 							</th>
 							<td>
 								<?php
 								wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
 								if ( 'valid' == $status ) { ?>
-									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'summit' ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'ambience' ); ?>"/>
 								<?php } else { ?>
-									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( 'Activate License', 'summit' ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( 'Activate License', 'ambience' ); ?>"/>
 								<?php }
 								?>
 							</td>
@@ -319,7 +319,7 @@ class DevPress_Theme_Updater_Admin {
 
 		// If response doesn't include license data, return
 		if ( !isset( $license_data->license ) ) {
-			$message = __( 'License status is unknown.', 'summit' );
+			$message = __( 'License status is unknown.', 'ambience' );
 			return $message;
 		}
 
@@ -327,7 +327,7 @@ class DevPress_Theme_Updater_Admin {
 		$expires = false;
 		if ( isset( $license_data->expires ) ) {
 			$expires = date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires ) );
-			$renew_link = '<a href="' . esc_url( $this->remote_api_url) . '">' . __( 'Renew?', 'summit' ) . '</a>';
+			$renew_link = '<a href="' . esc_url( $this->remote_api_url) . '">' . __( 'Renew?', 'ambience' ) . '</a>';
 		}
 
 		// Get site counts
@@ -336,37 +336,37 @@ class DevPress_Theme_Updater_Admin {
 
 		// If unlimited
 		if ( 0 == $license_limit ) {
-			$license_limit = __( 'unlimited', 'summit' );
+			$license_limit = __( 'unlimited', 'ambience' );
 		}
 
 		if ( $license_data->license == 'valid' ) {
-			$message = __( 'License key is active.', 'summit' ) . ' ';
+			$message = __( 'License key is active.', 'ambience' ) . ' ';
 			if ( $expires ) {
-				$message .= sprintf( __( 'Expires %s.', 'summit' ), $expires ) . ' ';
+				$message .= sprintf( __( 'Expires %s.', 'ambience' ), $expires ) . ' ';
 			}
 			if ( $site_count && $license_limit ) {
-				$message .= sprintf( __( 'You have %1$s / %2$s sites activated.', 'summit' ), $site_count, $license_limit );
+				$message .= sprintf( __( 'You have %1$s / %2$s sites activated.', 'ambience' ), $site_count, $license_limit );
 			}
 		} else if ( $license_data->license == 'expired' ) {
 			if ( $expires ) {
-				$message = sprintf( __( 'License key expired %s.', 'summit' ), $expires );
+				$message = sprintf( __( 'License key expired %s.', 'ambience' ), $expires );
 			} else {
-				$message = __( 'License key has expired.', 'summit' );
+				$message = __( 'License key has expired.', 'ambience' );
 			}
 			if ( $renew_link ) {
 				$message .= ' ' . $renew_link;
 			}
 		} else if ( $license_data->license == 'invalid' ) {
-			$message = __( 'License keys do not match.', 'summit' );
+			$message = __( 'License keys do not match.', 'ambience' );
 		} else if ( $license_data->license == 'inactive' ) {
-			$message = __( 'License is inactive.', 'summit' );
+			$message = __( 'License is inactive.', 'ambience' );
 		} else if ( $license_data->license == 'disabled' ) {
-			$message = __( 'License key is disabled.', 'summit' );
+			$message = __( 'License key is disabled.', 'ambience' );
 		} else if ( $license_data->license == 'site_inactive' ) {
 			// Site is inactive
-			$message = __( 'Site is inactive.', 'summit' );
+			$message = __( 'Site is inactive.', 'ambience' );
 		} else {
-			$message = __( 'License status is unknown.', 'summit' );
+			$message = __( 'License status is unknown.', 'ambience' );
 		}
 
 		return $message;
