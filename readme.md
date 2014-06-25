@@ -16,6 +16,12 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 ## Change log
 
+Summit 1.2.0
+
+* Fix: Hide social menu markup if no menu is selected
+
+----
+
 Summit 1.1.0
 ----
 

@@ -48,14 +48,18 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 
-			<?php wp_nav_menu( array(
-				'theme_location' => 'social',
-				'depth' => '1',
-				'fallback_cb' => false,
-				'container_class' => 'social-menu',
-				'link_before'     => '<span class="screen-reader-text">',
-				'link_after'      => '</span>'
-			) ); ?>
+			<?php
+			if ( has_nav_menu( 'social' ) ) :
+				wp_nav_menu( array(
+					'theme_location' => 'social',
+					'depth' => '1',
+					'fallback_cb' => false,
+					'container_class' => 'social-menu',
+					'link_before'     => '<span class="screen-reader-text">',
+					'link_after'      => '</span>'
+				) );
+			endif;
+			?>
 		</div>
 
 	</header><!-- #masthead -->
