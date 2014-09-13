@@ -17,26 +17,26 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 ## Change log
 
 Summit 1.2.0
+===
 
 * Fix: Hide social menu markup if no menu is selected
-
-----
+* Enhancement: RTL support
 
 Summit 1.1.0
-----
+===
 
 * Enhancement: New theme updater
 * Fix: Archive headers on small screen layouts
-* Masonry footer option
+* Enhancement: Masonry footer option
 
 Summit 1.0.1
-----
+===
 
 * Fix: Better loading of logos
 * Enhancement: Namespaced javascript
 
 
 Summit 1.0.0
-----
+===
 
 * Public Release

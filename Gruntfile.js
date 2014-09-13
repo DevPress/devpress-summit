@@ -56,16 +56,6 @@ module.exports = function(grunt) {
 		        dest: 'js/combined-min.js'
 		    }
 		},
-    	// https://www.npmjs.org/package/grunt-wp-i18n
-	    makepot: {
-	        target: {
-	            options: {
-	                domainPath: '/languages/',    // Where to save the POT file.
-	                potFilename: 'summit.pot',   // Name of the POT file.
-	                type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
-	            }
-	        }
-	    },
 	    replace: {
 			styleVersion: {
 				src: [
@@ -87,13 +77,34 @@ module.exports = function(grunt) {
 					to: 'define( \'SUMMIT_VERSION\', \'<%= pkg.version %>\' );'
 				} ]
 			},
+		},    	// https://www.npmjs.org/package/grunt-wp-i18n
+		makepot: {
+	        target: {
+	            options: {
+	                domainPath: '/languages/',    // Where to save the POT file.
+	                potFilename: 'summit.pot',   // Name of the POT file.
+	                type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
+	            }
+	        }
+	    },
+		cssjanus: {
+			theme: {
+				options: {
+					swapLtrRtlInUrl: false
+				},
+				files: [
+					{
+						src: 'style.css',
+						dest: 'style-rtl.css'
+					}
+				]
+			}
 		}
 	});
 
     grunt.registerTask( 'default', [
     	'sass',
-		'autoprefixer',
-    	'csscomb',
+		'autoprefixer'
     ]);
 
     grunt.registerTask( 'release', [
@@ -103,7 +114,8 @@ module.exports = function(grunt) {
 		'csscomb',
 		'concat:release',
 		'uglify:release',
-		'makepot'
+		'makepot',
+		'cssjanus'
 	]);
 
 };

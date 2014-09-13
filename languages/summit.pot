@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Summit 1.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-06-17 21:20:42+00:00\n"
+"POT-Creation-Date: 2014-09-13 00:49:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.4.5\n"
+"X-Generator: grunt-wp-i18n 0.4.8\n"
 
 #: 404.php:15
 msgid "That page can&rsquo;t be found."
@@ -160,11 +160,11 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: header.php:65
+#: header.php:69
 msgid "Menu"
 msgstr ""
 
-#: header.php:66
+#: header.php:70
 msgid "Skip to content"
 msgstr ""
 

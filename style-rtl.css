@@ -117,7 +117,7 @@ table {
 
 caption, th, td {
   font-weight: normal;
-  text-align: left;
+  text-align: right;
 }
 
 blockquote:before, blockquote:after,
@@ -241,7 +241,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 3em 1.5em 0;
 }
 
 ul {
@@ -255,7 +255,7 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 3em;
+  margin-right: 3em;
 }
 
 li {
@@ -285,8 +285,8 @@ table {
   margin: 0 0 1.5em;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-width: 1px 0 0 1px;
-  text-align: left;
+  border-width: 1px 1px 0 0;
+  text-align: right;
 }
 
 th {
@@ -296,7 +296,7 @@ th {
 th, td {
   padding: .5em .75em;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-width: 0 1px 1px 0;
+  border-width: 0 0 1px 1px;
 }
 
 /* =4.0 Forms
@@ -479,16 +479,16 @@ a:active {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   left: 0;
+  right: 0;
 }
 
 .site-branding {
   position: absolute;
   top: 40%;
   width: 100%;
-  padding-left: 10%;
   padding-right: 10%;
+  padding-left: 10%;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -590,8 +590,8 @@ a:active {
     width: 220px;
     background: #fff;
     border: 1px solid #eee;
-    left: 50%;
-    margin-left: -110px;
+    right: 50%;
+    margin-right: -110px;
     position: absolute;
     top: 30px;
     z-index: 99999;
@@ -601,10 +601,10 @@ a:active {
   .main-navigation ul ul:before {
     position: absolute;
     top: -8px;
-    left: 50%;
-    margin-left: -8px;
-    border-left: 8px solid transparent;
+    right: 50%;
+    margin-right: -8px;
     border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
     border-bottom: 8px solid #eee;
     content: "";
   }
@@ -660,7 +660,7 @@ a:active {
     display: inline-block;
     font-weight: normal;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 2px;
     text-align: center;
   }
@@ -696,7 +696,7 @@ a:active {
     display: inline-block;
     font-weight: 400;
     position: absolute;
-    right: 0;
+    left: 0;
     text-align: center;
     background: rgba(0, 0, 0, 0.02);
     top: 1px;
@@ -708,7 +708,7 @@ a:active {
   .dropdown-toggle:after {
     content: "\e811";
     position: absolute;
-    right: 16px;
+    left: 16px;
   }
 
   .dropdown-toggle.toggled:after {
@@ -721,7 +721,7 @@ a:active {
   }
 
   .main-navigation ul ul li a {
-    padding-left: 3em;
+    padding-right: 3em;
   }
 }
 /* =7.1 Social Navigation
@@ -915,7 +915,7 @@ a:active {
   font-family: "summit-icons";
   speak: none;
   display: inline-block;
-  margin-right: .5em;
+  margin-left: .5em;
 }
 
 /* Meta Icons */
@@ -940,7 +940,7 @@ a:active {
 .comments-link:after {
   content: '';
   display: inline-block;
-  margin-right: 1.5em;
+  margin-left: 1.5em;
 }
 
 .page-links {
@@ -955,7 +955,7 @@ a:active {
 }
 
 .page-links a:first-of-type {
-  margin-left: .5em;
+  margin-right: .5em;
 }
 
 /* Author Meta */
@@ -964,18 +964,18 @@ a:active {
   border-bottom: 1px solid #EEE;
   margin: 3em 0;
   position: relative;
-  padding: 1.5em 1.5em 1.5em 0;
+  padding: 1.5em 0 1.5em 1.5em;
 }
 
 .author-meta .author-avatar {
   position: absolute;
-  left: 0;
+  right: 0;
 }
 
 .author-description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
-  padding-left: 90px;
+  padding-right: 90px;
   min-height: 60px;
 }
 
@@ -996,9 +996,9 @@ a:active {
   font-size: 10px;
   line-height: 1;
   margin-top: 5px;
-  margin-left: -1.5em;
+  margin-right: -1.5em;
   width: 1.5em;
-  text-align: left;
+  text-align: right;
   display: inline-block;
   position: relative;
   vertical-align: text-top;
@@ -1032,7 +1032,7 @@ a:active {
 
 #content blockquote cite:before {
   content: '\2014';
-  margin-right: .5em;
+  margin-left: .5em;
 }
 
 #content blockquote p:last-of-type {
@@ -1059,22 +1059,22 @@ a:active {
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
+  float: right;
   width: 50%;
 }
 
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
   width: 50%;
 }
 
 .overlay-navigation {
   position: fixed;
   top: 46%;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 0;
   z-index: 5;
@@ -1134,11 +1134,11 @@ a:active {
 }
 
 .overlay-navigation .nav-previous a:hover:before {
-  padding: 0 10px 0 0;
+  padding: 0 0 0 10px;
 }
 
 .overlay-navigation .nav-next a:hover:after {
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 0;
 }
 
 /* =10.0 Widgets
@@ -1166,14 +1166,14 @@ a:active {
 
 #secondary.column-2 .widget,
 #secondary.column-masonry .widget {
-  float: left;
+  float: right;
   width: 48%;
-  margin: 0 4% 1.5em 0;
+  margin: 0 0 1.5em 4%;
 }
 
 #secondary.column-2 .widget:nth-of-type(2n),
 #secondary.column-masonry .widget:nth-of-type(2n) {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 #secondary.column-2 .widget:nth-of-type(2n+1),
@@ -1182,12 +1182,12 @@ a:active {
 }
 
 #secondary .widget ul {
-  margin-left: 0;
+  margin-right: 0;
   list-style: none;
 }
 
 #secondary .widget ul ul {
-  margin-left: 1.5em;
+  margin-right: 1.5em;
   list-style: none;
 }
 
@@ -1212,7 +1212,7 @@ a:active {
 
 .comment {
   position: relative;
-  margin: 0 0 0 90px;
+  margin: 0 90px 0 0;
 }
 
 .comment-body {
@@ -1229,18 +1229,18 @@ a:active {
 .comment-body:before {
   position: absolute;
   top: 30px;
-  left: -10px;
+  right: -10px;
   margin-top: -10px;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid #f9f9f9;
+  border-left: 10px solid #f9f9f9;
   content: "";
 }
 
 .comment-author .avatar {
   position: absolute;
   top: 0px;
-  left: -90px;
+  right: -90px;
   border-radius: 100%;
 }
 
@@ -1249,7 +1249,7 @@ a:active {
 }
 
 .comment-meta {
-  padding-right: 90px;
+  padding-left: 90px;
 }
 
 .comment-metadata {
@@ -1269,8 +1269,8 @@ a:active {
 }
 
 .comment-list .children .children .comment-author .avatar {
-  left: auto;
-  right: 1.5em;
+  right: auto;
+  left: 1.5em;
   top: 2em;
   z-index: 10;
   max-width: 40px;
@@ -1304,10 +1304,10 @@ a:active {
   font-family: "summit-icons";
   speak: none;
   display: inline-block;
-  margin-right: .5em;
+  margin-left: .5em;
   content: '\e800';
   position: absolute;
-  right: 1em;
+  left: 1em;
   color: #888;
   font-size: 20px;
 }
@@ -1341,14 +1341,14 @@ a:active {
 -------------------------------------------------------------- */
 .alignleft {
   display: inline;
-  float: left;
-  margin: 0 15px 15px 0;
+  float: right;
+  margin: 0 0 15px 15px;
 }
 
 .alignright {
   display: inline;
-  float: right;
-  margin: 0 0 15px 15px;
+  float: left;
+  margin: 0 15px 15px 0;
 }
 
 .aligncenter {
@@ -1402,7 +1402,7 @@ object {
 
 .gallery-item {
   display: inline-block;
-  text-align: left;
+  text-align: right;
   vertical-align: top;
   width: 100%;
   margin-bottom: 1.5em;
@@ -1496,7 +1496,7 @@ object {
   font-size: 14px;
   font-weight: bold;
   height: auto;
-  left: 5px;
+  right: 5px;
   line-height: normal;
   padding: 1.5em 2em;
   text-decoration: none;
@@ -1572,8 +1572,8 @@ body .contact-form label {
   }
 
   .comment-list .children .comment-author .avatar {
-    left: auto;
-    right: 1.5em;
+    right: auto;
+    left: 1.5em;
     top: 2em;
     z-index: 10;
     max-width: 40px;
@@ -1597,8 +1597,8 @@ body .contact-form label {
   }
 
   .main-navigation, #content, #colophon {
-    padding-right: 3em;
     padding-left: 3em;
+    padding-right: 3em;
   }
 
   #author, #email, #url, #respond textarea {
@@ -1617,13 +1617,13 @@ body .contact-form label {
   }
 
   .main-navigation, #colophon {
-    padding-right: 1.5em;
     padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 
   #content {
-    padding-right: 0em;
     padding-left: 0em;
+    padding-right: 0em;
   }
 
   .hentry {
@@ -1635,8 +1635,8 @@ body .contact-form label {
   .entry-content,
   .entry-footer,
   .archive .page-header {
-    padding-right: 1.5em;
     padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 
   .author-meta {
@@ -1644,11 +1644,11 @@ body .contact-form label {
   }
 
   .author-meta .author-avatar {
-    left: 1.5em;
+    right: 1.5em;
   }
 
   .author-description {
-    padding-left: 7.5em;
+    padding-right: 7.5em;
   }
 
   .site-main .comment-navigation,
@@ -1658,8 +1658,8 @@ body .contact-form label {
   }
 
   #secondary {
-    padding-right: 1.5em;
     padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 
   .cat-links, .tags-links, .comments-link {
@@ -1669,8 +1669,8 @@ body .contact-form label {
   }
 
   #comments {
-    padding-right: 1.5em;
     padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 
   .comments-title {
@@ -1686,8 +1686,8 @@ body .contact-form label {
   }
 
   .comment-author .avatar {
-    left: auto;
-    right: 1.5em;
+    right: auto;
+    left: 1.5em;
     top: 2em;
     z-index: 10;
     max-width: 40px;
