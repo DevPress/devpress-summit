@@ -2,13 +2,15 @@
 /**
  * Customize for textarea, extend the WP customizer
  *
- * @package Summit
+ * @package 	Customizer_Library
+ * @author		Devin Price, The Theme Foundry
  */
 
-if ( ! class_exists( 'WP_Customize_Control' ) )
+if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return NULL;
+}
 
-class Textarea_Custom_Control extends WP_Customize_Control {
+class Customizer_Library_Textarea extends WP_Customize_Control {
 
 	/**
 	 * Render the control's content.

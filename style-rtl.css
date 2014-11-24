@@ -83,7 +83,6 @@ html {
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
-  -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
   box-sizing: border-box;
 }
@@ -350,7 +349,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -394,6 +392,12 @@ textarea {
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 98%;
+}
+
+/* @noflip */
+body.rtl {
+  direction: rtl;
+  unicode-bidi: embed;
 }
 
 /* 5.0 Theme Globals
@@ -489,7 +493,7 @@ a:active {
   width: 100%;
   padding-right: 10%;
   padding-left: 10%;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .site-title {
@@ -1107,11 +1111,11 @@ a:active {
 
 .overlay-navigation .nav-previous a {
   width: auto;
-  box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-next a {
-  box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .overlay-navigation .nav-previous a:before,
@@ -1122,7 +1126,7 @@ a:active {
   padding: 0 5px;
   -webkit-transition: padding 0.2s ease;
           transition: padding 0.2s ease;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .overlay-navigation .nav-previous a:before {

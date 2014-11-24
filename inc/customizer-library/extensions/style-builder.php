@@ -1,10 +1,10 @@
 <?php
 /**
- * @package Summit
- * @credit Based on code from "Make" by The Theme Foundary
+ * @package 	Customizer_Library
+ * @author		The Theme Foundry
  */
 
-if ( ! class_exists( 'CURRENTS_CSS' ) ) :
+if ( ! class_exists( 'Customizer_Library_Styles' ) ) :
 /**
  * Singleton to collect and print CSS based on user input.
  *
@@ -12,14 +12,14 @@ if ( ! class_exists( 'CURRENTS_CSS' ) ) :
  * of conflicting rules and sorts out what the final CSS should be. The primary function is `add()`. It allows the
  * caller to add a new rule to be generated in the CSS.
  */
-class CURRENTS_CSS {
+class Customizer_Library_Styles {
 
 	/**
-	 * The one instance of CURRENTS_CSS.
+	 * The one instance of Customizer_Library_Styles.
 	 *
 	 * @since 1.0.0.
 	 *
-	 * @var   CURRENTS_CSS    The one instance for the singleton.
+	 * @var   Customizer_Library_Styles    The one instance for the singleton.
 	 */
 	private static $instance;
 
@@ -52,11 +52,11 @@ class CURRENTS_CSS {
 	private $tab = '';
 
 	/**
-	 * Instantiate or return the one CURRENTS_CSS instance.
+	 * Instantiate or return the one Customizer_Library_Styles instance.
 	 *
 	 * @since  1.0.0.
 	 *
-	 * @return CURRENTS_CSS
+	 * @return Customizer_Library_Styles
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
@@ -71,7 +71,7 @@ class CURRENTS_CSS {
 	 *
 	 * @since  1.0.0.
 	 *
-	 * @return CURRENTS_CSS
+	 * @return Customizer_Library_Styles
 	 */
 	function __construct() {
 		// Set line ending and tab
@@ -86,7 +86,7 @@ class CURRENTS_CSS {
 	 *
 	 * Accepts data to eventually be turned into CSS. Usage:
 	 *
-	 * ttfmake_get_css()->add( array(
+	 * Customizer_Library_Styles()->add( array(
 	 *     'selectors'    => array( '.site-header-main' ),
 	 *     'declarations' => array(
 	 *         'background-color' => $header_background_color
@@ -235,7 +235,7 @@ class CURRENTS_CSS {
 
 		/**
 		 * Note that when this output is prepared, it is not escaped, sanitized or otherwise altered. The sanitization
-		 * routines are implemented when the developer calls `ttfmake_get_css->add()`. Because every property value has
+		 * routines are implemented when the developer calls `Customizer_Library_Styles()->add`. Because every property value has
 		 * special sanitization needs, it is handled at that point.
 		 */
 		foreach ( $declarations as $property => $value ) {
@@ -251,17 +251,17 @@ class CURRENTS_CSS {
 }
 endif;
 
-if ( ! function_exists( 'summit_css' ) ) :
+if ( ! function_exists( 'customizer_library_styles' ) ) :
 /**
- * Return the one CURRENTS_CSS object.
+ * Return the one Customizer_Library_Styles object.
  *
  * @since  1.0.0.
  *
- * @return CURRENTS_CSS    The one CURRENTS_CSS object.
+ * @return Customizer_Library_Styles	The Customizer_Library_Styles object.
  */
-function summit_css() {
-	return CURRENTS_CSS::instance();
+function customizer_library_styles() {
+	return Customizer_Library_Styles::instance();
 }
 endif;
 
-add_action( 'init', 'summit_css', 1 );
+add_action( 'init', 'customizer_library_styles', 1 );

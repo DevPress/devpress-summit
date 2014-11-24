@@ -2,7 +2,8 @@
 /**
  * Customizer Utility Functions
  *
- * @package Summit
+ * @package 	Customizer_Library
+ * @author		Devin Price, The Theme Foundry
  */
 
 /**
@@ -14,9 +15,10 @@
  * @return mixed $default
  */
 
-function summit_get_default( $setting ) {
+function customizer_library_get_default( $setting ) {
 
-	$options = summit_options();
+	$customizer_library = Customizer_Library::Instance();
+	$options = $customizer_library->get_options();
 
 	if ( isset( $options[$setting]['default'] ) ) {
 		return $options[$setting]['default'];
@@ -32,10 +34,10 @@ function summit_get_default( $setting ) {
  * @param string
  * @return mixed $default
  */
+function customizer_library_get_choices( $setting ) {
 
-function summit_get_choices( $setting ) {
-
-	$options = summit_options();
+	$customizer_library = Customizer_Library::Instance();
+	$options = $customizer_library->get_options();
 
 	if ( isset( $options[$setting]['choices'] ) ) {
 		return $options[$setting]['choices'];
@@ -52,7 +54,7 @@ function summit_get_choices( $setting ) {
  * @param  string  $hex
  * @return array
  */
-function summit_hex_to_rgb( $hex ) {
+function customizer_library_hex_to_rgb( $hex ) {
 
 	// Remove "#" if it was added
 	$color = trim( $hex, '#' );
@@ -74,4 +76,26 @@ function summit_hex_to_rgb( $hex ) {
 
 	// Return the RGB colors as an array
 	return array( 'r' => $red, 'g' => $green, 'b' => $blue );
+}
+
+/**
+ * Helper function to remove custom theme mods
+ *
+ * @since  1.0.0
+ *
+ * @param string
+ * @return mixed $default
+ */
+function customizer_library_remove_theme_mods() {
+
+	$customizer_library = Customizer_Library::Instance();
+	$options = $customizer_library->get_options();
+
+	if ( $options ) {
+		foreach( $options as $option ) {
+			if ( isset( $option['id'] ) ) {
+				remove_theme_mod( $option['id'] );
+			}
+		}
+	}
 }

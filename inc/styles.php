@@ -6,7 +6,7 @@
  * @credit Based on code from "Make" by The Theme Foundary
  */
 
-if ( ! function_exists( 'summit_build_css_rules' ) ) :
+if ( ! function_exists( 'summit_styles' ) ) :
 /**
  * Process user options to generate CSS needed to implement the choices.
  *
@@ -21,15 +21,15 @@ if ( ! function_exists( 'summit_build_css_rules' ) ) :
  *
  * @return void
  */
-function summit_build_css_rules() {
+function summit_styles() {
 
 	// Header Background Color
 	$setting = 'header-background-color';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-	if ( $mod !== summit_get_default( $setting ) ) {
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
-		summit_css()->add( array(
+		Customizer_Library_Styles()->add( array(
 			'selectors'    => array( '#masthead' ),
 			'declarations' => array(
 				'background-color' => sanitize_hex_color( $mod )
@@ -40,7 +40,7 @@ function summit_build_css_rules() {
 	// Header image
 	$image = get_header_image();
 	if ( $image != '' ) {
-		summit_css()->add( array(
+		Customizer_Library_Styles()->add( array(
 			'selectors'    => array( '#masthead' ),
 			'declarations' => array(
 				'background-image' => 'url("' . esc_url( $image ) . '")'
@@ -50,9 +50,9 @@ function summit_build_css_rules() {
 
 	// Site title color
 	$setting = 'site-title-text-color';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
-	if ( $mod !== summit_get_default( $setting ) ) {
-		summit_css()->add( array(
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+		Customizer_Library_Styles()->add( array(
 			'selectors'    => array( '.site-title a' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
@@ -62,9 +62,9 @@ function summit_build_css_rules() {
 
 	// Site tagline color
 	$setting = 'site-tagline-text-color';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
-	if ( $mod !== summit_get_default( $setting ) ) {
-		summit_css()->add( array(
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
+		Customizer_Library_Styles()->add( array(
 			'selectors'    => array( '.site-description' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
@@ -74,15 +74,15 @@ function summit_build_css_rules() {
 
 	// Header Overlay Opacity
 	$setting = 'header-overlay-opacity';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-	if ( $mod !== summit_get_default( $setting ) ) {
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
 		// Header Overlay Color
-		$color = get_theme_mod( 'header-overlay-color', summit_get_default( 'header-overlay-color' ) );
-		$color = join( ', ', summit_hex_to_rgb( $color ) );
+		$color = get_theme_mod( 'header-overlay-color', customizer_library_get_default( 'header-overlay-color' ) );
+		$color = join( ', ', customizer_library_hex_to_rgb( $color ) );
 
-		summit_css()->add( array(
+		Customizer_Library_Styles()->add( array(
 			'selectors'    => array( '.header-image .opacity' ),
 			'declarations' => array(
 				'background' => 'rgba(' . $color . ',' . $mod . ')'
@@ -92,18 +92,18 @@ function summit_build_css_rules() {
 
 	// Highlight Color
 	$setting = 'highlight-color';
-	$mod = get_theme_mod( $setting, summit_get_default( $setting ) );
+	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
 
-	if ( $mod !== summit_get_default( $setting ) ) {
+	if ( $mod !== customizer_library_get_default( $setting ) ) {
 
-		summit_css()->add( array(
+		Customizer_Library_Styles()->add( array(
 			'selectors' => array( 'a', '.main-navigation .dropdown-toggle:hover', '.entry-title a:hover', '.entry-meta a:hover', '.entry-footer a:hover' ),
 			'declarations' => array(
 				'color' => sanitize_hex_color( $mod )
 			)
 		) );
 
-		summit_css()->add( array(
+		Customizer_Library_Styles()->add( array(
 			'selectors' => array( 'button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]', '#infinite-handle span' ),
 			'declarations' => array(
 				'background' => sanitize_hex_color( $mod )
@@ -116,14 +116,15 @@ function summit_build_css_rules() {
 }
 endif;
 
-add_action( 'summit_css', 'summit_build_css_rules' );
+add_action( 'customizer_library_styles', 'summit_styles' );
+
 
 if ( ! function_exists( 'summit_display_customizations' ) ) :
 /**
  * Generates the style tag and CSS needed for the theme options.
  *
- * By using the "summit_css" filter, different components can print CSS in the header. It is organized this way to
- * ensure that there is only one "style" tag and not a proliferation of them.
+ * By using the "Customizer_Library_Styles" filter, different components can print CSS in the header.
+ * It is organized this way to ensure there is only one "style" tag.
  *
  * @since  1.0.0.
  *
@@ -131,10 +132,10 @@ if ( ! function_exists( 'summit_display_customizations' ) ) :
  */
 function summit_display_customizations() {
 
-	do_action( 'summit_css' );
+	do_action( 'customizer_library_styles' );
 
 	// Echo the rules
-	$css = summit_css()->build();
+	$css = Customizer_Library_Styles()->build();
 
 	if ( ! empty( $css ) ) {
 		echo "\n<!-- Begin Summit Custom CSS -->\n<style type=\"text/css\" id=\"summit-custom-css\">\n";

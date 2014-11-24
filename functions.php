@@ -160,29 +160,25 @@ function summit_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'summit_fonts' );
 
-/**
- * Implement the Custom Header feature.
- */
+// Implement the Custom Header feature.
 require get_template_directory() . '/inc/custom-header.php';
 
-/**
- * Custom template tags for this theme.
- */
+// Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Custom functions that act independently of the theme templates.
- */
+// Custom functions that act independently of the theme templates.
 require get_template_directory() . '/inc/extras.php';
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer/customizer.php';
+// Helper library for the theme customizer.
+require get_template_directory() . '/inc/customizer-library/customizer-library.php';
 
-/**
- * Load Jetpack compatibility file.
- */
+// Define options for the theme customizer.
+require get_template_directory() . '/inc/customizer-options.php';
+
+// Output inline styles based on theme customizer selections.
+require get_template_directory() . '/inc/styles.php';
+
+// Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
 
 /**

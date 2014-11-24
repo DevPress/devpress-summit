@@ -1,415 +1,355 @@
 # Copyright (C) 2014 DevPress
 # This file is distributed under the GNU General Public License v2 or later.
+# Translators:
+# FxB <fxb@wp-translations.org>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Summit 1.1.0\n"
+"Project-Id-Version: Summit\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-09-13 00:49:17+00:00\n"
+"PO-Revision-Date: 2014-10-17 21:45+0000\n"
+"Last-Translator: FxB <fxb@wp-translations.org>\n"
+"Language-Team: French (France) (http://www.transifex.com/projects/p/summit/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.4.9\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"Language: en_US\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: grunt-wp-i18n 0.4.8\n"
 "X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "That page can&rsquo;t be found."
-msgstr ""
+msgstr "Cette page est introuvable."
 
 #: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the "
-"links below or a search?"
-msgstr ""
+"It looks like nothing was found at this location. Maybe try one of the links"
+" below or a search?"
+msgstr "Il semblerait que cette emplacement n'existe pas. Peut-être en suivant un des liens ci-dessous, ou en lançant une recherche ?"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Catégories les plus utilisées"
 
 #: archive.php:27
 msgid "Author: %s"
-msgstr ""
+msgstr "Auteur&nbsp;: %s"
 
 #: archive.php:30
 msgid "Day: %s"
-msgstr ""
+msgstr "Jour&nbsp;: %s"
 
 #: archive.php:33
 msgid "Month: %s"
-msgstr ""
+msgstr "Mois&nbsp;: %s"
 
 #: archive.php:36
 msgid "Year: %s"
-msgstr ""
+msgstr "Année&nbsp;: %s"
 
 #: archive.php:39
 msgid "Asides"
-msgstr ""
+msgstr "En passants"
 
 #: archive.php:42
 msgid "Galleries"
-msgstr ""
+msgstr "Galeries"
 
 #: archive.php:45
 msgid "Images"
-msgstr ""
+msgstr "Images"
 
 #: archive.php:48
 msgid "Videos"
-msgstr ""
+msgstr "Vidéos"
 
 #: archive.php:51
 msgid "Quotes"
-msgstr ""
+msgstr "Citations"
 
 #: archive.php:54
 msgid "Links"
-msgstr ""
+msgstr "Liens"
 
 #: archive.php:57
 msgid "Audios"
-msgstr ""
+msgstr "Sons"
 
 #: archive.php:60
 msgid "Archives"
-msgstr ""
+msgstr "Archives"
 
 #: comments.php:35 comments.php:54
 msgid "Comment navigation"
-msgstr ""
+msgstr "Navigation des commentaires"
 
 #: comments.php:36 comments.php:55
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Commentaires plus anciens"
 
 #: comments.php:37 comments.php:56
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Commentaires plus récents &rarr;"
 
 #: comments.php:66
 msgid "Comments are closed."
-msgstr ""
+msgstr "Les commentaires sont fermés."
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Rien n&rsquo;a été trouvé"
 
 #: content-none.php:19
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgstr "Prêt à publier votre premier article&nbsp;? <a href=\"%1$s\">Lancez-vous</a>&nbsp;!"
 
 #: content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "Désolé, mais rien ne correspond à vos critères de recherche. Veuillez réessayer avec d&rsquo;autres mots-clés."
 
 #: content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
 
 #: content-page.php:18 content-single.php:29 content.php:28
 msgid "Pages:"
-msgstr ""
+msgstr "Pages&nbsp;:"
 
 #: content-page.php:23 content-single.php:76 content.php:61
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: content-single.php:42
 msgid "About %s"
-msgstr ""
+msgstr "À propos de %s"
 
-#: content-single.php:53 content-single.php:63 content.php:38 content.php:48
 #. translators: used between list items, there is a space after the comma
+#: content-single.php:53 content-single.php:63 content.php:38 content.php:48
 msgid ", "
-msgstr ""
+msgstr ",&nbsp;"
 
 #: content-single.php:67 content.php:52
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Tagué %1$s"
 
 #: content-single.php:73 content.php:58
 msgid "Leave a comment"
-msgstr ""
+msgstr "Laisser un commentaire"
 
 #: content-single.php:73 content.php:58
 msgid "1 Comment"
-msgstr ""
+msgstr "1 commentaire"
 
 #: content-single.php:73 content.php:58
 msgid "% Comments"
-msgstr ""
+msgstr "% commentaires"
 
 #: content.php:25
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Lire la suite <span class=\"meta-nav\">&rarr;</span>"
 
 #: functions.php:47
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: functions.php:48
 msgid "Social Menu"
-msgstr ""
+msgstr "Menu social"
 
-#: functions.php:88 inc/customizer-options.php:211
+#: functions.php:88 inc/customizer/options.php:193
 msgid "Footer"
-msgstr ""
+msgstr "Pied de page"
 
 #: header.php:69
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: header.php:70
 msgid "Skip to content"
-msgstr ""
+msgstr "Aller au contenu principal"
 
 #: inc/custom-header.php:56
 msgid "Cloudscape"
-msgstr ""
+msgstr "Cloudscape"
 
 #: inc/custom-header.php:61
 msgid "Dune"
-msgstr ""
+msgstr "Dune"
 
 #: inc/custom-header.php:66
 msgid "Golden"
-msgstr ""
+msgstr "Or"
 
 #. Theme Name of the plugin/theme
 msgid "Summit"
-msgstr ""
+msgstr "Summit"
 
-#: inc/customizer-library/extensions/fonts.php:115
-msgid "All"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:116
-msgid "Cyrillic"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:117
-msgid "Cyrillic Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:118
-msgid "Devanagari"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:119
-msgid "Greek"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:120
-msgid "Greek Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:121
-msgid "Khmer"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:122
-msgid "Latin"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:123
-msgid "Latin Extended"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:124
-msgid "Vietnamese"
-msgstr ""
-
-#: inc/customizer-options.php:29
+#: inc/customizer/options.php:29
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo Image"
 
-#: inc/customizer-options.php:35
+#: inc/customizer/options.php:35
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
-#: inc/customizer-options.php:43
-msgid "Favicon"
-msgstr ""
-
-#: inc/customizer-options.php:47
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
-"x 32px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:52
-msgid "Apple Touch Icon"
-msgstr ""
-
-#: inc/customizer-options.php:56
-msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: "
-"<strong>152px x 152px</strong>."
-msgstr ""
-
-#: inc/customizer-options.php:64
+#: inc/customizer/options.php:46
 msgid "Site Title Text Color"
-msgstr ""
+msgstr "Couleur du texte du titre du site"
 
-#: inc/customizer-options.php:72
+#: inc/customizer/options.php:54
 msgid "Site Tagline Text Color"
-msgstr ""
+msgstr "Couleur du texte du slogan du site"
 
-#: inc/customizer-options.php:80
+#: inc/customizer/options.php:62
 msgid "Display Site Tagline"
-msgstr ""
+msgstr "Afficher le slogan du site"
 
-#: inc/customizer-options.php:91
+#: inc/customizer/options.php:73
 msgid "Header Settings"
-msgstr ""
+msgstr "Réglages de l&rsquo;en-tête"
 
-#: inc/customizer-options.php:97
+#: inc/customizer/options.php:79
 msgid "Header Background Color"
-msgstr ""
+msgstr "Couleur d&rsquo;arrière-plan de l'en-tête"
 
-#: inc/customizer-options.php:105
+#: inc/customizer/options.php:87
 msgid "Header Overlay Color"
-msgstr ""
+msgstr "Couleur de superposition de l&rsquo;en-tête"
 
-#: inc/customizer-options.php:127
+#: inc/customizer/options.php:109
 msgid "Header Overlay Opacity"
-msgstr ""
+msgstr "Opacité de la superposition de l&rsquo;en-tête"
 
-#: inc/customizer-options.php:152
+#: inc/customizer/options.php:134
 msgid "Colors"
-msgstr ""
+msgstr "Couleurs"
 
-#: inc/customizer-options.php:158
+#: inc/customizer/options.php:140
 msgid "Highlight Color"
-msgstr ""
+msgstr "Couleur de surbrillance"
 
-#: inc/customizer-options.php:169
+#: inc/customizer/options.php:151
 msgid "Typography"
-msgstr ""
+msgstr "Typographie"
 
-#: inc/customizer-options.php:178
+#: inc/customizer/options.php:160
 msgid "General"
-msgstr ""
+msgstr "Apparence"
 
-#: inc/customizer-options.php:184
+#: inc/customizer/options.php:166
 msgid "Display Post Dates"
-msgstr ""
+msgstr "Afficher la date de l'article"
 
-#: inc/customizer-options.php:192
+#: inc/customizer/options.php:174
 msgid "Display Featured Images"
-msgstr ""
+msgstr "Afficher les images à la Une"
 
-#: inc/customizer-options.php:200
+#: inc/customizer/options.php:182
 msgid "Display Overlay Navigation"
-msgstr ""
+msgstr "Afficher la navigation superposée"
 
-#: inc/customizer-options.php:224
+#: inc/customizer/options.php:206
 msgid "Footer Widget Columns"
-msgstr ""
+msgstr "Colonnes de widgets du pied de page"
 
-#: inc/customizer-options.php:233
+#: inc/customizer/options.php:215
 msgid "Footer Text"
-msgstr ""
+msgstr "Texte du pied de page"
 
-#: inc/customizer-options.php:271
+#: inc/customizer/options.php:251
 msgid "Background"
-msgstr ""
+msgstr "Arrière-plan"
 
-#: inc/customizer-options.php:277
+#: inc/customizer/options.php:257
 msgid "Background Color"
-msgstr ""
+msgstr "Couleur de fond"
 
 #: inc/extras.php:49
 msgid "Page %s"
-msgstr ""
+msgstr "Page %s"
 
 #: inc/extras.php:162
 msgid "Powered by %s"
-msgstr ""
+msgstr "Propulsé par %s"
 
 #: inc/extras.php:163
 msgid "http://wordpress.org/"
-msgstr ""
+msgstr "http://wordpress.org/"
 
 #: inc/extras.php:167
 msgid "%1$s Theme by %2$s."
-msgstr ""
+msgstr "Thème %1$s par %2$s."
 
-#: inc/extras.php:208
+#: inc/extras.php:188
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
-#: inc/extras.php:209
+#: inc/extras.php:189
 msgid "Name *"
-msgstr ""
+msgstr "Nom *"
 
-#: inc/extras.php:215
+#: inc/extras.php:195
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
-#: inc/extras.php:216
+#: inc/extras.php:196
 msgid "Email *"
-msgstr ""
+msgstr "E-mail *"
 
-#: inc/extras.php:222 inc/extras.php:223
+#: inc/extras.php:202 inc/extras.php:203
 msgid "Website"
-msgstr ""
+msgstr "Site Web"
 
-#: inc/extras.php:241
+#: inc/extras.php:221
 msgid "Comment *"
-msgstr ""
+msgstr "Commentaire *"
 
 #: inc/template-tags.php:27
 msgid "Page navigation"
-msgstr ""
+msgstr "Navigation de page"
 
 #: inc/template-tags.php:31
 msgid "<span><span class=\"meta-nav\">&larr;</span> Older posts</span>"
-msgstr ""
+msgstr "<span><span class=\"meta-nav\">&larr;</span>&nbsp;Articles plus anciens</span>"
 
 #: inc/template-tags.php:35
 msgid "<span>Newer posts <span class=\"meta-nav\">&rarr;</span></span>"
-msgstr ""
+msgstr "<span>Articles plus récents&nbsp;<span class=\"meta-nav\">&rarr;</span></span>"
 
 #: inc/template-tags.php:64
 msgid "Post navigation"
-msgstr ""
+msgstr "Navigation des articles"
 
 #: inc/template-tags.php:94
 msgid ""
 "<span class=\"posted-on\">Posted %1$s</span><span class=\"byline\"> by "
 "%2$s</span>"
-msgstr ""
+msgstr "<span class=\"posted-on\">Publié le %1$s</span><span class=\"byline\">&nbsp;par %2$s</span>."
 
 #: inc/updater/theme-updater-admin.php:93
 #: inc/updater/theme-updater-admin.php:94
 #: inc/updater/theme-updater-admin.php:123
 msgid "Theme License"
-msgstr ""
+msgstr "Licence du thème"
 
 #: inc/updater/theme-updater-admin.php:113
 msgid "Enter your theme license key."
-msgstr ""
+msgstr "Entrez votre clé de licence du thème"
 
 #: inc/updater/theme-updater-admin.php:133
 msgid "License Key"
-msgstr ""
+msgstr "Clé de licence"
 
 #: inc/updater/theme-updater-admin.php:146
 msgid "License Action"
@@ -470,7 +410,7 @@ msgstr ""
 
 #: inc/updater/theme-updater-admin.php:367
 msgid "Site is inactive."
-msgstr ""
+msgstr "Le site est inactif."
 
 #: inc/updater/theme-updater-class.php:61
 msgid ""
@@ -480,74 +420,59 @@ msgstr ""
 
 #: inc/updater/theme-updater-class.php:66
 msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
-"class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
-"href=\"%5$s\"%6$s>update now</a>."
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\""
+" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update "
+"now</a>."
 msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Résultats de recherche pour : %s"
 
 #. Theme URI of the plugin/theme
 msgid "http://devpress.com/summit"
-msgstr ""
+msgstr "http://devpress.com/summit"
 
 #. Description of the plugin/theme
 msgid ""
 "Summit is simple one-column WordPress theme, perfect for blogging and small "
-"business.  It features excellent header images with a number of "
-"customizable display options.  Social icons can be added to the header.  A "
-"customizable widget area is available in the footer.  Summit is also "
-"responsive and looks great on desktop and mobile devices."
-msgstr ""
+"business.  It features excellent header images with a number of customizable"
+" display options.  Social icons can be added to the header.  A customizable "
+"widget area is available in the footer.  Summit is also responsive and looks"
+" great on desktop and mobile devices."
+msgstr "Summit est un thème pour WordPress simple et sur une seule colonne, parfait pour les blogs et les petites entreprises. Il permet d'afficher de superbes images d'en-tête avec un certain nombre d'options d'affichage personnalisable. Les icônes sociaux peuvent être ajoutés dans l'en-tête. Une zone de widget personnalisable est disponible dans le pied de page. Summit est également responsive et s'affiche parfaitement bien sur tous les appareils portables."
 
 #. Author of the plugin/theme
 msgid "DevPress"
-msgstr ""
+msgstr "DevPress"
 
 #. Author URI of the plugin/theme
 msgid "http://devpress.com"
-msgstr ""
+msgstr "http://devpress.com"
 
 #: archive.php:33
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: archive.php:36
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: comments.php:28
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/customizer-library/extensions/fonts.php:184
-msgctxt "font style"
-msgid "Serif"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:188
-msgctxt "font style"
-msgid "Sans Serif"
-msgstr ""
-
-#: inc/customizer-library/extensions/fonts.php:192
-msgctxt "font style"
-msgid "Monospaced"
-msgstr ""
+msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
 
 #: inc/template-tags.php:67
 msgctxt "Previous post link"
 msgid "<span><span class=\"meta-nav\">&larr;</span> Previous</span>"
-msgstr ""
+msgstr "<span><span class=\"meta-nav\">&larr;</span>&nbsp;Précédent</span>"
 
 #: inc/template-tags.php:68
 msgctxt "Next post link"
 msgid "<span>Next <span class=\"meta-nav\">&rarr;</span></span>"
-msgstr ""
+msgstr "<span>Suivant&nbsp;<span class=\"meta-nav\">&rarr;</span></span>"

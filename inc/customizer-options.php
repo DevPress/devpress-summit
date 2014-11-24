@@ -34,8 +34,26 @@ function summit_options() {
 		'id' => 'logo',
 		'label'   => __( 'Logo', 'summit' ),
 		'section' => $section,
-		'type'    => 'upload',
+		'type'    => 'image',
 		'default' => '',
+	);
+
+	$options['logo-favicon'] = array(
+		'id' => 'logo-favicon',
+		'label'   => __( 'Favicon', 'summit' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => '',
+		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'summit' ),
+	);
+
+	$options['logo-apple-touch'] = array(
+		'id' => 'logo-apple-touch',
+		'label'   => __( 'Apple Touch Icon', 'summit' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => '',
+		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'summit' ),
 	);
 
 	// Title/Tagline Section
@@ -221,9 +239,11 @@ function summit_options() {
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
 
-	return $options;
+	$customizer_library = Customizer_Library::Instance();
+	$customizer_library->add_options( $options );
 
 }
+add_action( 'init', 'summit_options', 100 );
 
 /**
  * Alters some of the defaults for the theme customizer

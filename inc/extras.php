@@ -172,6 +172,26 @@ function summit_get_default_footer_text() {
 }
 
 /**
+ * Display favicon and apple-touch logo in the head
+ *
+ * @since Summit 0.1
+ */
+if ( ! function_exists( 'summit_display_favicons' ) ) :
+function summit_display_favicons() {
+	$logo_favicon = get_theme_mod( 'logo-favicon' );
+	if ( ! empty( $logo_favicon ) ) : ?>
+		<link rel="icon" href="<?php echo esc_url( $logo_favicon ); ?>" />
+	<?php endif;
+
+	$logo_apple_touch = get_theme_mod( 'logo-apple-touch' );
+	if ( ! empty( $logo_apple_touch ) ) : ?>
+		<link rel="apple-touch-icon" href="<?php echo esc_url( $logo_apple_touch ); ?>" />
+	<?php endif;
+}
+endif;
+add_action( 'wp_head', 'summit_display_favicons' );
+
+/**
  * Add HTML5 placeholders for each default comment field
  *
  * @param array $fields
