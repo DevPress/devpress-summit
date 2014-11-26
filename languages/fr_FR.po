@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Summit\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-09-13 00:49:17+00:00\n"
-"PO-Revision-Date: 2014-10-17 21:45+0000\n"
-"Last-Translator: FxB <fxb@wp-translations.org>\n"
+"PO-Revision-Date: 2014-11-26 22:00+0000\n"
+"Last-Translator: Devin Price <devin@wptheming.com>\n"
 "Language-Team: French (France) (http://www.transifex.com/projects/p/summit/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: grunt-wp-i18n 0.4.8\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -167,7 +167,7 @@ msgstr "Menu principal"
 msgid "Social Menu"
 msgstr "Menu social"
 
-#: functions.php:88 inc/customizer/options.php:193
+#: functions.php:88 inc/customizer-options.php:211
 msgid "Footer"
 msgstr "Pied de page"
 
@@ -195,83 +195,143 @@ msgstr "Or"
 msgid "Summit"
 msgstr "Summit"
 
-#: inc/customizer/options.php:29
+#: inc/customizer-library/extensions/fonts.php:115
+msgid "All"
+msgstr "Tout"
+
+#: inc/customizer-library/extensions/fonts.php:116
+msgid "Cyrillic"
+msgstr "Cyrillic"
+
+#: inc/customizer-library/extensions/fonts.php:117
+msgid "Cyrillic Extended"
+msgstr "Cyrillic étendu"
+
+#: inc/customizer-library/extensions/fonts.php:118
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: inc/customizer-library/extensions/fonts.php:119
+msgid "Greek"
+msgstr "Grec"
+
+#: inc/customizer-library/extensions/fonts.php:120
+msgid "Greek Extended"
+msgstr "Grec étendu"
+
+#: inc/customizer-library/extensions/fonts.php:121
+msgid "Khmer"
+msgstr "Khmer"
+
+#: inc/customizer-library/extensions/fonts.php:122
+msgid "Latin"
+msgstr "Latin"
+
+#: inc/customizer-library/extensions/fonts.php:123
+msgid "Latin Extended"
+msgstr "Latin étendu"
+
+#: inc/customizer-library/extensions/fonts.php:124
+msgid "Vietnamese"
+msgstr "Vietnamien"
+
+#: inc/customizer-options.php:29
 msgid "Logo Image"
 msgstr "Logo Image"
 
-#: inc/customizer/options.php:35
+#: inc/customizer-options.php:35
 msgid "Logo"
 msgstr "Logo"
 
-#: inc/customizer/options.php:46
+#: inc/customizer-options.php:43
+msgid "Favicon"
+msgstr "Favicon"
+
+#: inc/customizer-options.php:47
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
+"x 32px</strong>."
+msgstr "Le fichier doit être au format <strong>.png</strong>. Les dimensions optimales sont de <strong>32px x 32px</strong>."
+
+#: inc/customizer-options.php:52
+msgid "Apple Touch Icon"
+msgstr "Icône Apple Touch"
+
+#: inc/customizer-options.php:56
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px"
+" x 152px</strong>."
+msgstr "Le fichier doit être au format <strong>.png</strong>. Les dimensions optimales sont de <strong>152px x 152px</strong>."
+
+#: inc/customizer-options.php:64
 msgid "Site Title Text Color"
 msgstr "Couleur du texte du titre du site"
 
-#: inc/customizer/options.php:54
+#: inc/customizer-options.php:72
 msgid "Site Tagline Text Color"
 msgstr "Couleur du texte du slogan du site"
 
-#: inc/customizer/options.php:62
+#: inc/customizer-options.php:80
 msgid "Display Site Tagline"
 msgstr "Afficher le slogan du site"
 
-#: inc/customizer/options.php:73
+#: inc/customizer-options.php:91
 msgid "Header Settings"
 msgstr "Réglages de l&rsquo;en-tête"
 
-#: inc/customizer/options.php:79
+#: inc/customizer-options.php:97
 msgid "Header Background Color"
 msgstr "Couleur d&rsquo;arrière-plan de l'en-tête"
 
-#: inc/customizer/options.php:87
+#: inc/customizer-options.php:105
 msgid "Header Overlay Color"
 msgstr "Couleur de superposition de l&rsquo;en-tête"
 
-#: inc/customizer/options.php:109
+#: inc/customizer-options.php:127
 msgid "Header Overlay Opacity"
 msgstr "Opacité de la superposition de l&rsquo;en-tête"
 
-#: inc/customizer/options.php:134
+#: inc/customizer-options.php:152
 msgid "Colors"
 msgstr "Couleurs"
 
-#: inc/customizer/options.php:140
+#: inc/customizer-options.php:158
 msgid "Highlight Color"
 msgstr "Couleur de surbrillance"
 
-#: inc/customizer/options.php:151
+#: inc/customizer-options.php:169
 msgid "Typography"
 msgstr "Typographie"
 
-#: inc/customizer/options.php:160
+#: inc/customizer-options.php:178
 msgid "General"
 msgstr "Apparence"
 
-#: inc/customizer/options.php:166
+#: inc/customizer-options.php:184
 msgid "Display Post Dates"
 msgstr "Afficher la date de l'article"
 
-#: inc/customizer/options.php:174
+#: inc/customizer-options.php:192
 msgid "Display Featured Images"
 msgstr "Afficher les images à la Une"
 
-#: inc/customizer/options.php:182
+#: inc/customizer-options.php:200
 msgid "Display Overlay Navigation"
 msgstr "Afficher la navigation superposée"
 
-#: inc/customizer/options.php:206
+#: inc/customizer-options.php:224
 msgid "Footer Widget Columns"
 msgstr "Colonnes de widgets du pied de page"
 
-#: inc/customizer/options.php:215
+#: inc/customizer-options.php:233
 msgid "Footer Text"
 msgstr "Texte du pied de page"
 
-#: inc/customizer/options.php:251
+#: inc/customizer-options.php:271
 msgid "Background"
 msgstr "Arrière-plan"
 
-#: inc/customizer/options.php:257
+#: inc/customizer-options.php:277
 msgid "Background Color"
 msgstr "Couleur de fond"
 
@@ -291,27 +351,27 @@ msgstr "http://wordpress.org/"
 msgid "%1$s Theme by %2$s."
 msgstr "Thème %1$s par %2$s."
 
-#: inc/extras.php:188
+#: inc/extras.php:208
 msgid "Name"
 msgstr "Nom"
 
-#: inc/extras.php:189
+#: inc/extras.php:209
 msgid "Name *"
 msgstr "Nom *"
 
-#: inc/extras.php:195
+#: inc/extras.php:215
 msgid "Email"
 msgstr "E-Mail"
 
-#: inc/extras.php:196
+#: inc/extras.php:216
 msgid "Email *"
 msgstr "E-mail *"
 
-#: inc/extras.php:202 inc/extras.php:203
+#: inc/extras.php:222 inc/extras.php:223
 msgid "Website"
 msgstr "Site Web"
 
-#: inc/extras.php:221
+#: inc/extras.php:241
 msgid "Comment *"
 msgstr "Commentaire *"
 
@@ -353,60 +413,60 @@ msgstr "Clé de licence"
 
 #: inc/updater/theme-updater-admin.php:146
 msgid "License Action"
-msgstr ""
+msgstr "Action sur la licence"
 
 #: inc/updater/theme-updater-admin.php:152
 msgid "Deactivate License"
-msgstr ""
+msgstr "Désactiver la licence"
 
 #: inc/updater/theme-updater-admin.php:154
 msgid "Activate License"
-msgstr ""
+msgstr "Activer la licence"
 
 #: inc/updater/theme-updater-admin.php:322
 #: inc/updater/theme-updater-admin.php:369
 msgid "License status is unknown."
-msgstr ""
+msgstr "L'état de la licence est inconnu."
 
 #: inc/updater/theme-updater-admin.php:330
 msgid "Renew?"
-msgstr ""
+msgstr "Renouveler ?"
 
 #: inc/updater/theme-updater-admin.php:339
 msgid "unlimited"
-msgstr ""
+msgstr "illimité"
 
 #: inc/updater/theme-updater-admin.php:343
 msgid "License key is active."
-msgstr ""
+msgstr "La clé de licence est activée."
 
 #: inc/updater/theme-updater-admin.php:345
 msgid "Expires %s."
-msgstr ""
+msgstr "Expire le %s."
 
 #: inc/updater/theme-updater-admin.php:348
 msgid "You have %1$s / %2$s sites activated."
-msgstr ""
+msgstr "Vous avez %1$s / %2$s sites activés."
 
 #: inc/updater/theme-updater-admin.php:352
 msgid "License key expired %s."
-msgstr ""
+msgstr "La clé de licence expire le %s."
 
 #: inc/updater/theme-updater-admin.php:354
 msgid "License key has expired."
-msgstr ""
+msgstr "La clé de licence est expirée."
 
 #: inc/updater/theme-updater-admin.php:360
 msgid "License keys do not match."
-msgstr ""
+msgstr "Les clés de licence ne correspondent pas."
 
 #: inc/updater/theme-updater-admin.php:362
 msgid "License is inactive."
-msgstr ""
+msgstr "La licence est inactive."
 
 #: inc/updater/theme-updater-admin.php:364
 msgid "License key is disabled."
-msgstr ""
+msgstr "La clé de licence est désactivée."
 
 #: inc/updater/theme-updater-admin.php:367
 msgid "Site is inactive."
@@ -416,14 +476,14 @@ msgstr "Le site est inactif."
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
-msgstr ""
+msgstr "En mettant à jour ce thème vous allez perdre toutes vos modifications personnelles que vous y avez faites. 'Annuler' pour arrêter, 'OK' pour continuer."
 
 #: inc/updater/theme-updater-class.php:66
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\""
 " title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update "
 "now</a>."
-msgstr ""
+msgstr "<strong>%1$s %2$s</strong> est disponible. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Découvrir les nouveautés</a> ou <a href=\"%5$s\"%6$s>mettre à jour maintenant</a>."
 
 #: search.php:16
 msgid "Search Results for: %s"
@@ -431,7 +491,7 @@ msgstr "Résultats de recherche pour : %s"
 
 #. Theme URI of the plugin/theme
 msgid "http://devpress.com/summit"
-msgstr "http://devpress.com/summit"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
@@ -448,7 +508,7 @@ msgstr "DevPress"
 
 #. Author URI of the plugin/theme
 msgid "http://devpress.com"
-msgstr "http://devpress.com"
+msgstr ""
 
 #: archive.php:33
 msgctxt "monthly archives date format"
@@ -466,6 +526,21 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
 msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+
+#: inc/customizer-library/extensions/fonts.php:184
+msgctxt "font style"
+msgid "Serif"
+msgstr "Serif"
+
+#: inc/customizer-library/extensions/fonts.php:188
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: inc/customizer-library/extensions/fonts.php:192
+msgctxt "font style"
+msgid "Monospaced"
+msgstr "Monospaced"
 
 #: inc/template-tags.php:67
 msgctxt "Previous post link"
