@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Summit 1.1.0\n"
+"Project-Id-Version: Summit 1.3.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2014-09-13 00:49:17+00:00\n"
 "MIME-Version: 1.0\n"

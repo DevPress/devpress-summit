@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set constant for version
  */
-define( 'SUMMIT_VERSION', '1.1.0' );
+define( 'SUMMIT_VERSION', '1.3.0' );
 
 if ( ! function_exists( 'summit_setup' ) ) :
 /**
