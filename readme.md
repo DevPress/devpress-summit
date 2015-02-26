@@ -20,6 +20,11 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 ## Change Log
 
+1.3.1
+---
+
+* Enhancement: Add social icon for YouTube
+
 1.3.0
 ---
 
