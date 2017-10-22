@@ -1,0 +1,52 @@
+linters:
+
+  BorderZero:
+    enabled: true
+    convention: none
+
+  BemDepth:
+    enabled: true
+
+  Comment:
+    enabled: false
+    style: silent
+
+  DeclarationOrder:
+    enabled: false
+
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: tab
+    width: 1
+
+  LeadingZero:
+    enabled: false
+
+  NestingDepth:
+    enabled: true
+    max_depth: 6
+    ignore_parent_selectors: false
+
+  PropertySortOrder:
+    enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  SelectorDepth:
+      max_depth: 6
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+    class_convention: ^(?!js-).*
+    class_convention_explanation: should not be written in the form js-*
+
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
+
+  StringQuotes:
+    enabled: true
+    style: double_quotes

@@ -106,19 +106,13 @@ function summit_scripts() {
 	// Use style-rtl.css for RTL layouts
 	wp_style_add_data( 'summit-style', 'rtl', 'replace' );
 
-	if ( SCRIPT_DEBUG || WP_DEBUG ) :
-
-		wp_enqueue_script( 'summit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), SUMMIT_VERSION, true );
-
-		wp_enqueue_script( 'summit-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), SUMMIT_VERSION, true );
-
-		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), SUMMIT_VERSION, true );
-
-	else :
-
-		wp_enqueue_script( 'summit-theme', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), SUMMIT_VERSION, true );
-
-	endif;
+	wp_enqueue_script(
+		'summit-theme',
+		get_template_directory_uri() . '/js/combined-min.js',
+		array( 'jquery' ),
+		SUMMIT_VERSION,
+		true
+	);
 
 	if ( 'column-masonry' == footer_widgetarea_class() ) {
 		wp_enqueue_script( 'summit-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), SUMMIT_VERSION, true );
@@ -142,7 +136,7 @@ add_action( 'wp_head', 'summit_js_class', 1 );
  * Load placeholder polyfill for IE9 and older
  */
 function summit_placeholder_polyfill() {
-    echo '<!--[if lte IE 9]><script src="' . get_template_directory_uri() . '/js/jquery-placeholder.js"></script><![endif]-->'. "\n";
+	echo '<!--[if lte IE 9]><script src="' . get_template_directory_uri() . '/js/jquery-placeholder.js"></script><![endif]-->'. "\n";
 }
 add_action( 'wp_head', 'summit_placeholder_polyfill' );
 
@@ -152,10 +146,20 @@ add_action( 'wp_head', 'summit_placeholder_polyfill' );
 function summit_fonts() {
 
 	// Source Sans Pro
-	wp_enqueue_style( 'summit_fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Noto+Serif:400,700,400italic', array(), null, 'screen' );
+	wp_enqueue_style(
+		'summit_fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Noto+Serif:400,700,400italic',
+		array(),
+		null,
+		'screen'
+	);
 
 	// Custom Icon Font
-	wp_enqueue_style( 'summit_icons', get_template_directory_uri() . '/fonts/summit-icons/icons.css', array(), SUMMIT_VERSION );
+	wp_enqueue_style(
+		'summit_icons',
+		get_template_directory_uri() . '/fonts/summit-icons/icons.css',
+		array(),
+		SUMMIT_VERSION
+	);
 
 }
 add_action( 'wp_enqueue_scripts', 'summit_fonts' );

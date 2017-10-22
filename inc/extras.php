@@ -81,11 +81,11 @@ add_action( 'wp', 'summit_setup_author' );
  * @return array HTML5-ified gallery attributes.
  */
 function summit_gallery_atts( $atts ) {
-    $atts['itemtag']    = 'figure';
-    $atts['icontag']    = 'div';
-    $atts['captiontag'] = 'figcaption';
+	$atts['itemtag']    = 'figure';
+	$atts['icontag']    = 'div';
+	$atts['captiontag'] = 'figcaption';
 
-    return $atts;
+	return $atts;
 }
 add_filter( 'shortcode_atts_gallery', 'summit_gallery_atts' );
 
@@ -172,26 +172,6 @@ function summit_get_default_footer_text() {
 }
 
 /**
- * Display favicon and apple-touch logo in the head
- *
- * @since Summit 0.1
- */
-if ( ! function_exists( 'summit_display_favicons' ) ) :
-function summit_display_favicons() {
-	$logo_favicon = get_theme_mod( 'logo-favicon' );
-	if ( ! empty( $logo_favicon ) ) : ?>
-		<link rel="icon" href="<?php echo esc_url( $logo_favicon ); ?>" />
-	<?php endif;
-
-	$logo_apple_touch = get_theme_mod( 'logo-apple-touch' );
-	if ( ! empty( $logo_apple_touch ) ) : ?>
-		<link rel="apple-touch-icon" href="<?php echo esc_url( $logo_apple_touch ); ?>" />
-	<?php endif;
-}
-endif;
-add_action( 'wp_head', 'summit_display_favicons' );
-
-/**
  * Add HTML5 placeholders for each default comment field
  *
  * @param array $fields
@@ -199,32 +179,32 @@ add_action( 'wp_head', 'summit_display_favicons' );
  */
 function summit_comment_fields( $fields ) {
 
-    $commenter = wp_get_current_commenter();
-    $req = get_option( 'require_name_email' );
-    $aria_req = ( $req ? " aria-required='true'" : '' );
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
 
-    $fields['author'] =
-        '<p class="comment-form-author">
-        	<label for="author">' . __( 'Name', 'summit' ) . '</label>
-            <input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'summit' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-    '" size="30"' . $aria_req . ' />
-        </p>';
+	$fields['author'] =
+		'<p class="comment-form-author">
+			<label for="author">' . __( 'Name', 'summit' ) . '</label>
+			<input required minlength="3" maxlength="30" placeholder="' . __( 'Name *', 'summit' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+	'" size="30"' . $aria_req . ' />
+		</p>';
 
-    $fields['email'] =
-        '<p class="comment-form-email">
-        	<label for="email">' . __( 'Email', 'summit' ) . '</label>
-            <input required placeholder="' . __( 'Email *', 'summit' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-    '" size="30"' . $aria_req . ' />
-        </p>';
+	$fields['email'] =
+		'<p class="comment-form-email">
+			<label for="email">' . __( 'Email', 'summit' ) . '</label>
+			<input required placeholder="' . __( 'Email *', 'summit' ) . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+	'" size="30"' . $aria_req . ' />
+		</p>';
 
-    $fields['url'] =
-        '<p class="comment-form-url">
-        	<label for="url">' . __( 'Website', 'summit' ) . '</label>
-            <input placeholder="' . __( 'Website', 'summit' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
-    '" size="30" />
-        </p>';
+	$fields['url'] =
+		'<p class="comment-form-url">
+			<label for="url">' . __( 'Website', 'summit' ) . '</label>
+			<input placeholder="' . __( 'Website', 'summit' ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+	'" size="30" />
+		</p>';
 
-    return $fields;
+	return $fields;
 }
 add_filter( 'comment_form_default_fields', 'summit_comment_fields' );
 
@@ -236,11 +216,11 @@ add_filter( 'comment_form_default_fields', 'summit_comment_fields' );
  */
  function summit_commtent_textarea( $comment_field ) {
 
-    $comment_field =
-        '<p class="comment-form-comment">
-            <textarea required placeholder="' . __( 'Comment *', 'summit' ) . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
-        </p>';
+	$comment_field =
+		'<p class="comment-form-comment">
+			<textarea required placeholder="' . __( 'Comment *', 'summit' ) . '" id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
+		</p>';
 
-    return $comment_field;
+	return $comment_field;
 }
 add_filter( 'comment_form_field_comment', 'summit_commtent_textarea' );

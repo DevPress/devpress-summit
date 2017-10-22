@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	// load all tasks
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-    grunt.initConfig({
+	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			files: ['scss/*.scss'],
@@ -15,16 +15,16 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			default: {
-		  		options : {
-			  		style : 'expanded'
-			  	},
-			  	files: {
+				options : {
+					style : 'expanded'
+				},
+				files: {
 					'style.css':'scss/style.scss',
 				}
 			}
 		},
 		autoprefixer: {
-            options: {
+			options: {
 				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
 			},
 			single_file: {
@@ -32,31 +32,23 @@ module.exports = function(grunt) {
 				dest: 'style.css'
 			}
 		},
-		csscomb: {
-			options: {
-                config: '.csscomb.json'
-            },
-            files: {
-                'style.css': ['style.css'],
-            }
-		},
 		concat: {
-		    release: {
-		        src: [
-		            'js/skip-link-focus-fix.js',
-		            'js/jquery.fitvids.js',
-		            'js/theme.js'
-		        ],
-		        dest: 'js/combined-min.js',
-		    }
+			release: {
+				src: [
+					'js/skip-link-focus-fix.js',
+					'js/jquery.fitvids.js',
+					'js/theme.js'
+				],
+				dest: 'js/combined-min.js',
+			}
 		},
 		uglify: {
-		    release: {
-		        src: 'js/combined-min.js',
-		        dest: 'js/combined-min.js'
-		    }
+			release: {
+				src: 'js/combined-min.js',
+				dest: 'js/combined-min.js'
+			}
 		},
-	    replace: {
+		replace: {
 			styleVersion: {
 				src: [
 					'scss/style.scss',
@@ -78,22 +70,22 @@ module.exports = function(grunt) {
 				} ]
 			},
 		},
-	    // https://www.npmjs.org/package/grunt-wp-i18n
-	    makepot: {
-	        target: {
-	            options: {
-	                domainPath: '/languages/',
-	                potFilename: 'summit.pot',
-	                potHeaders: {
-	                poedit: true, // Includes common Poedit headers.
-                    'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
-                },
-		        type: 'wp-theme',
-		        updateTimestamp: false,
-		        processPot: function( pot, options ) {
+		// https://www.npmjs.org/package/grunt-wp-i18n
+		makepot: {
+			target: {
+				options: {
+					domainPath: '/languages/',
+					potFilename: 'summit.pot',
+					potHeaders: {
+					poedit: true, // Includes common Poedit headers.
+					'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
+				},
+				type: 'wp-theme',
+				updateTimestamp: false,
+				processPot: function( pot, options ) {
 					pot.headers['report-msgid-bugs-to'] = 'https://devpress.com/';
-		        	pot.headers['language'] = 'en_US';
-		        	return pot;
+					pot.headers['language'] = 'en_US';
+					return pot;
 					}
 				}
 			}
@@ -139,32 +131,19 @@ module.exports = function(grunt) {
 		}
 	});
 
-    grunt.registerTask( 'default', [
-    	'sass',
+	grunt.registerTask( 'default', [
+		'sass',
 		'autoprefixer'
-    ]);
+	]);
 
-    grunt.registerTask( 'release', [
-    	'replace',
-    	'sass',
+	grunt.registerTask( 'release', [
+		'replace',
+		'sass',
 		'autoprefixer',
-		'csscomb',
 		'concat:release',
 		'uglify:release',
 		'makepot',
 		'cssjanus'
 	]);
-
-	// Makepot and push it on Transifex task(s).
-    grunt.registerTask( 'txpush', [
-    	'makepot',
-    	'exec:txpush_s'
-    ]);
-
-    // Pull from Transifex and create .mo task(s).
-    grunt.registerTask( 'txpull', [
-    	'exec:txpull',
-    	'potomo'
-    ]);
 
 };

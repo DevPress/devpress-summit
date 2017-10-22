@@ -20,6 +20,12 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 ## Change Log
 
+Development
+---
+
+* Update: Improved .scss organization and linting
+* Update: Remove favicon options (now handled by WordPress core)
+
 1.3.1
 ---
 

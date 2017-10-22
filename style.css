@@ -195,12 +195,14 @@ code, kbd, tt, var {
   font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none;
 }
@@ -331,7 +333,6 @@ input[type="submit"] {
   border: none;
   border-radius: 3px;
 }
-
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -346,15 +347,7 @@ input[type="radio"] {
 }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
   box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-  -webkit-appearance: none;
 }
 
 input[type="text"],
@@ -368,7 +361,6 @@ textarea {
   padding: 5px 10px;
   box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -376,14 +368,6 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
   color: #111;
-}
-
-button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner {
-  padding: 0;
-  border: 0 none;
 }
 
 textarea {
@@ -448,10 +432,7 @@ a {
   text-decoration: none;
   transition: all 0.2s ease;
 }
-
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
   color: #666;
   text-decoration: underline;
 }
@@ -459,7 +440,7 @@ a:active {
 #page {
   max-width: 890px;
   margin: 0 auto;
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
 }
 
@@ -501,17 +482,14 @@ a:active {
   letter-spacing: 1px;
   margin-bottom: .25em;
 }
-
 .site-title a {
   text-decoration: none;
   color: #fff;
 }
-
 .site-title a:hover {
   opacity: .6;
 }
-
-.site-logo img {
+.site-title img {
   max-height: 200px;
   width: auto;
   max-width: 100%;
@@ -584,8 +562,7 @@ a:active {
 
   .main-navigation ul {
     text-align: center;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .main-navigation ul ul {
@@ -703,7 +680,7 @@ a:active {
     background: rgba(0, 0, 0, 0.02);
     top: 1px;
     height: 48px;
-    line-height: 48px;
+    line-height: 1;
     width: 48px;
   }
 
@@ -863,11 +840,9 @@ a:active {
   line-height: 1.25;
   margin-bottom: .25em;
 }
-
 .entry-title a {
   color: #555;
 }
-
 .entry-title a:hover {
   text-decoration: none;
   color: #3fc0c3;
@@ -899,7 +874,8 @@ a:active {
   color: #888;
 }
 
-.entry-meta a, .entry-footer a {
+.entry-meta a,
+.entry-footer a {
   color: #888;
 }
 
@@ -952,7 +928,6 @@ a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
-
 .page-links a {
   font-size: 14px;
   background: #f9f9f9;
@@ -965,8 +940,8 @@ a:active {
 
 /* Author Meta */
 .author-meta {
-  border-top: 1px solid #EEE;
-  border-bottom: 1px solid #EEE;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   margin: 3em 0;
   position: relative;
   padding: 1.5em 1.5em 1.5em 0;
@@ -1013,7 +988,7 @@ a:active {
 .archive .page-header {
   padding: 0 0 3em;
   margin: 0 0 3em;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 
 .taxonomy-description p {

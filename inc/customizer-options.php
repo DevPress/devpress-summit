@@ -38,24 +38,6 @@ function summit_options() {
 		'default' => '',
 	);
 
-	$options['logo-favicon'] = array(
-		'id' => 'logo-favicon',
-		'label'   => __( 'Favicon', 'summit' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'summit' ),
-	);
-
-	$options['logo-apple-touch'] = array(
-		'id' => 'logo-apple-touch',
-		'label'   => __( 'Apple Touch Icon', 'summit' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'summit' ),
-	);
-
 	// Title/Tagline Section
 	$section = 'title_tagline';
 

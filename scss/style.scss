@@ -63,9 +63,10 @@ body.rtl {
 -------------------------------------------------------------- */
 
 body {
-	background:#444;
+	background: #444;
 	word-wrap: break-word;
 }
+
 body,
 button,
 input,
@@ -76,40 +77,49 @@ textarea {
 	font-size: 16px;
 	line-height: 1.6;
 }
+
 label {
 	font-family: $font-1;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-1;
 	margin-bottom: .5em;
 }
+
 h1 {
 	font-size: 30px;
 }
+
 h2 {
 	font-size: 28px;
 }
+
 h3 {
 	font-size: 24px;
 }
+
 h4, h5, h6 {
 	font-size: 20px;
 }
+
 a {
 	color: $highlight;
 	text-decoration: none;
 	transition: all 0.2s ease;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #666;
+		text-decoration: underline;
+	}
 }
-a:hover,
-a:focus,
-a:active {
-	color: #666;
-	text-decoration: underline;
-}
+
 #page {
 	max-width: $breakpoint-2;
 	margin: 0 auto;
-	background-color: #FFF;
+	background-color: #fff;
 	position: relative;
 }
 
@@ -124,47 +134,56 @@ a:active {
 	background-size: cover;
 	background-position: 50% 50%;
 }
+
 .header-image img {
 	display: block;
 }
+
 .header-image .opacity {
 	position: absolute;
-	top:0;
-	bottom:0;
-	right:0;
-	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
+
 .site-branding {
 	position: absolute;
-	top:40%;
-	width:100%;
-	padding-left:10%;
-	padding-right:10%;
+	top: 40%;
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
 	text-shadow: 0px 1px 1px rgba( 0, 0, 0, 0.4);
 }
+
 .site-title {
 	font-size: 36px;
 	line-height: 1;
 	letter-spacing: 1px;
-	margin-bottom:.25em;
+	margin-bottom: .25em;
+
+	a {
+		text-decoration: none;
+		color:#fff;
+
+		&:hover {
+			opacity:.6;
+		}
+	}
+
+	img {
+		max-height: 200px;
+		width:auto;
+		max-width: 100%;
+	}
 }
-.site-title a {
-	text-decoration: none;
-	color:#fff;
-}
-.site-title a:hover {
-	opacity:.6;
-}
-.site-logo img {
-	max-height: 200px;
-	width:auto;
-	max-width: 100%;
-}
+
 .site-description {
-	font-size:16px;
-	color:#fff;
+	font-size: 16px;
+	color: #fff;
 	font-family: $font-2;
 }
+
 .js .site-branding {
 	display: none;
 }
@@ -179,61 +198,70 @@ a:active {
 	padding: .75em 6em .75em;
 	touch-action: manipulation;
 }
+
 .no-main-navigation {
 	border-top: 1px solid #eee;
 	margin-bottom:3em;
 }
+
 .main-navigation a {
-	font-size:16px;
-	padding:12px 0;
-	color:#555;
+	font-size: 16px;
+	padding: 12px 0;
+	color: #555;
 	display: block;
 	text-decoration: none;
 	border-top:1px solid #eee;
 }
+
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding:0;
+	padding: 0;
 	font-weight: 400;
 }
+
 .main-navigation a:hover {
 	opacity:.6;
 }
+
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
-	font-weight:600;
+	font-weight: 600;
 }
 
 /* Larger Screen Sizes */
 @media screen and (min-width: $breakpoint-2 ) {
+
 	.main-navigation a {
 		font-size:15px;
 		padding:10px;
 		border:none;
 		display: inline-block;
 	}
+
 	.main-navigation li {
 		position: relative;
 		display: inline;
 	}
+
 	.main-navigation ul {
 		text-align: center;
-		-webkit-transition: all 0.2s ease;
-		-moz-transition: all 0.2s ease;
+		transition: all 0.2s ease;
 	}
+
 	.main-navigation ul ul {
 		display: none;
-		width:220px;
-		background:#fff;
+		width: 220px;
+		background: #fff;
 		border: 1px solid #eee;
 		left: 50%;
 		margin-left: -110px;
 		position: absolute;
 		top: 30px;
 		z-index: 99999;
-		border-radius:5px;
+		border-radius: 5px;
 	}
+
 	.main-navigation ul ul:before {
 		position: absolute;
 		top: -8px;
@@ -244,25 +272,31 @@ a:active {
 		border-bottom: 8px solid #eee;
 		content: "";
 	}
+
 	.main-navigation ul ul li {
 		display: block;
-		margin:0;
+		margin: 0;
 	}
+
 	.main-navigation ul ul a {
 		display: block;
 		padding:12px;
 		border-bottom:1px solid #eee;
 	}
+
 	.main-navigation ul ul a:hover {
 		opacity: 1;
 		background:#f6f6f6;
 	}
+
 	.main-navigation ul ul li:last-child a {
 		border-bottom: none;
 	}
+
 	.main-navigation ul li:hover > ul {
 		display: block;
 	}
+
 }
 
 /* Small menu */
@@ -272,18 +306,21 @@ a:active {
 }
 
 @media screen and (max-width: ( $breakpoint-2 - 1 ) ) {
+
 	.main-navigation {
-		padding:1.75em 6em .5em;
+		padding: 1.75em 6em .5em;
 	}
+
 	.menu-toggle {
 		line-height: 1;
 		font-size: 20px;
-		font-weight:600;
+		font-weight: 600;
 		position: relative;
-		margin:0 0 .75em;
+		margin: 0 0 .75em;
 	}
+
 	.menu-toggle:after {
-		color:#666;
+		color: #666;
 		font-family: "summit-icons";
 		content: '\e812';
 		speak: none;
@@ -294,51 +331,61 @@ a:active {
 		top:2px;
 		text-align: center;
 	}
+
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
+
 	.main-navigation.toggled .nav-menu {
 		margin-bottom:.25em;
 	}
+
 	.main-navigation.toggled .menu-toggle:after {
 		content: '\e821';
 	}
+
 	.main-navigation ul {
 		display: none;
 	}
+
 	.main-navigation .menu-item-has-children {
 		position: relative;
 		cursor: pointer;
 	}
+
 	.dropdown-toggle {
 		transition: all 0.2s ease;
-		color:#999;
+		color: #999;
 		font-family: "summit-icons";
 		speak: none;
 		display: inline-block;
-		font-weight:400;
+		font-weight: 400;
 		position: absolute;
-		right:0;
+		right: 0;
 		text-align: center;
-		background:rgba(0,0,0,.02);
+		background: rgba(0,0,0,.02);
 		top: 1px;
-		height:48px;
-		line-height:48px;
-		width:48px;
+		height: 48px;
+		line-height: 1;
+		width: 48px;
 	}
+
 	.dropdown-toggle:after {
 		content: "\e811";
 		position: absolute;
-		right:16px;
+		right: 16px;
 	}
+
 	.dropdown-toggle.toggled:after {
 		content: '\e821';
 	}
+
 	.main-navigation .dropdown-toggle:hover {
 		background: $highlight;
 		color:#fff;
 	}
+
 	.main-navigation ul ul li a {
 		padding-left: 3em;
 	}
@@ -353,16 +400,20 @@ a:active {
 	margin: 0;
 	padding: 0;
 }
+
 .social-menu li {
 	display: inline-block;
 }
+
 .social-menu a {
 	color:#fff;
 	text-decoration: none;
 }
+
 .social-menu a:hover {
 	opacity: .6;
 }
+
 .social-menu li a:before {
 	content: '\e80d';
 	display: inline-block;
@@ -370,58 +421,75 @@ a:active {
 	font-family: 'summit-icons';
 	font-size: 16px;
 	vertical-align: top;
-	margin:0;
+	margin: 0;
 	transition: margin 0.2s ease;
 }
+
 .social-menu li a:hover:before {
 	margin-top:-2px;
 }
+
 .social-menu li a[href*="behance.com"]:before {
 	content: '\e81d';
 }
+
 .social-menu li a[href*="dribbble.com"]:before {
 	content: '\e818';
 }
+
 .social-menu li a[href*="facebook.com"]:before {
 	content: '\e80c';
 }
+
 .social-menu li a[href*="flickr.com"]:before {
 	content: '\e81f';
 }
+
 .social-menu li a[href*="github.com"]:before {
 	content: '\e81e';
 }
+
 .social-menu li a[href*="linkedin.com"]:before {
 	content: '\e816';
 }
+
 .social-menu li a[href*="pinterest.com"]:before {
 	content: '\e817';
 }
+
 .social-menu li a[href*="plus.google.com"]:before {
 	content: '\e80f';
 }
+
 .social-menu li a[href*="instagr.am"]:before,
 .social-menu li a[href*="instagram.com"]:before {
 	content: '\e81c';
 }
+
 .social-menu li a[href*="rdio.com"]:before {
 	content: '\e819';
 }
+
 .social-menu li a[href*="skype.com"]:before {
 	content: '\e80a';
 }
+
 .social-menu li a[href*="spotify.com"]:before {
 	content: '\e81b';
 }
+
 .social-menu li a[href*="tumblr.com"]:before {
 	content: '\e815';
 }
+
 .social-menu li a[href*="twitter.com"]:before {
 	content: '\e81a';
 }
+
 .social-menu li a[href*="vimeo.com"]:before {
 	content: '\e807';
 }
+
 .social-menu li a[href*="youtube.com"]:before {
 	content: '\e823';
 }
@@ -432,71 +500,88 @@ a:active {
 #primary {
 	margin: 0 0 3em;
 }
+
 #content {
 	padding: 0 6em;
 	font-family: $font-2;
 }
+
 #colophon {
 	text-align: center;
-	padding:1.5em 6em 3em;
+	padding: 1.5em 6em 3em;
 }
-.sticky {
-}
+
+
 .hentry {
 	padding: 0 0 3em;
 	margin: 0 0 3em;
 	border-bottom: 1px solid #eee;
 	overflow: hidden;
 }
+
 .hentry:last-of-type {
 	margin: 0 0 1.5em;
 }
+
 .entry-header {
-	margin:0 0 1.5em;
+	margin: 0 0 1.5em;
 }
+
 .entry-title {
-	font-size:30px;
-	line-height:1.25;
-	margin-bottom:.25em;
+	font-size: 30px;
+	line-height: 1.25;
+	margin-bottom: .25em;
+
+	a {
+		color: #555;
+
+		&:hover {
+			text-decoration: none;
+			color: $highlight;
+		}
+	}
 }
-.entry-title a {
-	color:#555;
-}
-.entry-title a:hover {
-	text-decoration: none;
-	color: $highlight;
-}
+
 .byline,
 .updated {
 	display: none;
 }
+
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
+
 .featured-image {
 	background: #f9f9f9;
-	margin-bottom:3em;
+	margin-bottom: 3em;
 }
+
 .featured-image img {
 	display: block;
-	margin:0 auto;
+	margin: 0 auto;
 }
+
 .entry-meta, .entry-footer {
-	font-size:15px;
+	font-size: 15px;
 	font-family: $font-1;
+	color: #888;
+}
+
+.entry-meta a,
+.entry-footer a {
 	color:#888;
 }
-.entry-meta a, .entry-footer a {
-	color:#888;
-}
+
 .entry-meta a:hover, .entry-footer a:hover {
 	text-decoration: underline;
 	color: $highlight;
 }
+
 .entry-content {
 	margin-bottom:1.5em;
 }
+
 .format-icon:before,
 .cat-links:before,
 .tags-links:before,
@@ -513,31 +598,38 @@ a:active {
 .cat-links:before {
 	content: '\e806';
 }
+
 .tags-links:before {
 	content: '\e814';
 }
+
 .comments-link:before {
 	content: '\e808';
 }
+
 .post-edit-link:before {
 	content: '\e809';
 }
+
 .cat-links:after,
 .tags-links:after,
 .comments-link:after {
 	content: '';
 	display: inline-block;
-	margin-right:1.5em;
+	margin-right: 1.5em;
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+
+	a {
+		font-size: 14px;
+		background: #f9f9f9;
+		padding: .25em 1em;
+	}
 }
-.page-links a {
-	font-size:14px;
-	background:#f9f9f9;
-	padding:.25em 1em;
-}
+
 .page-links a:first-of-type {
 	margin-left:.5em;
 }
@@ -545,26 +637,29 @@ a:active {
 /* Author Meta */
 
 .author-meta {
-	border-top: 1px solid #EEE;
-	border-bottom: 1px solid #EEE;
-	margin:3em 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin: 3em 0;
 	position: relative;
-	padding:1.5em 1.5em 1.5em 0;
+	padding: 1.5em 1.5em 1.5em 0;
 }
+
 .author-meta .author-avatar {
 	position: absolute;
 	left: 0;
 }
+
 .author-description {
 	font-family: $font-1;
-	font-size:15px;
+	font-size: 15px;
 	padding-left: 90px;
 	min-height: 60px;
 }
+
 .author-description h3 {
 	font-weight: 600;
-	font-size:15px;
-	line-height:1;
+	font-size: 15px;
+	line-height: 1;
 }
 
 /* Override Specific Global Styles */
@@ -572,14 +667,15 @@ a:active {
 .hentry ul {
 	list-style: none;
 }
+
 .hentry ul > li:before {
 	font-family: sans-serif;
 	content: '\25A0'; // Square bullet
-	font-size:10px;
+	font-size: 10px;
 	line-height: 1;
-	margin-top:5px;
+	margin-top: 5px;
 	margin-left: -1.5em;
-	width:1.5em;
+	width: 1.5em;
 	text-align: left;
 	display: inline-block;
 	position: relative;
@@ -591,32 +687,36 @@ a:active {
 .archive .page-header {
 	padding: 0 0 3em;
 	margin: 0 0 3em;
-	border-bottom: 1px solid #EEE;
+	border-bottom: 1px solid #eee;
 }
+
 .taxonomy-description p {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 /* =8.1 Post Formats
 -------------------------------------------------------------- */
 
 #content blockquote {
-	font-size:18px;
-	background:#f9f9f9;
-	margin:0 0 1.5em;
-	padding:1.5em;
+	font-size: 18px;
+	background: #f9f9f9;
+	margin: 0 0 1.5em;
+	padding: 1.5em;
 }
+
 #content blockquote cite {
 	display: inline-block;
-	margin-top:.5em;
-	font-size:15px;
+	margin-top: .5em;
+	font-size: 15px;
 }
+
 #content blockquote cite:before {
 	content: '\2014';
-	margin-right:.5em;
+	margin-right: .5em;
 }
+
 #content blockquote p:last-of-type {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 /* =8.2 Error 404
@@ -638,12 +738,14 @@ a:active {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
+
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
+
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
@@ -651,6 +753,7 @@ a:active {
 	text-align: right;
 	width: 50%;
 }
+
 .overlay-navigation {
 	position: fixed;
 	top: 46%;
@@ -659,52 +762,63 @@ a:active {
 	height: 0;
 	z-index: 5;
 }
+
 .overlay-navigation .paging-navigation .nav-previous,
 .overlay-navigation .paging-navigation .nav-next,
 .overlay-navigation .post-navigation .nav-previous,
 .overlay-navigation .post-navigation .nav-next {
 	width:auto;
 }
+
 .overlay-navigation span {
 	display: none;
 }
+
 .overlay-navigation a {
-	color:rgba( 255, 255, 255, .9);
-	background:rgba(0,0,0,.1);
-	font-size:26px;
-	padding:.75em 10px;
+	color: rgba( 255, 255, 255, .9);
+	background: rgba(0,0,0,.1);
+	font-size: 26px;
+	padding: .75em 10px;
 	text-decoration: none;
 	touch-action: manipulation;
 }
+
 .overlay-navigation a:hover {
-	color:rgba( 255, 255, 255, 1);
+	color: rgba( 255, 255, 255, 1);
 }
+
 .overlay-navigation .nav-previous a {
 	width: auto;
 	box-shadow:	inset -5px 0 15px rgba(0,0,0,.1);
 }
+
 .overlay-navigation .nav-next a {
 	box-shadow:	inset 5px 0 15px rgba(0,0,0,.1);
 }
+
 .overlay-navigation .nav-previous a:before,
 .overlay-navigation .nav-next a:after {
 	font-family: "summit-icons";
 	speak: none;
 	display: inline-block;
-	padding:0 5px;
+	padding: 0 5px;
 	transition: padding 0.2s ease;
 	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 
 }
+
 .overlay-navigation .nav-previous a:before {
 	content: '\e804';
 }
+
 .overlay-navigation .nav-next a:after {
 	content: '\e805';
 }
+
 .overlay-navigation .nav-previous a:hover:before {
 	padding: 0 10px 0 0;
 }
+
 .overlay-navigation .nav-next a:hover:after {
 	padding: 0 0 0 10px;
 }
@@ -715,6 +829,7 @@ a:active {
 .widget {
 	margin: 0 0 1.5em;
 }
+
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
@@ -725,30 +840,36 @@ a:active {
 #secondary.no-widgets {
 	display: none;
 }
+
 #secondary .widget {
 	margin:0 0 1.5em 0;
 	background:#f9f9f9;
 	padding:1.5em;
 	max-width:100%;
 }
+
 #secondary.column-2 .widget,
 #secondary.column-masonry .widget {
 	float:left;
 	width:48%;
 	margin:0 4% 1.5em 0;
 }
+
 #secondary.column-2 .widget:nth-of-type(2n),
 #secondary.column-masonry .widget:nth-of-type(2n) {
 	margin-right:0;
 }
+
 #secondary.column-2 .widget:nth-of-type(2n+1),
 #secondary.column-masonry .widget:nth-of-type(2n+1) {
 	clear:both;
 }
+
 #secondary .widget ul {
 	margin-left:0;
 	list-style: none;
 }
+
 #secondary .widget ul ul {
 	margin-left:1.5em;
 	list-style: none;
@@ -760,6 +881,7 @@ a:active {
 #comments, #respond {
 	font-family: $font-1;
 }
+
 .comment-list {
 	margin:0 0 3em 0;
 	list-style: none;
