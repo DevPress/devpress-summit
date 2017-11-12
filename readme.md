@@ -1,6 +1,6 @@
 # Summit
 
-Summit is simple one-column WordPress theme, perfect for blogging and small business.  It features excellent header images with a number of customizable display options.  Social icons can be added to the header.  A customizable widget area is available in the footer.
+Summit is simple one-column WordPress theme, perfect for blogging and small business. It features excellent header images with a number of customizable display options. Social icons can be added to the header. A customizable widget area is available in the footer.
 
 ## Credits
 
@@ -23,6 +23,7 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 Development
 ---
 
+* Update: Add theme support for title-tag
 * Update: Improved .scss organization and linting
 * Update: Remove favicon options (now handled by WordPress core)
 

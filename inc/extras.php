@@ -166,7 +166,7 @@ function summit_get_default_footer_text() {
 	$text .= sprintf(
 		__( '%1$s Theme by %2$s.', 'summit' ),
 			'Summit',
-			'<a href="http://devpress.com/" rel="designer">DevPress</a>'
+			'<a href="https://devpress.com/" rel="designer">DevPress</a>'
 	);
 	return $text;
 }
