@@ -3,16 +3,16 @@ Theme Name: Summit
 Theme URI: http://devpress.com/summit
 Author: DevPress
 Author URI: http://devpress.com
-Description: Summit is simple one-column WordPress theme, perfect for blogging and small business.  It features excellent header images with a number of customizable display options.  Social icons can be added to the header.  A customizable widget area is available in the footer.  Summit is also responsive and looks great on desktop and mobile devices.
+Description: Summit is simple one-column WordPress theme, perfect for blogging and small business.  It features excellent header images with a number of customizable display options.  Social icons can be added to the header.  A customizable widget area is available in the footer.  Summit is responsive and looks great on desktop and mobile devices.
 Version: 1.3.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: summit
 Domain Path: /languages/
-Tags: one-column, responsive-layout, theme-options, translation-ready
+Tags: one-column, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Summit is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Summit is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 */
 
@@ -767,7 +767,7 @@ a {
 .overlay-navigation .paging-navigation .nav-next,
 .overlay-navigation .post-navigation .nav-previous,
 .overlay-navigation .post-navigation .nav-next {
-	width:auto;
+	width: auto;
 }
 
 .overlay-navigation span {
@@ -997,7 +997,6 @@ a {
 	font-size: 12px;
 }
 
-
 /* =12.0 Media
 -------------------------------------------------------------- */
 
@@ -1006,16 +1005,19 @@ a {
 	float: left;
 	margin: 0 15px 15px 0;
 }
+
 .alignright {
 	display: inline;
 	float: right;
 	margin: 0 0 15px 15px;
 }
+
 .aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto 15px;
 }
+
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -1024,6 +1026,7 @@ a {
 	margin-top: 0;
 	padding: 0;
 }
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
@@ -1038,13 +1041,16 @@ object {
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	max-width: 100%;
 }
+
 .wp-caption-text {
 	text-align: center;
 }
+
 .wp-caption .wp-caption-text {
 	margin: 0.5em 0;
 	font-style: italic;
@@ -1063,44 +1069,56 @@ object {
 	width: 100%;
 	margin-bottom:1.5em;
 }
+
 .gallery .gallery-item img {
 	display: block;
 	margin:0 auto
 }
+
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
+
 .gallery-columns-3 .gallery-item {
 	max-width: 33.33%;
 }
+
 .gallery-columns-4 .gallery-item {
 	max-width: 25%;
 }
+
 .gallery-columns-5 .gallery-item {
 	max-width: 20%;
 }
+
 .gallery-columns-6 .gallery-item {
 	max-width: 16.66%;
 }
+
 .gallery-columns-7 .gallery-item {
 	max-width: 14.28%;
 }
+
 .gallery-columns-8 .gallery-item {
 	max-width: 12.5%;
 }
+
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
+
 .gallery-caption {
 	font-size:13px;
 	margin-top:1em;
 	color: #999;
 }
+
 .gallery:before,
 .gallery:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
+
 .gallery:after {
 	clear: both;
 }
@@ -1110,14 +1128,14 @@ object {
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 .clearfix {
-    *zoom: 1;
+	*zoom: 1;
 }
 
 /* =14.0 Accessibility
@@ -1128,6 +1146,7 @@ object {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 }
+
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
@@ -1156,27 +1175,33 @@ object {
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
 }
+
 /* When infinite scroll reaches the end (oh, the irony!), redisplay hidden elements */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
 #infinite-handle span {
 	background: $highlight;
 	font-family: $font-1;
-	font-size:15px;
+	font-size: 15px;
 }
+
 body #content div.sharedaddy {
-	border-bottom: 1px solid #EEE;
-	margin-bottom:3em;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 3em;
 }
+
 body #content div.sharedaddy div.sd-block {
-	border-top: 1px solid #EEE;
+	border-top: 1px solid #eee;
 	padding: 1.5em 0 1.25em;
 }
+
 body #content div.sharedaddy h3 {
 	font-family: $font-1;
 	font-size:15px;
 }
+
 body .contact-form label {
 	font-weight: normal;
 	margin-bottom:5px;
@@ -1198,15 +1223,19 @@ body .contact-form label {
 }
 
 @media screen and (max-width: $breakpoint-2 ) {
+
 	.comment-list .children {
 		margin: 0;
 	}
+
 	.comment-list .children .comment {
 		margin:0;
 	}
+
 	.comment-list .children .comment-body:before {
 		content:none;
 	}
+
 	.comment-list .children .comment-author .avatar {
 		left: auto;
 		right: 1.5em;
@@ -1214,51 +1243,65 @@ body .contact-form label {
 		z-index: 10;
 		max-width:40px;
 	}
+
 	#author, #email, #url {
 		width: 70%;
 	}
+
 	#respond textarea {
 		width: 90%;
 	}
+
 }
 
 @media screen and (max-width: $breakpoint-3 ) {
+
 	#masthead {
 		min-height:280px;
 	}
+
 	.site-logo img {
 		max-height: 120px;
 	}
+
 	.main-navigation, #content, #colophon {
 		padding-right: 3em;
 		padding-left: 3em;
 	}
+
 	#author, #email, #url, #respond textarea {
 		width: 100%;
 	}
+
 	#secondary.column-2 .widget, #secondary.column-masonry .widget {
 		float:none;
 		width:auto;
 		margin:0 0 1.5em 0;
 	}
+
 }
 
 @media screen and (max-width: $breakpoint-4 ) {
+
 	.site-logo img {
 		max-height: 90px;
 	}
+
 	.main-navigation, #colophon {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
+
 	#content {
 		padding-right: 0em;
 		padding-left: 0em;
 	}
+
 	.hentry {
 		padding-bottom:1.5em;
 		margin-bottom: 1.5em;
 	}
+
 	.entry-header,
 	.entry-content,
 	.entry-footer,
@@ -1266,54 +1309,68 @@ body .contact-form label {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
+
 	.author-meta {
 		margin:3em 0 1.5em;
 	}
+
 	.author-meta .author-avatar {
 		left: 1.5em;
 	}
+
 	.author-description {
 		padding-left:7.5em;
 	}
+
 	.site-main .comment-navigation,
 	.site-main .paging-navigation,
 	.site-main .post-navigation {
 		padding: 0 1.5em 1.5em;
 	}
+
 	#secondary {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
+
 	.cat-links, .tags-links, .comments-link {
 		display: block;
 		clear:both;
 		margin-bottom:.5em;
 	}
+
 	#comments {
 		padding-right: 1.5em;
 		padding-left: 1.5em;
 	}
+
 	.comments-title {
 		margin-bottom:1.5em;
 	}
+
 	.comment {
 		margin:0;
 	}
+
 	.comment-body:before {
 		content:none;
 	}
+
 	.comment-author .avatar {
 		left: auto;
 		right: 1.5em;
-		top:2em;
+		top: 2em;
 		z-index: 10;
 		max-width:40px;
 	}
+
 	#reply-title {
 		padding: .75em 0;
 	}
+
 	.widget .search-field {
 		width:90%;
 		margin-bottom:.5em;
 	}
+
 }

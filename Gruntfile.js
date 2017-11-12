@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			files: ['scss/*.scss'],
-			tasks: 'sass',
+			files: ['assets/scss/**/*.scss', 'assets/js/**/*.js'],
+			tasks: ['sass', 'postcss', 'cssmin', 'concat', 'uglify'],
 			options: {
 				livereload: true,
 			},
@@ -16,20 +16,23 @@ module.exports = function(grunt) {
 		sass: {
 			default: {
 				options : {
-					style : 'expanded'
+					style : 'expanded',
+					sourceMap: true
 				},
 				files: {
 					'style.css':'scss/style.scss',
 				}
 			}
 		},
-		autoprefixer: {
+		postcss: {
 			options: {
-				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
+				map: true,
+				processors: [
+					require('autoprefixer-core')({browsers: 'last 2 versions'}),
+				]
 			},
-			single_file: {
-				src: 'style.css',
-				dest: 'style.css'
+			files: {
+				'style.css':'style.css'
 			}
 		},
 		concat: {
@@ -90,17 +93,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		exec: {
-			txpull: { // Pull Transifex translation - grunt exec:txpull
-				cmd: 'tx pull -a --minimum-perc=90' // Percentage translated
-			},
-			txpush_s: { // Push pot to Transifex - grunt exec:txpush_s
-				cmd: 'tx push -s'
-			},
-		},
-		dirs: {
-			lang: 'languages',
-		},
 		potomo: {
 			dist: {
 				options: {
@@ -133,13 +125,13 @@ module.exports = function(grunt) {
 
 	grunt.registerTask( 'default', [
 		'sass',
-		'autoprefixer'
+		'postcss'
 	]);
 
 	grunt.registerTask( 'release', [
 		'replace',
 		'sass',
-		'autoprefixer',
+		'postcss',
 		'concat:release',
 		'uglify:release',
 		'makepot',

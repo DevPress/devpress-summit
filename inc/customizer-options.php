@@ -250,13 +250,13 @@ function summit_customizer_defaults( $wp_customize ) {
 	$wp_customize->remove_section( 'background_image' );
 
 	$wp_customize->add_section( 'background_image', array(
-		'title'          => __( 'Background' ),
+		'title'          => __( 'Background', 'summit' ),
 		'priority'       => 80,
 	) );
 
 	// Add background color to background_image section
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
-		'label'   => __( 'Background Color' ),
+		'label'   => __( 'Background Color', 'summit' ),
 		'section' => 'background_image',
 	) ) );
 

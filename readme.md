@@ -24,8 +24,9 @@ Development
 ---
 
 * Update: Add theme support for title-tag
-* Update: Improved .scss organization and linting
 * Update: Remove favicon options (now handled by WordPress core)
+* Update: Improved .scss organization and linting
+* Update: Update grunt build tools
 
 1.3.1
 ---
