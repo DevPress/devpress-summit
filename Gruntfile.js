@@ -36,19 +36,19 @@ module.exports = function(grunt) {
 			}
 		},
 		concat: {
-			release: {
+			default: {
 				src: [
 					'js/skip-link-focus-fix.js',
 					'js/jquery.fitvids.js',
 					'js/theme.js'
 				],
-				dest: 'js/combined-min.js',
+				dest: 'js/theme.min.js',
 			}
 		},
 		uglify: {
-			release: {
-				src: 'js/combined-min.js',
-				dest: 'js/combined-min.js'
+			default: {
+				src: 'js/theme.min.js',
+				dest: 'js/theme.min.js'
 			}
 		},
 		replace: {
@@ -93,21 +93,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		potomo: {
-			dist: {
-				options: {
-					poDel: false // Set to true if you want to erase the .po
-				},
-				files: [{
-					expand: true,
-					cwd: '<%= dirs.lang %>',
-					src: ['*.po'],
-					dest: '<%= dirs.lang %>',
-					ext: '.mo',
-					nonull: true
-				}]
-			}
-		},
 		cssjanus: {
 			theme: {
 				options: {
@@ -125,15 +110,17 @@ module.exports = function(grunt) {
 
 	grunt.registerTask( 'default', [
 		'sass',
-		'postcss'
+		'postcss',
+		'concat',
+		'uglify'
 	]);
 
 	grunt.registerTask( 'release', [
 		'replace',
 		'sass',
 		'postcss',
-		'concat:release',
-		'uglify:release',
+		'concat',
+		'uglify',
 		'makepot',
 		'cssjanus'
 	]);

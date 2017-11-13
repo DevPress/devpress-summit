@@ -109,21 +109,32 @@ add_action( 'widgets_init', 'summit_widgets_init' );
  */
 function summit_scripts() {
 
-	wp_enqueue_style( 'summit-style', get_stylesheet_uri(), array(), SUMMIT_VERSION );
+	wp_enqueue_style(
+		'summit-style',
+		get_stylesheet_uri(),
+		array(),
+		SUMMIT_VERSION
+	);
 
 	// Use style-rtl.css for RTL layouts
 	wp_style_add_data( 'summit-style', 'rtl', 'replace' );
 
 	wp_enqueue_script(
 		'summit-theme',
-		get_template_directory_uri() . '/js/combined-min.js',
+		get_template_directory_uri() . '/js/theme.min.js',
 		array( 'jquery' ),
 		SUMMIT_VERSION,
 		true
 	);
 
-	if ( 'column-masonry' == footer_widgetarea_class() ) {
-		wp_enqueue_script( 'summit-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), SUMMIT_VERSION, true );
+	if ( 'column-masonry' === footer_widgetarea_class() ) {
+		wp_enqueue_script(
+			'summit-masonry',
+			get_template_directory_uri() . '/js/masonry.pkgd.min.js',
+			array( 'jquery' ),
+			SUMMIT_VERSION,
+			true
+		);
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -136,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'summit_scripts' );
  * Replace class on html tag if javascript is supported
  */
 function summit_js_class() {
-    echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
+	echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
 }
 add_action( 'wp_head', 'summit_js_class', 1 );
 
