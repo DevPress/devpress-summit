@@ -20,7 +20,7 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 ## Change Log
 
-Development
+1.3.2 (10/13/2017)
 ---
 
 * Update: Add theme support for title-tag
@@ -28,38 +28,38 @@ Development
 * Update: Improved .scss organization and linting
 * Update: Update grunt build tools
 
-1.3.1
+1.3.1 (02/25/2015)
 ---
 
 * Enhancement: Add social icon for YouTube
 
-1.3.0
+1.3.0 (11/26/2014)
 ---
 
 * Enhancement: Favicon and Apple Touch Icon options
 * Translations: fr_FR (French) props @fxbenard
 * Update: New version of Customizer Library
 
-1.2.0
+1.2.0 (06/17/2014)
 ---
 
 * Fix: Hide social menu markup if no menu is selected
 * Enhancement: RTL support
 
-1.1.0
+1.1.0 (06/16/2014)
 ---
 
 * Enhancement: New theme updater
 * Fix: Archive headers on small screen layouts
 * Enhancement: Masonry footer option
 
-1.0.1
+1.0.1 (05/28/2014)
 ---
 
 * Fix: Better loading of logos
 * Enhancement: Namespaced javascript
 
-1.0.0
+1.0.0 (05/19/2014)
 ---
 
 * Public Release
